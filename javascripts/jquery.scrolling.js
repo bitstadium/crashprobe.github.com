@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#button-distribution").anchorScroll(),$("#button-crashes").anchorScroll(),$("#button-feedback").anchorScroll(),$("#button-analytics").anchorScroll()});

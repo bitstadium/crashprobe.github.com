@@ -1,0 +1,1 @@
+function showReport(e,r){$(".crashreport").hide();var t=$("#crashview_"+e+"_"+r);t.length>0&&(t[0].style.display="inline")}$(document).ready(function(){$("#cp-content").length>0&&($(".crashreport").hide(),$("#CrashReports_Description").show())});
