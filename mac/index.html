@@ -257,15 +257,8 @@
               <li>iMac, Mac OS X 10.9.2</li>
             </ol>
           </p>
-          <p>
-            The SDK versions used are as following:
-            <ol>
-              <li>Apple: None</li>
-              <li>HockeyApp: HockeySDK 2.1.0 (Mach exceptions enabled)</li>
-            </ol>
-          </p>
           <p class='cp-p'>
-            The following table shows an overview of all tests.
+            The following chart shows an overview of all tests.
           </p>
           <table class='col-xs-12' id='cp-featuretable'>
             <thead>
@@ -273,14 +266,12 @@
                 <th>
                   Provider
                 </th>
-                <th class='cp-feature-indicator cp-feature-header cp-feature-na'>
-                  <div></div>
-                </th>
-                <th class='cp-feature-indicator cp-feature-header cp-feature-unknown'>
-                  <div></div>
-                </th>
-                <th class='cp-feature-indicator cp-feature-header cp-feature-available'>
-                  <div></div>
+                <th>
+                  <div class='cp-chart cp-chart-mac-legend'>
+                    <div class='cp-chart-complete'>correct</div>
+                    <div class='cp-chart-incomplete'>improper</div>
+                    <div class='cp-chart-wrong'>wrong</div>
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -290,16 +281,11 @@
                   Apple
                 </td>
                 <td>
-                  <b>14%</b>
-                  <i>(3)</i>
-                </td>
-                <td>
-                  <b>29%</b>
-                  <i>(6)</i>
-                </td>
-                <td>
-                  <b>57%</b>
-                  <i>(12)</i>
+                  <div class='cp-chart'>
+                    <div class='cp-chart-complete' style='width: 30px;'>3</div>
+                    <div class='cp-chart-incomplete' style='width: 60px;'>6</div>
+                    <div class='cp-chart-wrong' style='width: 120px;'>12</div>
+                  </div>
                 </td>
               </tr>
               <tr id='cp-HockeyApp'>
@@ -308,16 +294,11 @@
                   v2.1.0
                 </td>
                 <td>
-                  <b>10%</b>
-                  <i>(2)</i>
-                </td>
-                <td>
-                  <b>14%</b>
-                  <i>(3)</i>
-                </td>
-                <td>
-                  <b>76%</b>
-                  <i>(16)</i>
+                  <div class='cp-chart'>
+                    <div class='cp-chart-complete' style='width: 20px;'>2</div>
+                    <div class='cp-chart-incomplete' style='width: 30px;'>3</div>
+                    <div class='cp-chart-wrong' style='width: 160px;'>16</div>
+                  </div>
                 </td>
               </tr>
             </tbody>
