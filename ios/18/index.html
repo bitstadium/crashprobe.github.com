@@ -287,13 +287,13 @@
               </tr>
               <tr id='cp-Crashlytics'>
                 <td class='title'>Crashlytics</td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','armv7');"></div>
                 </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','armv7s');"></div>
                 </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','arm64');"></div>
                 </td>
               </tr>
@@ -361,15 +361,15 @@
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
             <h2 class='cp-h2'>Crashlytics - armv7</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x27cfbffc&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashProbeiOS 0x0000ed54 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:33)&#x000A;1   CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...&#x000A;508 CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;509 CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x27cfbffc&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0   CrashProbeiOS 0x0000ed54 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:33)</span>&#x000A;1   CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...&#x000A;508 CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;509 CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashProbeiOS 0x0000ed69 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_armv7s'>
             <h2 class='cp-h2'>Crashlytics - armv7s</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x27c51ff8&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashProbeiOS 0x000b8d2c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:33)&#x000A;1   CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...&#x000A;508 CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;509 CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x27c51ff8&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0   CrashProbeiOS 0x000b8d2c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:33)</span>&#x000A;1   CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...&#x000A;508 CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;509 CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashProbeiOS 0x000b8d41 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x000000016fcbbff0&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashProbeiOS 0x0000000100050324 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:33)&#x000A;1   CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...&#x000A;508 CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;509 CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x000000016fcbbff0&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0   CrashProbeiOS 0x0000000100050324 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:33)</span>&#x000A;1   CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...&#x000A;508 CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;509 CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashProbeiOS 0x000000010005033c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7'>
             <h2 class='cp-h2'>Testflight - armv7</h2>

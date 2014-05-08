@@ -265,6 +265,12 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64');"></div>
                 </td>
               </tr>
+              <tr id='cp-Crashlytics'>
+                <td class='title'>Crashlytics</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64');"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>HockeyApp</td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
@@ -288,6 +294,10 @@
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_INSTRUCTION (SIGILL)&#x000A;Exception Codes: 0x0000000000000001, 0x0000000000000000&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x61000015c300&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0  net.hockeyapp.CrashLib   0x000000010a6f93b5 -[CRLCrashTrap crash] + 4 (CRLCrashTrap.m:37)&#x000A;1  net.hockeyapp.CrashProbe 0x000000010a6ec62e -[CRLMainWindowController causeCrash:] + 76 (CRLMainWindowController.m:72)&#x000A;2  com.apple.AppKit         0x00007fff891af340 -[NSApplication sendAction:to:from:] + 327&#x000A;3  com.apple.AppKit         0x00007fff891af1be -[NSControl sendAction:to:] + 86&#x000A;4  com.apple.AppKit         0x00007fff891fbced -[NSCell _sendActionFrom:] + 128&#x000A;5  com.apple.AppKit         0x00007fff892156c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;6  com.apple.AppKit         0x00007fff89214a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;7  com.apple.AppKit         0x00007fff892141ad -[NSControl mouseDown:] + 706&#x000A;8  com.apple.AppKit         0x00007fff89195b48 -[NSWindow sendEvent:] + 11296&#x000A;9  com.apple.AppKit         0x00007fff891346e4 -[NSApplication sendEvent:] + 2021&#x000A;10 com.apple.AppKit         0x00007fff88f84b89 -[NSApplication run] + 646&#x000A;11 com.apple.AppKit         0x00007fff88f6f913 NSApplicationMain + 940&#x000A;12 libdyld.dylib            0x00007fff87d085fd start + 1</pre>
+          </div>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
+            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_INSTRUCTION EXC_I386_INVOP at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0  CrashLib      0x0000000102c793b5 -[CRLCrashTrap crash] (CRLCrashTrap.m:35)</span>&#x000A;1  CrashProbe    0x0000000102c24d9e -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;2  AppKit        0x00007fff8bdd4340 -[NSApplication sendAction:to:from:] + 327&#x000A;3  AppKit        0x00007fff8bdd41be -[NSControl sendAction:to:] + 86&#x000A;4  AppKit        0x00007fff8be20ced -[NSCell _sendActionFrom:] + 128&#x000A;5  AppKit        0x00007fff8be3a6c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;6  AppKit        0x00007fff8be39a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;7  AppKit        0x00007fff8be391ad -[NSControl mouseDown:] + 706&#x000A;8  AppKit        0x00007fff8bdbab48 -[NSWindow sendEvent:] + 11296&#x000A;9  AppKit        0x00007fff8bd596e4 -[NSApplication sendEvent:] + 2021&#x000A;10 AppKit        0x00007fff8bba9b89 -[NSApplication run] + 646&#x000A;11 AppKit        0x00007fff8bb94913 NSApplicationMain + 940&#x000A;12 libdyld.dylib 0x00007fff8256d5fd start + 1</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>

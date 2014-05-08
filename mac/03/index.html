@@ -265,6 +265,12 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64');"></div>
                 </td>
               </tr>
+              <tr id='cp-Crashlytics'>
+                <td class='title'>Crashlytics</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64');"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>HockeyApp</td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
@@ -288,6 +294,10 @@
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: KERN_INVALID_ADDRESS at 0x0000000000000000&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000014abe0&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 net.hockeyapp.CrashLib 0x0000000107a2d048 CRLFramelessDWARF_test_crash + 4 (CRLFramelessDWARF.m:35)&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+          </div>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
+            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 CrashLib 0x000000010f6e3048 CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:34)&#x000A;<span class="cp-wrong">Missing frames</span></pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>

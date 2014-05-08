@@ -265,6 +265,12 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64');"></div>
                 </td>
               </tr>
+              <tr id='cp-Crashlytics'>
+                <td class='title'>Crashlytics</td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64');"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>HockeyApp</td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
@@ -288,6 +294,10 @@
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x610000152e80&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 net.hockeyapp.CrashLib 0x000000010b05ab3e -[CRLCrashSmashStackBottom crash] + 43 (CRLCrashSmashStackBottom.m:52)&#x000A;1 ???                    0xa5a5a5a5a5a5a5a5 0 + 11936128518282651045</pre>
+          </div>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
+            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 CrashLib 0x000000010119bb3e -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:52)</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>

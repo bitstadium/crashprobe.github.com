@@ -265,6 +265,12 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64');"></div>
                 </td>
               </tr>
+              <tr id='cp-Crashlytics'>
+                <td class='title'>Crashlytics</td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64');"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>HockeyApp</td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
@@ -287,7 +293,11 @@
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: KERN_PROTECTION_FAILURE at 0x00007fff5e7bcff8&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x610000143a70&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0   net.hockeyapp.CrashLib 0x0000000100c5697b -[CRLCrashStackGuard crash] + 11 (CRLCrashStackGuard.m:36)&#x000A;1   net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)&#x000A;2   net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)&#x000A;...&#x000A;509 net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)&#x000A;510 net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)&#x000A;511 net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)</pre>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: KERN_PROTECTION_FAILURE at 0x00007fff5e7bcff8&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x610000143a70&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0   net.hockeyapp.CrashLib 0x0000000100c5697b -[CRLCrashStackGuard crash] + 11 (CRLCrashStackGuard.m:36)&#x000A;<span class="cp-wrong">1   net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)</span>&#x000A;<span class="cp-wrong">2   net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)</span>&#x000A;...&#x000A;<span class="cp-wrong">509 net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)</span>&#x000A;<span class="cp-wrong">510 net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)</span>&#x000A;<span class="cp-wrong">511 net.hockeyapp.CrashLib 0x0000000100c56981 -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:40)</span></pre>
+          </div>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
+            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x00007fff563feff8&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashLib 0x000000010905b97b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;1   CrashLib 0x000000010905b981 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;2   CrashLib 0x000000010905b981 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;...          &#x000A;509 CrashLib 0x000000010905b981 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;510 CrashLib 0x000000010905b981 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)&#x000A;511 CrashLib 0x000000010905b981 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:36)</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
