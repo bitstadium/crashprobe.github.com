@@ -138,7 +138,7 @@
           <li class='cp-os-macos'>
             <a href='/mac/'>
               <div></div>
-              Mac OS
+              OS X
             </a>
           </li>
         </ul>
@@ -297,16 +297,16 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','arm64');"></div>
                 </td>
               </tr>
-              <tr id='cp-Testflight'>
-                <td class='title'>Testflight</td>
+              <tr id='cp-TestFlight'>
+                <td class='title'>TestFlight</td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','armv7');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','armv7');"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','armv7s');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','armv7s');"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','arm64');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','arm64');"></div>
                 </td>
               </tr>
               <tr id='cp-Crittercism'>
@@ -371,16 +371,16 @@
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;SIGABRT ABORT at 0x0000000191f2658c&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0  libsystem_kernel.dylib  0x0000000191f2658c __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x0000000191fa94a8 pthread_kill + 104&#x000A;2  libsystem_c.dylib       0x0000000191eba84c abort + 112&#x000A;3  libc++abi.dylib         0x00000001910e0994 __cxa_bad_cast&#x000A;4  libc++abi.dylib         0x00000001910fdc2c default_unexpected_handler()&#x000A;5  libobjc.A.dylib         0x0000000191842044 _objc_terminate() + 156&#x000A;6  libc++abi.dylib         0x00000001910fb168 std::__terminate(void (*)()) + 16&#x000A;7  libc++abi.dylib         0x00000001910fad3c __cxa_rethrow + 144&#x000A;8  libobjc.A.dylib         0x0000000191841f24 objc_exception_rethrow + 44&#x000A;9  CoreFoundation          0x0000000185409bb4 CFRunLoopRunSpecific + 576&#x000A;10 GraphicsServices        0x000000018addb830 GSEventRunModal + 168&#x000A;11 UIKit                   0x00000001884480e8 UIApplicationMain + 1156&#x000A;12 CrashProbeiOS           0x00000001000ce058 main (main.m:16)&#x000A;13 libdyld.dylib           0x0000000191e2baa0 start + 4</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7'>
-            <h2 class='cp-h2'>Testflight - armv7</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7'>
+            <h2 class='cp-h2'>TestFlight - armv7</h2>
             <pre class='cp-featurecode'>SIGABRT&#x000A;&#x000A;0  CrashProbeiOS            0x000a82c8 testflight_backtrace&#x000A;1  CrashProbeiOS            0x000a7b04 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x387ab062 _sigtramp&#x000A;3  libsystem_pthread.dylib  0x387b0a32 pthread_kill&#x000A;4  libsystem_c.dylib        0x386f7ffc abort&#x000A;5  libc++abi.dylib          0x37a26cd6 abort_message&#x000A;6  libc++abi.dylib          0x37a3f6e4 _ZL25default_terminate_handlerv&#x000A;7  libobjc.A.dylib          0x38188944 _ZL15_objc_terminatev&#x000A;8  libc++abi.dylib          0x37a3d1c6 _ZSt11__terminatePFvvE&#x000A;9  libc++abi.dylib          0x37a3cd2c __cxa_increment_exception_refcount&#x000A;10 libobjc.A.dylib          0x381887f6 objc_exception_rethrow&#x000A;11 CoreFoundation           0x2dda7c9c CFRunLoopRunSpecific&#x000A;12 CoreFoundation           0x2dda7a0a CFRunLoopRunInMode&#x000A;13 GraphicsServices         0x32a97282 GSEventRunModal&#x000A;14 UIKit                    0x3064b048 UIApplicationMain&#x000A;15 CrashProbeiOS            0x0009908e main in main.m on Line 16&#x000A;16 libdyld.dylib            0x38690ab6 start</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7s'>
-            <h2 class='cp-h2'>Testflight - armv7s</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
+            <h2 class='cp-h2'>TestFlight - armv7s</h2>
             <pre class='cp-featurecode'>SIGABRT&#x000A;&#x000A;0	 CrashProbeiOS            0x000c6344 testflight_backtrace&#x000A;1	 CrashProbeiOS            0x000c5b84 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x39071722 _sigtramp&#x000A;3  libsystem_pthread.dylib  0x39076a52 pthread_kill&#x000A;4  libsystem_c.dylib        0x38fc002c abort&#x000A;5  libc++abi.dylib          0x3840e98e abort_message&#x000A;6  libc++abi.dylib          0x384276e6 _ZL25default_terminate_handlerv&#x000A;7  libobjc.A.dylib          0x38a5f95c _ZL15_objc_terminatev&#x000A;8  libc++abi.dylib          0x384251b2 _ZSt11__terminatePFvvE&#x000A;9  libc++abi.dylib          0x38424d16 __cxa_rethrow&#x000A;10 libobjc.A.dylib          0x38a5f80e objc_exception_rethrow&#x000A;11 CoreFoundation           0x2e6364e6 CFRunLoopRunSpecific&#x000A;12 CoreFoundation           0x2e636252 CFRunLoopRunInMode&#x000A;13 GraphicsServices         0x333702ea GSEventRunModal&#x000A;14 UIKit                    0x30eeb844 UIApplicationMain&#x000A;15 CrashProbeiOS            0x000b714e main in main.m on Line 16&#x000A;16 libdyld.dylib            0x38f58ab6 start</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_arm64'>
-            <h2 class='cp-h2'>Testflight - arm64</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_arm64'>
+            <h2 class='cp-h2'>TestFlight - arm64</h2>
             <pre class='cp-featurecode'>SIGABRT&#x000A;&#x000A;0  CrashProbeiOS            0x1000bbecf testflight_backtrace&#x000A;1  CrashProbeiOS            0x1000bb4d3 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x18f81fb1b _sigtramp&#x000A;3  libsystem_pthread.dylib  0x18f8254a7 pthread_kill&#x000A;4  libsystem_c.dylib        0x18f73684b abort&#x000A;5  libc++abi.dylib          0x18e95c993 abort_message&#x000A;6  libc++abi.dylib          0x18e979c2b _ZL25default_terminate_handlerv&#x000A;7  libobjc.A.dylib          0x18f0be043 _ZL15_objc_terminatev&#x000A;8  libc++abi.dylib          0x18e977167 _ZSt11__terminatePFvvE&#x000A;9  libc++abi.dylib          0x18e976d3b __cxa_rethrow&#x000A;10 libobjc.A.dylib          0x18f0bdf23 objc_exception_rethrow&#x000A;11 CoreFoundation           0x182c85bb3 CFRunLoopRunSpecific&#x000A;12 GraphicsServices         0x18865782f GSEventRunModal&#x000A;13 UIKit                    0x185cc40e7 UIApplicationMain&#x000A;14 CrashProbeiOS            0x1000a8b7b main in main.m on Line 16&#x000A;15 libdyld.dylib            0x18f6a7a9f start&#x000A;16                          0xffffffffffffffff 0xffffffffffffffff</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7'>
@@ -404,7 +404,7 @@
         </div>
         <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed before 05/09/2014.<br/>Current data may be differ due to updates by the services.
+            All tests were performed and are accurate as of 05/09/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

@@ -138,7 +138,7 @@
           <li class='cp-os-macos'>
             <a href='/mac/'>
               <div></div>
-              Mac OS
+              OS X
             </a>
           </li>
         </ul>
@@ -297,16 +297,16 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','arm64');"></div>
                 </td>
               </tr>
-              <tr id='cp-Testflight'>
-                <td class='title'>Testflight</td>
+              <tr id='cp-TestFlight'>
+                <td class='title'>TestFlight</td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','armv7');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','armv7');"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','armv7s');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','armv7s');"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','arm64');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','arm64');"></div>
                 </td>
               </tr>
               <tr id='cp-Crittercism'>
@@ -371,16 +371,16 @@
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
             <pre class='cp-featurecode'></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7'>
-            <h2 class='cp-h2'>Testflight - armv7</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7'>
+            <h2 class='cp-h2'>TestFlight - armv7</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;0	CrashProbeiOS            0x0003d2c8 testflight_backtrace&#x000A;1	CrashProbeiOS            0x0003cb04 TFSignalHandler&#x000A;2	libsystem_platform.dylib 0x3829a062 _sigtramp&#x000A;3	CrashProbeiOS            0x00043a04 -[CRLCrashSmashStackBottom crash] in CRLCrashSmashStackBottom.m on Line 51</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7s'>
-            <h2 class='cp-h2'>Testflight - armv7s</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
+            <h2 class='cp-h2'>TestFlight - armv7s</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;0	CrashProbeiOS            0x0010e344 testflight_backtrace&#x000A;1	CrashProbeiOS            0x0010db84 TFSignalHandler&#x000A;2	libsystem_platform.dylib 0x39071722 _sigtramp&#x000A;3                          0x0000000b</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_arm64'>
-            <h2 class='cp-h2'>Testflight - arm64</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_arm64'>
+            <h2 class='cp-h2'>TestFlight - arm64</h2>
             <pre class='cp-featurecode'>SIGBUS&#x000A;&#x000A;0 CrashProbeiOS            0x10010becf testflight_backtrace&#x000A;1 CrashProbeiOS            0x10010b4d3 TFSignalHandler&#x000A;2 libsystem_platform.dylib 0x18f81fb1b _sigtramp&#x000A;3                          0xa5a5a5a5a5a5a5a4 0xa5a5a5a5a5a5a5a4</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7'>
@@ -404,7 +404,7 @@
         </div>
         <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed before 05/09/2014.<br/>Current data may be differ due to updates by the services.
+            All tests were performed and are accurate as of 05/09/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

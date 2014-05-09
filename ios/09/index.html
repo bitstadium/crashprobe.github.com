@@ -138,7 +138,7 @@
           <li class='cp-os-macos'>
             <a href='/mac/'>
               <div></div>
-              Mac OS
+              OS X
             </a>
           </li>
         </ul>
@@ -297,16 +297,16 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','arm64');"></div>
                 </td>
               </tr>
-              <tr id='cp-Testflight'>
-                <td class='title'>Testflight</td>
+              <tr id='cp-TestFlight'>
+                <td class='title'>TestFlight</td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','armv7');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','armv7');"></div>
                 </td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','armv7s');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','armv7s');"></div>
                 </td>
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Testflight','arm64');"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight','arm64');"></div>
                 </td>
               </tr>
               <tr id='cp-Crittercism'>
@@ -371,16 +371,16 @@
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0x0000000000000005&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0  libobjc.A.dylib  0x000000019183b9c8 objc_msgSend + 8 (respondsToSelector:)&#x000A;1  Foundation       0x0000000185f9169c _NSDescriptionWithLocaleFunc + 72&#x000A;2  CoreFoundation   0x00000001854d992c __CFStringAppendFormatCore + 6008&#x000A;3  CoreFoundation   0x000000018541dd68 _CFStringCreateWithFormatAndArgumentsAux + 120&#x000A;4  CoreFoundation   0x0000000185453588 _CFLogvEx + 144&#x000A;5  Foundation       0x0000000185fa37fc NSLogv + 112&#x000A;6  Foundation       0x0000000185fa3780 NSLog + 24&#x000A;7  CrashProbeiOS    0x000000010003f9a4 -[CRLCrashNSLog crash] (CRLCrashNSLog.m:41)&#x000A;8  CrashProbeiOS    0x000000010003f050 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;9  UIKit            0x0000000188414a94 -[UIApplication sendAction:to:from:forEvent:] + 100&#x000A;10 UIKit            0x0000000188414a28 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 24&#x000A;11 UIKit            0x00000001883fe244 -[UIControl _sendActionsForEvents:withEvent:] + 376&#x000A;12 UIKit            0x0000000188414428 -[UIControl touchesEnded:withEvent:] + 584&#x000A;13 UIKit            0x00000001883d16f0 _UIGestureRecognizerUpdate + 5032&#x000A;14 UIKit            0x000000018840f4ec -[UIWindow _sendGesturesForEvent:] + 1012&#x000A;15 UIKit            0x000000018840ec88 -[UIWindow sendEvent:] + 840&#x000A;16 UIKit            0x00000001883e07b8 -[UIApplication sendEvent:] + 256&#x000A;17 UIKit            0x00000001883de9c4 _UIApplicationHandleEventQueue + 8472&#x000A;18 CoreFoundation   0x00000001854cb77c __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 24&#x000A;19 CoreFoundation   0x00000001854caad8 __CFRunLoopDoSources0 + 256&#x000A;20 CoreFoundation   0x00000001854c8d70 __CFRunLoopRun + 632&#x000A;21 CoreFoundation   0x0000000185409b38 CFRunLoopRunSpecific + 452&#x000A;22 GraphicsServices 0x000000018addb830 GSEventRunModal + 168&#x000A;23 UIKit            0x00000001884480e8 UIApplicationMain + 1156&#x000A;24 CrashProbeiOS    0x000000010003e058 main (main.m:16)&#x000A;25 libdyld.dylib    0x0000000191e2baa0 start + 4</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7'>
-            <h2 class='cp-h2'>Testflight - armv7</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7'>
+            <h2 class='cp-h2'>TestFlight - armv7</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;0  CrashProbeiOS            0x000ba2c8 testflight_backtrace&#x000A;1  CrashProbeiOS            0x000b9b04 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x387ab062 _sigtramp&#x000A;3  Foundation               0x2e78b3a4 _NSDescriptionWithLocaleFunc&#x000A;4  CoreFoundation           0x2de49e6a __CFStringAppendFormatCore&#x000A;5  CoreFoundation           0x2ddb9370 _CFStringCreateWithFormatAndArgumentsAux&#x000A;6  CoreFoundation           0x2dde198a _CFLogvEx&#x000A;7  Foundation               0x2e79a3a2 NSLogv&#x000A;8  Foundation               0x2e79a33a NSLog&#x000A;9  CrashProbeiOS            0x000c088c -[CRLCrashNSLog crash] in CRLCrashNSLog.m on Line 41&#x000A;10 CrashProbeiOS            0x000abcc6 -[CRLDetailViewController doCrash] in CRLDetailViewController.m on Line 53&#x000A;11 UIKit                    0x3061b712 -[UIApplication sendAction:to:from:forEvent:]&#x000A;12 UIKit                    0x3061b6b2 -[UIApplication sendAction:toTarget:fromSender:forEvent:]&#x000A;13 UIKit                    0x3061b690 -[UIControl sendAction:to:forEvent:]&#x000A;14 UIKit                    0x3060711e -[UIControl _sendActionsForEvents:withEvent:]&#x000A;15 UIKit                    0x3061b106 -[UIControl touchesEnded:withEvent:]&#x000A;16 UIKit                    0x3061add8 -[UIWindow _sendTouchesForEvent:]&#x000A;17 UIKit                    0x30615e64 -[UIWindow sendEvent:]&#x000A;18 UIKit                    0x305eb79c -[UIApplication sendEvent:]&#x000A;19 UIKit                    0x305e9fa2 _UIApplicationHandleEventQueue&#x000A;20 CoreFoundation           0x2de3f182 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;21 CoreFoundation           0x2de3e652 __CFRunLoopDoSources0&#x000A;22 CoreFoundation           0x2de3ce46 __CFRunLoopRun&#x000A;23 CoreFoundation           0x2dda7c26 CFRunLoopRunSpecific&#x000A;24 CoreFoundation           0x2dda7a0a CFRunLoopRunInMode&#x000A;25 GraphicsServices         0x32a97282 GSEventRunModal&#x000A;26 UIKit                    0x3064b048 UIApplicationMain&#x000A;27 CrashProbeiOS            0x000ab08e main in main.m on Line 16&#x000A;28 libdyld.dylib            0x38690ab6 start</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_armv7s'>
-            <h2 class='cp-h2'>Testflight - armv7s</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
+            <h2 class='cp-h2'>TestFlight - armv7s</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;0  CrashProbeiOS            0x000da344 testflight_backtrace&#x000A;1	 CrashProbeiOS            0x000d9b84 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x39071722 _sigtramp&#x000A;3  Foundation               0x2f01a658 _NSDescriptionWithLocaleFunc&#x000A;4  CoreFoundation           0x2e6d8bee __CFStringAppendFormatCore&#x000A;5  CoreFoundation           0x2e647c4c _CFStringCreateWithFormatAndArgumentsAux&#x000A;6  CoreFoundation           0x2e6702f6 _CFLogvEx&#x000A;7  Foundation               0x2f029662 NSLogv&#x000A;8  Foundation               0x2f029602 NSLog&#x000A;9  CrashProbeiOS            0x000e08ac -[CRLCrashNSLog crash] in CRLCrashNSLog.m on Line 41&#x000A;10 CrashProbeiOS            0x000cbd86 -[CRLDetailViewController doCrash] in CRLDetailViewController.m on Line 53&#x000A;11 UIKit                    0x30ebbda2 -[UIApplication sendAction:to:from:forEvent:]&#x000A;12 UIKit                    0x30ebbd3e -[UIApplication sendAction:toTarget:fromSender:forEvent:]&#x000A;13 UIKit                    0x30ebbd12 -[UIControl sendAction:to:forEvent:]&#x000A;14 UIKit                    0x30ea7742 -[UIControl _sendActionsForEvents:withEvent:]&#x000A;15 UIKit                    0x30ebb75a -[UIControl touchesEnded:withEvent:]&#x000A;16 UIKit                    0x30ebb424 -[UIWindow _sendTouchesForEvent:]&#x000A;17 UIKit                    0x30eb6450 -[UIWindow sendEvent:]&#x000A;18 UIKit                    0x30e8bd78 -[UIApplication sendEvent:]&#x000A;19 UIKit                    0x30e8a568 _UIApplicationHandleEventQueue&#x000A;20 CoreFoundation           0x2e6cdf1e __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;21 CoreFoundation           0x2e6cd3e6 __CFRunLoopDoSources0&#x000A;22 CoreFoundation           0x2e6cbbd6 __CFRunLoopRun&#x000A;23 CoreFoundation           0x2e636470 CFRunLoopRunSpecific&#x000A;24 CoreFoundation           0x2e636252 CFRunLoopRunInMode&#x000A;25 GraphicsServices         0x333702ea GSEventRunModal&#x000A;26 UIKit                    0x30eeb844 UIApplicationMain&#x000A;27 CrashProbeiOS            0x000cb14e main in main.m on Line 16&#x000A;28 libdyld.dylib            0x38f58ab6 start</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Testflight_arm64'>
-            <h2 class='cp-h2'>Testflight - arm64</h2>
+          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_arm64'>
+            <h2 class='cp-h2'>TestFlight - arm64</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;0  CrashProbeiOS            0x100037ecf testflight_backtrace&#x000A;1  CrashProbeiOS            0x1000374d3 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x18f81fb1b _sigtramp&#x000A;3  Foundation               0x18380d69b _NSDescriptionWithLocaleFunc&#x000A;4  CoreFoundation           0x182d5592b __CFStringAppendFormatCore&#x000A;5  CoreFoundation           0x182c99d67 _CFStringCreateWithFormatAndArgumentsAux&#x000A;6  CoreFoundation           0x182ccf587 _CFLogvEx&#x000A;7  Foundation               0x18381f7fb NSLogv&#x000A;8  Foundation               0x18381f77f NSLog&#x000A;9  CrashProbeiOS            0x10003f913 -[CRLCrashNSLog crash] in CRLCrashNSLog.m on Line 41&#x000A;10 CrashProbeiOS            0x100025b67 -[CRLDetailViewController doCrash] in CRLDetailViewController.m on Line 53&#x000A;11 UIKit                    0x185c90a93 -[UIApplication sendAction:to:from:forEvent:]&#x000A;12 UIKit                    0x185c90a27 -[UIApplication sendAction:toTarget:fromSender:forEvent:]&#x000A;13 UIKit                    0x185c7a243 -[UIControl _sendActionsForEvents:withEvent:]&#x000A;14 UIKit                    0x185c90427 -[UIControl touchesEnded:withEvent:]&#x000A;15 UIKit                    0x185c4d6ef _UIGestureRecognizerUpdate&#x000A;16 UIKit                    0x185c8b4eb -[UIWindow _sendGesturesForEvent:]&#x000A;17 UIKit                    0x185c8ac87 -[UIWindow sendEvent:]&#x000A;18 UIKit                    0x185c5c7b7 -[UIApplication sendEvent:]&#x000A;19 UIKit                    0x185c5a9c3 _UIApplicationHandleEventQueue&#x000A;20 CoreFoundation           0x182d4777b __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;21 CoreFoundation           0x182d46ad7 __CFRunLoopDoSources0&#x000A;22 CoreFoundation           0x182d44d6f __CFRunLoopRun&#x000A;23 CoreFoundation           0x182c85b37 CFRunLoopRunSpecific&#x000A;24 GraphicsServices         0x18865782f GSEventRunModal&#x000A;25 UIKit                    0x185cc40e7 UIApplicationMain&#x000A;26 CrashProbeiOS            0x100024b7b main in main.m on Line 16&#x000A;27 libdyld.dylib            0x18f6a7a9f start&#x000A;28                          0xffffffffffffffff 0xffffffffffffffff</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7'>
@@ -404,7 +404,7 @@
         </div>
         <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed before 05/09/2014.<br/>Current data may be differ due to updates by the services.
+            All tests were performed and are accurate as of 05/09/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>
