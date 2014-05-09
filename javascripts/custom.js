@@ -1,1 +1,1 @@
-function showReport(e,r){$(".crashreport").hide();var t=$("#crashview_"+e+"_"+r);t.length>0&&(t[0].style.display="inline")}$(document).ready(function(){$("#cp-content").length>0&&($(".crashreport").hide(),$("#CrashReports_Description").show())});
+function showReport(e,t){$(".crashreport").hide();var o=$("#crashview_"+e+"_"+t);o.length>0&&(o[0].style.display="inline"),$("html, body").animate({scrollTop:$("#cp-featuretable").offset().top+"px"},"fast")}$(document).ready(function(){$("#cp-content").length>0&&($(".crashreport").hide(),$("#CrashReports_Description").show())});
