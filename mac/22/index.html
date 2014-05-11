@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Smash the bottom of the stack</title>
+    <title>Hold _pthread_list_lock</title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -158,7 +158,7 @@
               <li class='cp-mainfeature'>
                 async-safety
               </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
                 <a href='/mac/22/'>Hold pthread Lock</a>
               </li>
             </ul>
@@ -178,7 +178,7 @@
               <li class='cp-subfeature visible-lg visible-md visible-sm'>
                 <a href='/mac/04/'>Overwrite link register</a>
               </li>
-              <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
+              <li class='cp-subfeature visible-lg visible-md visible-sm'>
                 <a href='/mac/05/'>Smash stack bottom</a>
               </li>
               <li class='cp-subfeature visible-lg visible-md visible-sm'>
@@ -263,9 +263,9 @@
           </ul>
         </nav>
         <div class='col-xs-12 col-sm-8 col-md-9 col-sm-push-1' id='cp-featuredetail'>
-          <h1 class='cp-h1'>Smash the bottom of the stack</h1>
+          <h1 class='cp-h1'>Hold _pthread_list_lock</h1>
           <p class='cp-p'>
-            Overwrite data below the current stack pointer. This will destroy the current function.<br/>Reporting of this crash is expected to fail. Succeeding is basically luck.
+            Triggers a crash with libsystem_pthread's _pthread_list_lock held, causing non-async-safe crash reporters that use pthread APIs to deadlock.
           </p>
           <table class='col-xs-12' id='cp-featuretable'>
             <thead>
@@ -283,13 +283,13 @@
               </tr>
               <tr id='cp-Crashlytics'>
                 <td class='title'>Crashlytics</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64');"></div>
                 </td>
               </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>HockeyApp</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp','x86_64');"></div>
                 </td>
               </tr>
@@ -300,7 +300,7 @@
             <h2 class='cp-h2'>
               Expected Report Details:
             </h2>
-            <pre class='cp-featurecode'>-[CRLCrashSmashStackBottom crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashSmashStackBottom.m#L52">CRLCrashSmashStackBottom.m:52</a>)<br>-[CRLMainWindowController causeCrash:] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLMainWindowController.m#L72">CRLMainWindowController.m:72</a>)<br></pre>
+            <pre class='cp-featurecode'>-[CRLCrashAsyncSafeThread crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashAsyncSafeThread.m#L38">CRLCrashAsyncSafeThread.m:38</a>)<br>-[CRLMainWindowController causeCrash:] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLMainWindowController.m#L72">CRLMainWindowController.m:72</a>)<br></pre>
           </div>
           <div class='crashreport col-sm-12' id='CrashReports_Description'>
             <p class='cp-p'>
@@ -309,15 +309,15 @@
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x600000144410&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 net.hockeyapp.CrashLib 0x000000010b283a29 -[CRLCrashSmashStackBottom crash] + 43 (CRLCrashSmashStackBottom.m:52)&#x000A;1 ???                    0xa5a5a5a5a5a5a5a5 0 + 11936128518282651045&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: KERN_INVALID_ADDRESS at 0x0000000000000001&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60800015a410&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0  libsystem_platform.dylib 0x00007fff8c1f6040 _platform_memmove$VARIANT$Nehalem + 96&#x000A;1  libsystem_pthread.dylib  0x00007fff8a47cc00 pthread_getname_np + 105&#x000A;<span class="cp-wrong">2  net.hockeyapp.CrashLib   0x000000010854a01a -[CRLCrashAsyncSafeThread crash] + 27 (CRLCrashAsyncSafeThread.m:39)</span>&#x000A;3  net.hockeyapp.CrashProbe 0x0000000108539633 -[CRLMainWindowController causeCrash:] + 75 (CRLMainWindowController.m:72)&#x000A;4  com.apple.AppKit         0x00007fff8c6c5340 -[NSApplication sendAction:to:from:] + 327&#x000A;5  com.apple.AppKit         0x00007fff8c6c51be -[NSControl sendAction:to:] + 86&#x000A;6  com.apple.AppKit         0x00007fff8c711ced -[NSCell _sendActionFrom:] + 128&#x000A;7  com.apple.AppKit         0x00007fff8c72b6c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;8  com.apple.AppKit         0x00007fff8c72aa97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;9  com.apple.AppKit         0x00007fff8c72a1ad -[NSControl mouseDown:] + 706&#x000A;10 com.apple.AppKit         0x00007fff8c6abb48 -[NSWindow sendEvent:] + 11296&#x000A;11 com.apple.AppKit         0x00007fff8c64a6e4 -[NSApplication sendEvent:] + 2021&#x000A;12 net.hockeyapp.sdk.mac    0x000000010855e8b3 -[BITCrashExceptionApplication sendEvent:] + 40 (BITCrashExceptionApplication.m:87)&#x000A;13 com.apple.AppKit         0x00007fff8c49ab89 -[NSApplication run] + 646&#x000A;14 com.apple.AppKit         0x00007fff8c485913 NSApplicationMain + 940&#x000A;15 net.hockeyapp.CrashProbe 0x000000010853999c main + 9 (main.m:13)&#x000A;16 libdyld.dylib            0x00007fff8b21e5fd start + 1</pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 CrashLib 0x000000010b0bca29 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:52)&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report, app locks up.</span></pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 CrashLib 0x0000000102183a29 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:52)&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x1&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  libsystem_platform.dylib 0x00007fff8c1f6040 _platform_memmove$VARIANT$Nehalem + 96&#x000A;1  libsystem_pthread.dylib  0x00007fff8a47cc00 pthread_getname_np + 105&#x000A;2  CrashLib                 0x000000010551901a -[CRLCrashAsyncSafeThread crash] (CRLCrashAsyncSafeThread.m:38)&#x000A;3  CrashProbe               0x000000010550f5a3 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;4  AppKit                   0x00007fff8c6c5340 -[NSApplication sendAction:to:from:] + 327&#x000A;5  AppKit                   0x00007fff8c6c51be -[NSControl sendAction:to:] + 86&#x000A;6  AppKit                   0x00007fff8c711ced -[NSCell _sendActionFrom:] + 128&#x000A;7  AppKit                   0x00007fff8c72b6c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;8  AppKit                   0x00007fff8c72aa97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;9  AppKit                   0x00007fff8c72a1ad -[NSControl mouseDown:] + 706&#x000A;10 AppKit                   0x00007fff8c6abb48 -[NSWindow sendEvent:] + 11296&#x000A;11 AppKit                   0x00007fff8c64a6e4 -[NSApplication sendEvent:] + 2021&#x000A;12 HockeySDK                0x00000001055288b3 -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;13 AppKit                   0x00007fff8c49ab89 -[NSApplication run] + 646&#x000A;14 AppKit                   0x00007fff8c485913 NSApplicationMain + 940&#x000A;15 CrashProbe               0x000000010550f90c main (main.m:13)&#x000A;16 libdyld.dylib            0x00007fff8b21e5fd start + 1</pre>
           </div>
           <div class='clear'></div>
         </div>

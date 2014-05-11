@@ -29,6 +29,14 @@
           <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Menu</a>
           <ul class='dropdown-menu' id='cp-ul-mainfeatures-dropdown'>
             <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>async-safety</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/mac/22/'>Hold pthread Lock</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
               <a href='#'>esoteric</a>
               <ul class='dropdown-menu'>
                 <li>
@@ -148,6 +156,14 @@
           <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
             <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
               <li class='cp-mainfeature'>
+                async-safety
+              </li>
+              <li class='cp-subfeature visible-lg visible-md visible-sm'>
+                <a href='/mac/22/'>Hold pthread Lock</a>
+              </li>
+            </ul>
+            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+              <li class='cp-mainfeature'>
                 esoteric
               </li>
               <li class='cp-subfeature visible-lg visible-md visible-sm'>
@@ -254,7 +270,7 @@
           <p class='cp-p'>
             The tests have been done on the following device:
             <ol>
-              <li>iMac, OS X 10.9.2</li>
+              <li>iMac Late 2009, OS X 10.9.2</li>
             </ol>
           </p>
           <p class='cp-p'>
@@ -268,9 +284,9 @@
                 </th>
                 <th>
                   <div class='cp-chart cp-chart-mac-legend'>
-                    <div class='cp-chart-complete'>correct</div>
-                    <div class='cp-chart-incomplete'>improper</div>
-                    <div class='cp-chart-wrong'>wrong</div>
+                    <div class='cp-chart-complete'>accurate</div>
+                    <div class='cp-chart-incomplete'>imprecise</div>
+                    <div class='cp-chart-wrong'>insufficient</div>
                   </div>
                 </th>
               </tr>
@@ -282,9 +298,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 120px;'>12</div>
-                    <div class='cp-chart-incomplete' style='width: 60px;'>6</div>
-                    <div class='cp-chart-wrong' style='width: 30px;'>3</div>
+                    <div class='cp-chart-complete' style='width: 183px;'>10</div>
+                    <div class='cp-chart-incomplete' style='width: 164px;'>9</div>
+                    <div class='cp-chart-wrong' style='width: 55px;'>3</div>
                   </div>
                 </td>
               </tr>
@@ -295,9 +311,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 170px;'>17</div>
-                    <div class='cp-chart-incomplete' style='width: 20px;'>2</div>
-                    <div class='cp-chart-wrong' style='width: 20px;'>2</div>
+                    <div class='cp-chart-complete' style='width: 348px;'>19</div>
+                    <div class='cp-chart-incomplete' style='width: 18px;'>1</div>
+                    <div class='cp-chart-wrong' style='width: 36px;'>2</div>
                   </div>
                 </td>
               </tr>
@@ -308,9 +324,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 80px;'>8</div>
-                    <div class='cp-chart-incomplete' style='width: 90px;'>9</div>
-                    <div class='cp-chart-wrong' style='width: 40px;'>4</div>
+                    <div class='cp-chart-complete' style='width: 165px;'>9</div>
+                    <div class='cp-chart-incomplete' style='width: 146px;'>8</div>
+                    <div class='cp-chart-wrong' style='width: 91px;'>5</div>
                   </div>
                 </td>
               </tr>
@@ -324,7 +340,7 @@
         </div>
         <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/09/2014.
+            All tests were performed and are accurate as of 05/11/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

@@ -29,6 +29,14 @@
           <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Menu</a>
           <ul class='dropdown-menu' id='cp-ul-mainfeatures-dropdown'>
             <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>async-safety</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/22/'>Hold pthread Lock</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
               <a href='#'>esoteric</a>
               <ul class='dropdown-menu'>
                 <li>
@@ -146,6 +154,14 @@
       <div class='row' id='cp-content'>
         <nav class='col-xs-12 col-sm-3 col-md-2 hidden-xs' id='cp-featurenav'>
           <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
+            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+              <li class='cp-mainfeature'>
+                async-safety
+              </li>
+              <li class='cp-subfeature visible-lg visible-md visible-sm'>
+                <a href='/ios/22/'>Hold pthread Lock</a>
+              </li>
+            </ul>
             <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
               <li class='cp-mainfeature'>
                 esoteric
@@ -270,9 +286,9 @@
                 </th>
                 <th>
                   <div class='cp-chart cp-chart-ios-legend'>
-                    <div class='cp-chart-complete'>correct</div>
-                    <div class='cp-chart-incomplete'>improper</div>
-                    <div class='cp-chart-wrong'>wrong</div>
+                    <div class='cp-chart-complete'>accurate</div>
+                    <div class='cp-chart-incomplete'>imprecise</div>
+                    <div class='cp-chart-wrong'>insufficient</div>
                   </div>
                 </th>
               </tr>
@@ -284,9 +300,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 215px;'>44</div>
-                    <div class='cp-chart-incomplete' style='width: 15px;'>1</div>
-                    <div class='cp-chart-wrong' style='width: 85px;'>18</div>
+                    <div class='cp-chart-complete' style='width: 280px;'>47</div>
+                    <div class='cp-chart-incomplete' style='width: 13px;'>1</div>
+                    <div class='cp-chart-wrong' style='width: 109px;'>18</div>
                   </div>
                 </td>
               </tr>
@@ -297,9 +313,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 255px;'>51</div>
-                    <div class='cp-chart-incomplete' style='width: 25px;'>5</div>
-                    <div class='cp-chart-wrong' style='width: 35px;'>7</div>
+                    <div class='cp-chart-complete' style='width: 328px;'>54</div>
+                    <div class='cp-chart-incomplete' style='width: 31px;'>5</div>
+                    <div class='cp-chart-wrong' style='width: 43px;'>7</div>
                   </div>
                 </td>
               </tr>
@@ -310,9 +326,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 85px;'>17</div>
-                    <div class='cp-chart-incomplete' style='width: 165px;'>33</div>
-                    <div class='cp-chart-wrong' style='width: 65px;'>13</div>
+                    <div class='cp-chart-complete' style='width: 104px;'>17</div>
+                    <div class='cp-chart-incomplete' style='width: 201px;'>33</div>
+                    <div class='cp-chart-wrong' style='width: 97px;'>16</div>
                   </div>
                 </td>
               </tr>
@@ -323,9 +339,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 65px;'>13</div>
-                    <div class='cp-chart-incomplete' style='width: 85px;'>17</div>
-                    <div class='cp-chart-wrong' style='width: 165px;'>33</div>
+                    <div class='cp-chart-complete' style='width: 80px;'>13</div>
+                    <div class='cp-chart-incomplete' style='width: 103px;'>17</div>
+                    <div class='cp-chart-wrong' style='width: 219px;'>36</div>
                   </div>
                 </td>
               </tr>
@@ -336,9 +352,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 105px;'>21</div>
-                    <div class='cp-chart-incomplete' style='width: 115px;'>23</div>
-                    <div class='cp-chart-wrong' style='width: 95px;'>19</div>
+                    <div class='cp-chart-complete' style='width: 128px;'>21</div>
+                    <div class='cp-chart-incomplete' style='width: 158px;'>26</div>
+                    <div class='cp-chart-wrong' style='width: 116px;'>19</div>
                   </div>
                 </td>
               </tr>
@@ -352,7 +368,7 @@
         </div>
         <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/09/2014.
+            All tests were performed and are accurate as of 05/11/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

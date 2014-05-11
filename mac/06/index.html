@@ -29,6 +29,14 @@
           <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Menu</a>
           <ul class='dropdown-menu' id='cp-ul-mainfeatures-dropdown'>
             <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>async-safety</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/mac/22/'>Hold pthread Lock</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
               <a href='#'>esoteric</a>
               <ul class='dropdown-menu'>
                 <li>
@@ -146,6 +154,14 @@
       <div class='row' id='cp-content'>
         <nav class='col-xs-12 col-sm-3 col-md-2 hidden-xs' id='cp-featurenav'>
           <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
+            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+              <li class='cp-mainfeature'>
+                async-safety
+              </li>
+              <li class='cp-subfeature visible-lg visible-md visible-sm'>
+                <a href='/mac/22/'>Hold pthread Lock</a>
+              </li>
+            </ul>
             <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
               <li class='cp-mainfeature'>
                 esoteric
@@ -284,7 +300,7 @@
             <h2 class='cp-h2'>
               Expected Report Details:
             </h2>
-            <pre class='cp-featurecode'>-[CRLCrashSmashStackTop crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashSmashStackTop.m#L51">CRLCrashSmashStackTop.m:51</a>)<br></pre>
+            <pre class='cp-featurecode'>-[CRLCrashSmashStackTop crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashSmashStackTop.m#L51">CRLCrashSmashStackTop.m:51</a>)<br>-[CRLMainWindowController causeCrash:] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLMainWindowController.m#L72">CRLMainWindowController.m:72</a>)<br></pre>
           </div>
           <div class='crashreport col-sm-12' id='CrashReports_Description'>
             <p class='cp-p'>
@@ -293,15 +309,15 @@
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000015a2b0&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff88ce0f6d _platform_bzero$VARIANT$Merom + 93&#x000A;1 ???                      0xa5a5a5a5a5a5a5a5 0 + 11936128518282651045&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x600000154e20&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff8c1f6f6d _platform_bzero$VARIANT$Merom + 93&#x000A;1 ???                      0xa5a5a5a5a5a5a5a5 0 + 11936128518282651045&#x000A;<span class="cp-wrong">Missing frames</span></pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff882609f7 _platform_bzero$VARIANT$Ivybridge + 119&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff8c1f6f6d _platform_bzero$VARIANT$Ivybridge + 119&#x000A;<span class="cp-wrong">Missing frames</span></pre>
           </div>
           <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 libsystem_platform.dylib 0x00007fff88ce0f6d _platform_bzero$VARIANT$Merom + 93&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 libsystem_platform.dylib 0x00007fff8c1f6f6d _platform_bzero$VARIANT$Merom + 93&#x000A;<span class="cp-wrong">Missing frames</span></pre>
           </div>
           <div class='clear'></div>
         </div>
@@ -312,7 +328,7 @@
         </div>
         <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/09/2014.
+            All tests were performed and are accurate as of 05/11/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>
