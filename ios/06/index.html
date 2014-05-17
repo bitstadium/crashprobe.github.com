@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Smash the bottom of the stack</title>
+    <title>CrashProbe - Presented by HockeyApp - Smash the bottom of the stack</title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class='container'>
+    <div class='container' id='content-container'>
       <div class='row' id='cp-header'>
-        <div class='col-xs-3 col-md-2' id='cp-logo'>
+        <div class='col-xs-3 col-md-2 col-md-push-1' id='cp-logo'>
           <a href='/'>
             <div id='cp-logo-image'></div>
           </a>
         </div>
-        <div class='col-xs-8 col-sm-push-1 col-md-9 col-md-push-1' id='cp-presentor'>
+        <div class='col-xs-8 col-xs-push-1 col-sm-push-1 col-md-8 col-md-push-1' id='cp-presentor'>
           <a href='http://hockeyapp.net/features/'>
             <div id='cp-banner-hockeyapp'></div>
           </a>
@@ -133,7 +133,7 @@
             </li>
           </ul>
         </nav>
-        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6' id='cp-os-selector'>
+        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
           <li class='cp-active-os cp-os-ios'>
             <a href='/ios/'>
               <div></div>
@@ -149,114 +149,112 @@
         </ul>
       </div>
       <div class='row' id='cp-content'>
-        <nav class='col-xs-12 col-sm-3 col-md-2 hidden-xs' id='cp-featurenav'>
-          <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                async-safety
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/01/'>Hold pthread Lock</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                esoteric
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/02/'>Corrupt Malloc</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/03/'>Corrupt ObjC</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/04/'>DWARF Unwinding</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/05/'>Overwrite Link Register</a>
-              </li>
-              <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/06/'>Smash Stack Bottom</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/07/'>Smash Stack Top</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                exceptions
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/08/'>C++ Exception</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/09/'>Objective-C Exception</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                objective-c
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/10/'>Access Non-Object</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/11/'>Inside objc_msgSend</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/12/'>Released Object</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigbus
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/13/'>Read-Only Page</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigill
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/14/'>Privileged Instruction</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/15/'>Undefined Instruction</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigsegv
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/16/'>NULL Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/17/'>Bad Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/18/'>NX Page</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/19/'>Stack Overflow</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigtrap
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/20/'>Call __builtin_trap</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/21/'>Call abort</a>
-              </li>
-            </ul>
+        <nav class='col-xs-12 col-sm-3 col-md-2 col-md-push-1 hidden-xs' id='cp-featurenav'>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              async-safety
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/01/'>Hold pthread Lock</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              esoteric
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/02/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/03/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/04/'>DWARF Unwinding</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/05/'>Overwrite Link Register</a>
+            </li>
+            <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/06/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/07/'>Smash Stack Top</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              exceptions
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/08/'>C++ Exception</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/09/'>Objective-C Exception</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              objective-c
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/10/'>Access Non-Object</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/11/'>Inside objc_msgSend</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/12/'>Released Object</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigbus
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/13/'>Read-Only Page</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigill
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/14/'>Privileged Instruction</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/15/'>Undefined Instruction</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigsegv
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/16/'>NULL Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/17/'>Bad Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/18/'>NX Page</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/19/'>Stack Overflow</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigtrap
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/20/'>Call __builtin_trap</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/21/'>Call abort</a>
+            </li>
           </ul>
         </nav>
-        <div class='col-xs-12 col-sm-8 col-md-9 col-sm-push-1' id='cp-featuredetail'>
+        <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'>Smash the bottom of the stack</h1>
           <p class='cp-p'>
             Overwrite data below the current stack pointer. This will destroy the current stack frame.<br/>Reporting of this crash is expected to fail. Succeeding is basically luck.
@@ -334,87 +332,90 @@
             </tbody>
           </table>
           <div class='clear'></div>
-          <div class='col-sm-12'>
+          <div class='cp-featurecode col-xs-12'>
             <h2 class='cp-h2'>
               Expected Report Details:
             </h2>
             <pre class='cp-featurecode'>-[CRLCrashSmashStackBottom crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashSmashStackBottom.m#L54">CRLCrashSmashStackBottom.m:54</a>)<br></pre>
           </div>
-          <div class='crashreport col-sm-12' id='CrashReports_Description'>
+          <div class='crashreport col-xs-12' id='CrashReports_Description'>
             <p class='cp-p'>
               Click on a button above to see the crashing threads stack trace with further annotation.
             </p>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???           0xa5a5a5a4 0x0 + 0&#x000A;1 CrashProbeiOS 0x001197d5 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7s'>
             <h2 class='cp-h2'>HockeyApp - armv7s</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a4 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0xa5a5a5a5a5a5a5a5&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a5a5a5a5a5 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x38633808 kevent64 + 24&#x000A;1 libdispatch.dylib      0x38575078 _dispatch_mgr_invoke + 228&#x000A;2 libdispatch.dylib      0x38574dfe _dispatch_mgr_thread$VARIANT$mp + 34&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7s'>
             <h2 class='cp-h2'>Apple - armv7s</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x3a60b804 kevent64 + 24&#x000A;1 libdispatch.dylib      0x3a55a050 _dispatch_mgr_invoke + 228&#x000A;2 libdispatch.dylib      0x3a5542de _dispatch_mgr_thread + 34&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
             <h2 class='cp-h2'>Apple - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Subtype: EXC_ARM_DA_ALIGN at 0xa5a5a5a5a5a5a5a5&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x0000000192cb9aa8 kevent64 + 8&#x000A;1 libdispatch.dylib      0x0000000192bbd998 _dispatch_mgr_thread + 48&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
             <h2 class='cp-h2'>Crashlytics - armv7</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 ???           0xa5a5a5a4 &#x000A;1 CrashProbeiOS 0x000f1131 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7s'>
             <h2 class='cp-h2'>Crashlytics - armv7s</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7'>
             <h2 class='cp-h2'>Crittercism - armv7</h2>
             <pre class='cp-featurecode'>Name: SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7s'>
             <h2 class='cp-h2'>Crittercism - armv7s</h2>
             <pre class='cp-featurecode'>Name: SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_arm64'>
             <h2 class='cp-h2'>Crittercism - arm64</h2>
             <pre class='cp-featurecode'>Name: SIGBUS&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_armv7'>
             <h2 class='cp-h2'>TestFlight - armv7</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;0	CrashProbeiOS	0x00022fd8	testflight_backtrace&#x000A;1	CrashProbeiOS	0x00022814	TFSignalHandler&#x000A;2	libsystem_platform.dylib	0x386aaf92	_sigtramp&#x000A;3	CrashProbeiOS	0x000296cc	-[CRLCrashSmashStackBottom crash] in CRLCrashSmashStackBottom.m on Line 54</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
             <h2 class='cp-h2'>TestFlight - armv7s</h2>
             <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;0 CrashProbeiOS            0x0003f044 testflight_backtrace&#x000A;1 CrashProbeiOS            0x0003e884 TFSignalHandler&#x000A;2 libsystem_platform.dylib 0x3a681722 _sigtramp&#x000A;3                          0x0000000b&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_arm64'>
             <h2 class='cp-h2'>TestFlight - arm64</h2>
             <pre class='cp-featurecode'>SIGBUS&#x000A;&#x000A;Crashed Thread:&#x000A;0 CrashProbeiOS            0x1000dfbef testflight_backtrace&#x000A;1 CrashProbeiOS            0x1000df1f3 TFSignalHandler&#x000A;2 libsystem_platform.dylib 0x192d4fb1b _sigtramp&#x000A;3                          0xa5a5a5a5a5a5a5a4 0xa5a5a5a5a5a5a5a4&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='clear'></div>
         </div>
       </div>
-      <div class='row' id='cp-footer'>
-        <div class='col-xs-3' id='cp-copyright'>
+      <div class='content-pusher'></div>
+    </div>
+    <div class='container'>
+      <div class='footer-wrapper row' id='cp-footer'>
+        <div class='col-xs-3 col-md-push-1' id='cp-copyright'>
           &copy; 2014 Bit Stadium GmbH
         </div>
-        <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
+        <div class='col-xs-5 col-md-push-1' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/11/2014.
+            All tests were performed and are accurate as of 05/15/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

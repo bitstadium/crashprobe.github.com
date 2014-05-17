@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Throw C++ exception</title>
+    <title>CrashProbe - Presented by HockeyApp - Throw C++ exception</title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class='container'>
+    <div class='container' id='content-container'>
       <div class='row' id='cp-header'>
-        <div class='col-xs-3 col-md-2' id='cp-logo'>
+        <div class='col-xs-3 col-md-2 col-md-push-1' id='cp-logo'>
           <a href='/'>
             <div id='cp-logo-image'></div>
           </a>
         </div>
-        <div class='col-xs-8 col-sm-push-1 col-md-9 col-md-push-1' id='cp-presentor'>
+        <div class='col-xs-8 col-xs-push-1 col-sm-push-1 col-md-8 col-md-push-1' id='cp-presentor'>
           <a href='http://hockeyapp.net/features/'>
             <div id='cp-banner-hockeyapp'></div>
           </a>
@@ -133,7 +133,7 @@
             </li>
           </ul>
         </nav>
-        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6' id='cp-os-selector'>
+        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
           <li class='cp-active-os cp-os-ios'>
             <a href='/ios/'>
               <div></div>
@@ -149,114 +149,112 @@
         </ul>
       </div>
       <div class='row' id='cp-content'>
-        <nav class='col-xs-12 col-sm-3 col-md-2 hidden-xs' id='cp-featurenav'>
-          <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                async-safety
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/01/'>Hold pthread Lock</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                esoteric
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/02/'>Corrupt Malloc</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/03/'>Corrupt ObjC</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/04/'>DWARF Unwinding</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/05/'>Overwrite Link Register</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/06/'>Smash Stack Bottom</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/07/'>Smash Stack Top</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                exceptions
-              </li>
-              <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/08/'>C++ Exception</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/09/'>Objective-C Exception</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                objective-c
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/10/'>Access Non-Object</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/11/'>Inside objc_msgSend</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/12/'>Released Object</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigbus
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/13/'>Read-Only Page</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigill
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/14/'>Privileged Instruction</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/15/'>Undefined Instruction</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigsegv
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/16/'>NULL Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/17/'>Bad Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/18/'>NX Page</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/19/'>Stack Overflow</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigtrap
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/20/'>Call __builtin_trap</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/21/'>Call abort</a>
-              </li>
-            </ul>
+        <nav class='col-xs-12 col-sm-3 col-md-2 col-md-push-1 hidden-xs' id='cp-featurenav'>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              async-safety
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/01/'>Hold pthread Lock</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              esoteric
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/02/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/03/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/04/'>DWARF Unwinding</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/05/'>Overwrite Link Register</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/06/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/07/'>Smash Stack Top</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              exceptions
+            </li>
+            <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/08/'>C++ Exception</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/09/'>Objective-C Exception</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              objective-c
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/10/'>Access Non-Object</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/11/'>Inside objc_msgSend</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/12/'>Released Object</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigbus
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/13/'>Read-Only Page</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigill
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/14/'>Privileged Instruction</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/15/'>Undefined Instruction</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigsegv
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/16/'>NULL Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/17/'>Bad Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/18/'>NX Page</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/19/'>Stack Overflow</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigtrap
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/20/'>Call __builtin_trap</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/21/'>Call abort</a>
+            </li>
           </ul>
         </nav>
-        <div class='col-xs-12 col-sm-8 col-md-9 col-sm-push-1' id='cp-featuredetail'>
+        <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'>Throw C++ exception</h1>
           <p class='cp-p'>
             Throw an uncaught C++ exception.<br/><br/>This is a difficult case for crash reporters to handle, as it involves the destruction of the data necessary to generate a correct backtrace.
@@ -334,87 +332,90 @@
             </tbody>
           </table>
           <div class='clear'></div>
-          <div class='col-sm-12'>
+          <div class='cp-featurecode col-xs-12'>
             <h2 class='cp-h2'>
               Expected Report Details:
             </h2>
             <pre class='cp-featurecode'>kaboom_exception<br>CRLCrashCXXException (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashCXXException.m#L32">CRLCrashCXXException.m:32</a>)<br>-[CRLDetailViewController doCrash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe%20iOS/CRLDetailViewController.m#L53">CRLDetailViewController.m:53</a>)<br></pre>
           </div>
-          <div class='crashreport col-sm-12' id='CrashReports_Description'>
+          <div class='crashreport col-xs-12' id='CrashReports_Description'>
             <p class='cp-p'>
               Click on a button above to see the crashing threads stack trace with further annotation.
             </p>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x386461f0&#x000A;Crashed Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x386461f0 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x386b0797 pthread_kill + 56&#x000A;2  libsystem_c.dylib       0x385f6fdd abort + 74&#x000A;3  libc++abi.dylib         0x37925cd7 abort_message + 72&#x000A;4  libc++abi.dylib         0x3793e6e5 default_terminate_handler() + 250&#x000A;5  libobjc.A.dylib         0x38083f89 _objc_terminate() + 226&#x000A;6  libc++abi.dylib         0x3793c1c7 std::__terminate(void (*)()) + 76&#x000A;7  libc++abi.dylib         0x3793bd2d __cxa_rethrow + 98&#x000A;8  libobjc.A.dylib         0x38083e17 objc_exception_rethrow + 40&#x000A;9  CoreFoundation          0x2d86cf85 CFRunLoopRunSpecific + 638&#x000A;10 CoreFoundation          0x2d86ccf3 CFRunLoopRunInMode + 104&#x000A;11 GraphicsServices        0x3278e663 GSEventRunModal + 136&#x000A;12 UIKit                   0x301b816d UIApplicationMain + 1134&#x000A;13 CrashProbeiOS           0x00062ecf main (main.m:16)&#x000A;14 libdyld.dylib           0x38590ab7 start + 0</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7s'>
             <h2 class='cp-h2'>HockeyApp - armv7s</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x3a61e1f0&#x000A;Crashed Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x3a61e1f0 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x3a6867b7 pthread_kill + 56&#x000A;2  libsystem_c.dylib       0x3a5ceff9 abort + 74&#x000A;3  libc++abi.dylib         0x39a1d98f abort_message + 72&#x000A;4  libc++abi.dylib         0x39a366e7 default_terminate_handler() + 252&#x000A;5  libobjc.A.dylib         0x3a069fa1 _objc_terminate() + 226&#x000A;6  libc++abi.dylib         0x39a341b3 std::__terminate(void (*)()) + 76&#x000A;7  libc++abi.dylib         0x39a33d17 __cxa_rethrow + 100&#x000A;8  libobjc.A.dylib         0x3a069e2f objc_exception_rethrow + 40&#x000A;9  CoreFoundation          0x2f8067df CFRunLoopRunSpecific + 640&#x000A;10 CoreFoundation          0x2f80654b CFRunLoopRunInMode + 104&#x000A;11 GraphicsServices        0x347736d3 GSEventRunModal + 136&#x000A;12 UIKit                   0x32165891 UIApplicationMain + 1134&#x000A;13 CrashProbeiOS           0x00080eff main (main.m:16)&#x000A;14 libdyld.dylib           0x3a567ab7 start + 0</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x192cd258c&#x000A;Crashed Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x0000000192cd258c __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x0000000192d5516c pthread_kill + 100&#x000A;2  libsystem_c.dylib       0x0000000192c66808 abort + 108&#x000A;3  libc++abi.dylib         0x0000000191e8c994 abort_message + 84&#x000A;4  libc++abi.dylib         0x0000000191ea9c2c default_terminate_handler() + 296&#x000A;5  libobjc.A.dylib         0x00000001925e44f0 _objc_terminate() + 152&#x000A;6  libc++abi.dylib         0x0000000191ea7168 std::__terminate(void (*)()) + 12&#x000A;7  libc++abi.dylib         0x0000000191ea6d3c __cxa_rethrow + 140&#x000A;8  libobjc.A.dylib         0x00000001925e43a8 objc_exception_rethrow + 40&#x000A;9  CoreFoundation          0x0000000185c29c9c CFRunLoopRunSpecific + 572&#x000A;10 GraphicsServices        0x000000018b8b9c0c GSEventRunModal + 164&#x000A;11 UIKit                   0x0000000188d5afdc UIApplicationMain + 1152&#x000A;12 CrashProbeiOS           0x00000001000b75b0 main (main.m:16)&#x000A;13 libdyld.dylib           0x0000000192bd7aa0 start + 0</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_CRASH (SIGABRT)&#x000A;Exception Codes: 0x0000000000000000, 0x0000000000000000&#x000A;Triggered by Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x386461f0 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x386b0792 pthread_kill + 54&#x000A;2  libsystem_c.dylib       0x385f6fd8 abort + 72&#x000A;3  libc++abi.dylib         0x37925cd2 abort_message + 70&#x000A;4  libc++abi.dylib         0x3793e6e0 default_terminate_handler() + 248&#x000A;5  libobjc.A.dylib         0x38083f86 _objc_terminate() + 226&#x000A;6  libc++abi.dylib         0x3793c1c4 std::__terminate(void (*)()) + 76&#x000A;7  libc++abi.dylib         0x3793bd28 __cxa_rethrow + 96&#x000A;8  libobjc.A.dylib         0x38083e12 objc_exception_rethrow + 38&#x000A;9  CoreFoundation          0x2d86cf80 CFRunLoopRunSpecific + 636&#x000A;10 CoreFoundation          0x2d86ccee CFRunLoopRunInMode + 102&#x000A;11 GraphicsServices        0x3278e65e GSEventRunModal + 134&#x000A;12 UIKit                   0x301b8168 UIApplicationMain + 1132&#x000A;13 CrashProbeiOS           0x0003dfb2 main (main.m:16)&#x000A;14 libdyld.dylib           0x38590ab4 start + 0</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7s'>
             <h2 class='cp-h2'>Apple - armv7s</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_CRASH (SIGABRT)&#x000A;Exception Codes: 0x0000000000000000, 0x0000000000000000&#x000A;Triggered by Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x3a61e1f0 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x3a6867b2 pthread_kill + 54&#x000A;2  libsystem_c.dylib       0x3a5ceff4 abort + 72&#x000A;3  libc++abi.dylib         0x39a1d98a abort_message + 70&#x000A;4  libc++abi.dylib         0x39a366e2 default_terminate_handler() + 250&#x000A;5  libobjc.A.dylib         0x3a069f9e _objc_terminate() + 226&#x000A;6  libc++abi.dylib         0x39a341b0 std::__terminate(void (*)()) + 76&#x000A;7  libc++abi.dylib         0x39a33d12 __cxa_rethrow + 98&#x000A;8  libobjc.A.dylib         0x3a069e2a objc_exception_rethrow + 38&#x000A;9  CoreFoundation          0x2f8067da CFRunLoopRunSpecific + 638&#x000A;10 CoreFoundation          0x2f806546 CFRunLoopRunInMode + 102&#x000A;11 GraphicsServices        0x347736ce GSEventRunModal + 134&#x000A;12 UIKit                   0x3216588c UIApplicationMain + 1132&#x000A;13 CrashProbeiOS           0x0003dfe2 main (main.m:16)&#x000A;14 libdyld.dylib           0x3a567ab4 start + 0</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
             <h2 class='cp-h2'>Apple - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_CRASH (SIGABRT)&#x000A;Exception Codes: 0x0000000000000000, 0x0000000000000000&#x000A;Triggered by Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib 0x0000000192cd258c __pthread_kill + 8&#x000A;1  libsystem_c.dylib      0x0000000192c66804 abort + 108&#x000A;2  libc++abi.dylib        0x0000000191e8c990 abort_message + 84&#x000A;3  libc++abi.dylib        0x0000000191ea9c28 default_terminate_handler() + 296&#x000A;4  libobjc.A.dylib        0x00000001925e44ec _objc_terminate() + 152&#x000A;5  libc++abi.dylib        0x0000000191ea7164 std::__terminate(void (*)()) + 12&#x000A;6  libc++abi.dylib        0x0000000191ea6d38 __cxa_rethrow + 140&#x000A;7  libobjc.A.dylib        0x00000001925e43a4 objc_exception_rethrow + 40&#x000A;8  CoreFoundation         0x0000000185c29c98 CFRunLoopRunSpecific + 572&#x000A;9  GraphicsServices       0x000000018b8b9c08 GSEventRunModal + 164&#x000A;10 UIKit                  0x0000000188d5afd8 UIApplicationMain + 1152&#x000A;11 CrashProbeiOS          0x000000010009f6d8 main (main.m:16)&#x000A;12 libdyld.dylib          0x0000000192bd7a9c start + 0</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
             <h2 class='cp-h2'>Crashlytics - armv7</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;SIGABRT ABORT at 0x37e5c1fc&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x386461f0 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x386b0797 pthread_kill + 58&#x000A;2  libsystem_c.dylib       0x385f6fdd abort + 76&#x000A;3  libc++abi.dylib         0x37925cd7 abort_message + 74&#x000A;4  libc++abi.dylib         0x3793e6e5 default_terminate_handler() + 252&#x000A;5  libobjc.A.dylib         0x38083f89 _objc_terminate() + 228&#x000A;6  libc++abi.dylib         0x3793c1c7 std::__terminate(void (*)()) + 78&#x000A;7  libc++abi.dylib         0x3793bd2d __cxa_increment_exception_refcount&#x000A;8  libobjc.A.dylib         0x38083e17 objc_exception_rethrow + 42&#x000A;9  CoreFoundation          0x2d86cf85 CFRunLoopRunSpecific + 640&#x000A;10 CoreFoundation          0x2d86ccf3 CFRunLoopRunInMode + 106&#x000A;11 GraphicsServices        0x3278e663 GSEventRunModal + 138&#x000A;12 UIKit                   0x301b816d UIApplicationMain + 1136&#x000A;13 CrashProbeiOS           0x00081ccf main (main.m:16)</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7s'>
             <h2 class='cp-h2'>Crashlytics - armv7s</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;SIGABRT ABORT at 0x3ad551fc&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x3a61e1f0 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x3a6867b7 pthread_kill + 58&#x000A;2  libsystem_c.dylib       0x3a5ceff9 abort + 76&#x000A;3  libc++abi.dylib         0x39a1d98f abort_message + 74&#x000A;4  libc++abi.dylib         0x39a366e7 default_terminate_handler() + 254&#x000A;5  libobjc.A.dylib         0x3a069fa1 _objc_terminate() + 228&#x000A;6  libc++abi.dylib         0x39a341b3 std::__terminate(void (*)()) + 78&#x000A;7  libc++abi.dylib         0x39a33d17 __cxa_rethrow + 102&#x000A;8  libobjc.A.dylib         0x3a069e2f objc_exception_rethrow + 42&#x000A;9  CoreFoundation          0x2f8067df CFRunLoopRunSpecific + 642&#x000A;10 CoreFoundation          0x2f80654b CFRunLoopRunInMode + 106&#x000A;11 GraphicsServices        0x347736d3 GSEventRunModal + 138&#x000A;12 UIKit                   0x32165891 UIApplicationMain + 1136&#x000A;13 CrashProbeiOS           0x00087d17 main (main.m:16)</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;SIGABRT ABORT at 0x0000000191f2658c&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x0000000192cd258c __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x0000000192d5516c pthread_kill + 104&#x000A;2  libsystem_c.dylib       0x0000000192c66808 abort + 112&#x000A;3  libc++abi.dylib         0x0000000191e8c994 __cxa_bad_cast&#x000A;4  libc++abi.dylib         0x0000000191ea9c2c default_unexpected_handler()&#x000A;5  libobjc.A.dylib         0x00000001925e44f0 _objc_terminate() + 156&#x000A;6  libc++abi.dylib         0x0000000191ea7168 std::__terminate(void (*)()) + 16&#x000A;7  libc++abi.dylib         0x0000000191ea6d3c __cxa_rethrow + 144&#x000A;8  libobjc.A.dylib         0x00000001925e43a8 objc_exception_rethrow + 44&#x000A;9  CoreFoundation          0x0000000185c29c9c CFRunLoopRunSpecific + 576&#x000A;10 GraphicsServices        0x000000018b8b9c0c GSEventRunModal + 168&#x000A;11 UIKit                   0x0000000188d5afdc UIApplicationMain + 1156&#x000A;12 CrashProbeiOS           0x000000010001fb60 main (main.m:16)&#x000A;13 libdyld.dylib           0x0000000192bd7aa0 start + 4</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7'>
             <h2 class='cp-h2'>Crittercism - armv7</h2>
             <pre class='cp-featurecode'>Name: SIGABRT&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib 0x386461f0 __pthread_kill + 8&#x000A;1  libsystem_c.dylib      0x385f6fdd abort + 77&#x000A;2  libc++abi.dylib        0x37925cd7 abort_message + 75&#x000A;3  libc++abi.dylib        0x3793e6e5 _ZL25default_terminate_handlerv + 253&#x000A;4  libobjc.A.dylib        0x38083f89 _ZL15_objc_terminatev + 229&#x000A;5  libc++abi.dylib        0x3793c1c7 _ZSt11__terminatePFvvE + 79&#x000A;6  libc++abi.dylib        0x3793bd2d __cxa_increment_exception_refcount + 1&#x000A;7  libobjc.A.dylib        0x38083e17 objc_exception_rethrow + 43&#x000A;8  CoreFoundation         0x2d86cf85 CFRunLoopRunSpecific + 641&#x000A;9  CoreFoundation         0x2d86ccf3 CFRunLoopRunInMode + 107&#x000A;10 GraphicsServices       0x3278e663 GSEventRunModal + 139&#x000A;11 UIKit                  0x301b816d UIApplicationMain + 1137&#x000A;12 CrashProbeiOS          0x000c5427 main (main.m:16)&#x000A;13 libdyld.dylib          0x38590ab7 start + 3</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7s'>
             <h2 class='cp-h2'>Crittercism - armv7s</h2>
             <pre class='cp-featurecode'>Name: SIGABRT&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib 0x3a61e1f0 __pthread_kill + 8&#x000A;1  libsystem_c.dylib      0x3a5ceff9 abort + 77&#x000A;2  libc++abi.dylib        0x39a1d98f abort_message + 75&#x000A;3  libc++abi.dylib        0x39a366e7 _ZL25default_terminate_handlerv + 255&#x000A;4  libobjc.A.dylib        0x3a069fa1 _ZL15_objc_terminatev + 229&#x000A;5  libc++abi.dylib        0x39a341b3 _ZSt11__terminatePFvvE + 79&#x000A;6  libc++abi.dylib        0x39a33d17 __cxa_rethrow + 103&#x000A;7  libobjc.A.dylib        0x3a069e2f objc_exception_rethrow + 43&#x000A;8  CoreFoundation         0x2f8067df CFRunLoopRunSpecific + 643&#x000A;9  CoreFoundation         0x2f80654b CFRunLoopRunInMode + 107&#x000A;10 GraphicsServices       0x347736d3 GSEventRunModal + 139&#x000A;11 UIKit                  0x32165891 UIApplicationMain + 1137&#x000A;12 CrashProbeiOS          0x0003d457 main (main.m:16)&#x000A;13 libdyld.dylib          0x3a567ab7 start + 3</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crittercism_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_arm64'>
             <h2 class='cp-h2'>Crittercism - arm64</h2>
             <pre class='cp-featurecode'>Name: SIGABRT&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib 0x0000000192cd258c __pthread_kill + 8&#x000A;1  libsystem_c.dylib      0x0000000192c66808 abort + 112&#x000A;2  libc++abi.dylib        0x0000000191e8c994 __cxa_bad_cast + 0&#x000A;3  libc++abi.dylib        0x0000000191ea9c2c _ZL26default_unexpected_handlerv + 0&#x000A;4  libobjc.A.dylib        0x00000001925e44f0 _ZL15_objc_terminatev + 156&#x000A;5  libc++abi.dylib        0x0000000191ea7168 _ZSt11__terminatePFvvE + 16&#x000A;6  libc++abi.dylib        0x0000000191ea6d3c __cxa_rethrow + 144&#x000A;7  libobjc.A.dylib        0x00000001925e43a8 objc_exception_rethrow + 44&#x000A;8  CoreFoundation         0x0000000185c29c9c CFRunLoopRunSpecific + 576&#x000A;9  GraphicsServices       0x000000018b8b9c0c GSEventRunModal + 168&#x000A;10 UIKit                  0x0000000188d5afdc UIApplicationMain + 1156&#x000A;11 CrashProbeiOS          0x000000010004181c main (main.m:16)&#x000A;12 libdyld.dylib          0x0000000192bd7aa0 start + 4</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_armv7'>
             <h2 class='cp-h2'>TestFlight - armv7</h2>
             <pre class='cp-featurecode'>SIGABRT&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  CrashProbeiOS            0x00101fd8	testflight_backtrace&#x000A;1  CrashProbeiOS            0x00101814	TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x386aaf92	_sigtramp&#x000A;3  libsystem_pthread.dylib  0x386b0796	pthread_kill&#x000A;4  libsystem_c.dylib        0x385f6fdc	abort&#x000A;5  libc++abi.dylib          0x37925cd6	abort_message&#x000A;6  libc++abi.dylib          0x3793e6e4	_ZL25default_terminate_handlerv&#x000A;7  libobjc.A.dylib          0x38083f88	_ZL15_objc_terminatev&#x000A;8  libc++abi.dylib          0x3793c1c6	_ZSt11__terminatePFvvE&#x000A;9  libc++abi.dylib          0x3793bd2c	__cxa_increment_exception_refcount&#x000A;10 libobjc.A.dylib          0x38083e16	objc_exception_rethrow&#x000A;11 CoreFoundation           0x2d86cf84	CFRunLoopRunSpecific&#x000A;12 CoreFoundation           0x2d86ccf2	CFRunLoopRunInMode&#x000A;13 GraphicsServices         0x3278e662	GSEventRunModal&#x000A;14 UIKit                    0x301b816c	UIApplicationMain&#x000A;15 CrashProbeiOS            0x000f2d7e	main in main.m on Line 16&#x000A;16 libdyld.dylib            0x38590ab6</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
             <h2 class='cp-h2'>TestFlight - armv7s</h2>
             <pre class='cp-featurecode'>SIGABRT&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  CrashProbeiOS            0x00027044	testflight_backtrace&#x000A;1  CrashProbeiOS            0x00026884	TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x3a681722	_sigtramp&#x000A;3  libsystem_pthread.dylib  0x3a6867b6	pthread_kill&#x000A;4  libsystem_c.dylib        0x3a5ceff8	abort&#x000A;5  libc++abi.dylib          0x39a1d98e	abort_message&#x000A;6  libc++abi.dylib          0x39a366e6	_ZL25default_terminate_handlerv&#x000A;7  libobjc.A.dylib          0x3a069fa0	_ZL15_objc_terminatev&#x000A;8  libc++abi.dylib          0x39a341b2	_ZSt11__terminatePFvvE&#x000A;9  libc++abi.dylib          0x39a33d16	__cxa_rethrow&#x000A;10 libobjc.A.dylib          0x3a069e2e	objc_exception_rethrow&#x000A;11 CoreFoundation           0x2f8067de	CFRunLoopRunSpecific&#x000A;12 CoreFoundation           0x2f80654a	CFRunLoopRunInMode&#x000A;13 GraphicsServices         0x347736d2	GSEventRunModal&#x000A;14 UIKit                    0x32165890	UIApplicationMain&#x000A;15 CrashProbeiOS            0x00017e2e	main in main.m on Line 16&#x000A;16 libdyld.dylib            0x3a567ab6</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_TestFlight_arm64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_arm64'>
             <h2 class='cp-h2'>TestFlight - arm64</h2>
             <pre class='cp-featurecode'>SIGABRT&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  CrashProbeiOS            0x1000bbbef testflight_backtrace&#x000A;1  CrashProbeiOS            0x1000bb1f3 TFSignalHandler&#x000A;2  libsystem_platform.dylib 0x192d4fb1b _sigtramp&#x000A;3  libsystem_pthread.dylib  0x192d5516b pthread_kill&#x000A;4  libsystem_c.dylib        0x192c66807 abort&#x000A;5  libc++abi.dylib          0x191e8c993 abort_message&#x000A;6  libc++abi.dylib          0x191ea9c2b _ZL25default_terminate_handlerv&#x000A;7  libobjc.A.dylib          0x1925e44ef _ZL15_objc_terminatev&#x000A;8  libc++abi.dylib          0x191ea7167 _ZSt11__terminatePFvvE&#x000A;9  libc++abi.dylib          0x191ea6d3b __cxa_rethrow&#x000A;10 libobjc.A.dylib          0x1925e43a7 objc_exception_rethrow&#x000A;11 CoreFoundation           0x185c29c9b CFRunLoopRunSpecific&#x000A;12 GraphicsServices         0x18b8b9c0b GSEventRunModal&#x000A;13 UIKit                    0x188d5afdb UIApplicationMain&#x000A;14 CrashProbeiOS            0x1000a8893 main in main.m on Line 16&#x000A;15 libdyld.dylib            0x192bd7a9f &#x000A;16                          0xffffffffffffffff 0xffffffffffffffff</pre>
           </div>
           <div class='clear'></div>
         </div>
       </div>
-      <div class='row' id='cp-footer'>
-        <div class='col-xs-3' id='cp-copyright'>
+      <div class='content-pusher'></div>
+    </div>
+    <div class='container'>
+      <div class='footer-wrapper row' id='cp-footer'>
+        <div class='col-xs-3 col-md-push-1' id='cp-copyright'>
           &copy; 2014 Bit Stadium GmbH
         </div>
-        <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
+        <div class='col-xs-5 col-md-push-1' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/11/2014.
+            All tests were performed and are accurate as of 05/15/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

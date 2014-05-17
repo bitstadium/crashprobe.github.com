@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Corrupt the Objective-C runtime's structures</title>
+    <title>CrashProbe - Presented by HockeyApp - Corrupt the Objective-C runtime's structures</title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class='container'>
+    <div class='container' id='content-container'>
       <div class='row' id='cp-header'>
-        <div class='col-xs-3 col-md-2' id='cp-logo'>
+        <div class='col-xs-3 col-md-2 col-md-push-1' id='cp-logo'>
           <a href='/'>
             <div id='cp-logo-image'></div>
           </a>
         </div>
-        <div class='col-xs-8 col-sm-push-1 col-md-9 col-md-push-1' id='cp-presentor'>
+        <div class='col-xs-8 col-xs-push-1 col-sm-push-1 col-md-8 col-md-push-1' id='cp-presentor'>
           <a href='http://hockeyapp.net/features/'>
             <div id='cp-banner-hockeyapp'></div>
           </a>
@@ -127,7 +127,7 @@
             </li>
           </ul>
         </nav>
-        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6' id='cp-os-selector'>
+        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
           <li class='cp-os-ios'>
             <a href='/ios/'>
               <div></div>
@@ -143,108 +143,106 @@
         </ul>
       </div>
       <div class='row' id='cp-content'>
-        <nav class='col-xs-12 col-sm-3 col-md-2 hidden-xs' id='cp-featurenav'>
-          <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                async-safety
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/01/'>Hold pthread Lock</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                esoteric
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/02/'>Corrupt Malloc</a>
-              </li>
-              <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/03/'>Corrupt ObjC</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/06/'>Smash Stack Bottom</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/07/'>Smash Stack Top</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                exceptions
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/08/'>C++ Exception</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/09/'>Objective-C Exception</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                objective-c
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/10/'>Access Non-Object</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/11/'>Inside objc_msgSend</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/12/'>Released Object</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigbus
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/13/'>Read-Only Page</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigill
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/14/'>Privileged Instruction</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/15/'>Undefined Instruction</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigsegv
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/16/'>NULL Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/17/'>Bad Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/18/'>NX Page</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/19/'>Stack Overflow</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigtrap
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/20/'>Call __builtin_trap</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/mac/21/'>Call abort</a>
-              </li>
-            </ul>
+        <nav class='col-xs-12 col-sm-3 col-md-2 col-md-push-1 hidden-xs' id='cp-featurenav'>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              async-safety
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/01/'>Hold pthread Lock</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              esoteric
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/02/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/03/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/06/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/07/'>Smash Stack Top</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              exceptions
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/08/'>C++ Exception</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/09/'>Objective-C Exception</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              objective-c
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/10/'>Access Non-Object</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/11/'>Inside objc_msgSend</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/12/'>Released Object</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigbus
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/13/'>Read-Only Page</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigill
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/14/'>Privileged Instruction</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/15/'>Undefined Instruction</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigsegv
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/16/'>NULL Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/17/'>Bad Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/18/'>NX Page</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/19/'>Stack Overflow</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigtrap
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/20/'>Call __builtin_trap</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/21/'>Call abort</a>
+            </li>
           </ul>
         </nav>
-        <div class='col-xs-12 col-sm-8 col-md-9 col-sm-push-1' id='cp-featuredetail'>
+        <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'>Corrupt the Objective-C runtime's structures</h1>
           <p class='cp-p'>
             Write garbage into data areas used by the Objective-C runtime to track classes and objects.
@@ -278,39 +276,42 @@
             </tbody>
           </table>
           <div class='clear'></div>
-          <div class='col-sm-12'>
+          <div class='cp-featurecode col-xs-12'>
             <h2 class='cp-h2'>
               Expected Report Details:
             </h2>
             <pre class='cp-featurecode'>-[CRLCrashCorruptObjC crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashCorruptObjC.m#L70">CRLCrashCorruptObjC.m:70</a>)<br>-[CRLMainWindowController causeCrash:] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLMainWindowController.m#L72">CRLMainWindowController.m:72</a>)<br></pre>
           </div>
-          <div class='crashreport col-sm-12' id='CrashReports_Description'>
+          <div class='crashreport col-xs-12' id='CrashReports_Description'>
             <p class='cp-p'>
               Click on a button above to see the crashing threads stack trace with further annotation.
             </p>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: description&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  libobjc.A.dylib 0x00007fff92f11fd2 cache_getImp + 18&#x000A;1  libobjc.A.dylib 0x00007fff92f1f32a lookUpImpOrForward + 384&#x000A;2  libobjc.A.dylib 0x00007fff92f12169 objc_msgSend + 233&#x000A;3  CrashLib        0x00000001034f893c -[CRLCrashCorruptObjC crash] (CRLCrashCorruptObjC.m:70)&#x000A;4  CrashProbe      0x00000001034eb5a3 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;5  AppKit          0x00007fff91721340 -[NSApplication sendAction:to:from:] + 327&#x000A;6  AppKit          0x00007fff917211be -[NSControl sendAction:to:] + 86&#x000A;7  AppKit          0x00007fff9176dced -[NSCell _sendActionFrom:] + 128&#x000A;8  AppKit          0x00007fff917876c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;9  AppKit          0x00007fff91786a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;10 AppKit          0x00007fff917861ad -[NSControl mouseDown:] + 706&#x000A;11 AppKit          0x00007fff91707b48 -[NSWindow sendEvent:] + 11296&#x000A;12 AppKit          0x00007fff916a66e4 -[NSApplication sendEvent:] + 2021&#x000A;13 HockeySDK       0x000000010350d8b3 -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;14 AppKit          0x00007fff914f6b89 -[NSApplication run] + 646&#x000A;15 AppKit          0x00007fff914e1913 NSApplicationMain + 940&#x000A;16 CrashProbe      0x00000001034eb90c main (main.m:13)&#x000A;17 libdyld.dylib   0x00007fff9027a5fd start + 1</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Apple_x86_64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000015c3b0&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0  libobjc.A.dylib          0x00007fff92f11fd2 cache_getImp + 18&#x000A;1  libobjc.A.dylib          0x00007fff92f1f32a lookUpImpOrForward + 384&#x000A;2  libobjc.A.dylib          0x00007fff92f12169 objc_msgSend + 233&#x000A;3  net.hockeyapp.CrashLib   0x000000010086e93c -[CRLCrashCorruptObjC crash] + 69 (CRLCrashCorruptObjC.m:70)&#x000A;4  net.hockeyapp.CrashProbe 0x0000000100861633 -[CRLMainWindowController causeCrash:] + 75 (CRLMainWindowController.m:72)&#x000A;5  com.apple.AppKit         0x00007fff91721340 -[NSApplication sendAction:to:from:] + 327&#x000A;6  com.apple.AppKit         0x00007fff917211be -[NSControl sendAction:to:] + 86&#x000A;7  com.apple.AppKit         0x00007fff9176dced -[NSCell _sendActionFrom:] + 128&#x000A;8  com.apple.AppKit         0x00007fff917876c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;9  com.apple.AppKit         0x00007fff91786a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;10 com.apple.AppKit         0x00007fff917861ad -[NSControl mouseDown:] + 706&#x000A;11 com.apple.AppKit         0x00007fff91707b48 -[NSWindow sendEvent:] + 11296&#x000A;12 com.apple.AppKit         0x00007fff916a66e4 -[NSApplication sendEvent:] + 2021&#x000A;13 com.apple.AppKit         0x00007fff914f6b89 -[NSApplication run] + 646&#x000A;14 com.apple.AppKit         0x00007fff914e1913 NSApplicationMain + 940&#x000A;15 net.hockeyapp.CrashProbe 0x000000010086199c main + 9 (main.m:13)&#x000A;16 libdyld.dylib            0x00007fff9027a5fd start + 1</pre>
           </div>
-          <div class='col-sm-12 crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
             <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0  libobjc.A.dylib 0x00007fff92f11fd2 cache_getImp + 18&#x000A;1  libobjc.A.dylib 0x00007fff92f12169 objc_msgSend + 233&#x000A;2  CrashLib        0x000000010023c93c -[CRLCrashCorruptObjC crash] (CRLCrashCorruptObjC.m:70)&#x000A;3  CrashProbe      0x00000001001f3da3 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;4  AppKit          0x00007fff91721340 -[NSApplication sendAction:to:from:] + 327&#x000A;5  AppKit          0x00007fff917211be -[NSControl sendAction:to:] + 86&#x000A;6  AppKit          0x00007fff9176dced -[NSCell _sendActionFrom:] + 128&#x000A;7  AppKit          0x00007fff917876c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;8  AppKit          0x00007fff91786a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;9  AppKit          0x00007fff917861ad -[NSControl mouseDown:] + 706&#x000A;10 AppKit          0x00007fff91707b48 -[NSWindow sendEvent:] + 11296&#x000A;11 AppKit          0x00007fff916a66e4 -[NSApplication sendEvent:] + 2021&#x000A;12 AppKit          0x00007fff914f6b89 -[NSApplication run] + 646&#x000A;13 AppKit          0x00007fff914e1913 NSApplicationMain + 940&#x000A;14 CrashProbe      0x00000001001f410c main (main.m:13)&#x000A;15 libdyld.dylib   0x00007fff9027a5fd start + 1</pre>
           </div>
           <div class='clear'></div>
         </div>
       </div>
-      <div class='row' id='cp-footer'>
-        <div class='col-xs-3' id='cp-copyright'>
+      <div class='content-pusher'></div>
+    </div>
+    <div class='container'>
+      <div class='footer-wrapper row' id='cp-footer'>
+        <div class='col-xs-3 col-md-push-1' id='cp-copyright'>
           &copy; 2014 Bit Stadium GmbH
         </div>
-        <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
+        <div class='col-xs-5 col-md-push-1' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/11/2014.
+            All tests were performed and are accurate as of 05/15/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

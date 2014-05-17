@@ -2,7 +2,9 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>CrashProbe</title>
+    <title>
+      CrashProbe - Presented by HockeyApp
+    </title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -10,158 +12,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
+  <body class='index'>
     <div class='container'>
       <div class='row' id='cp-header'>
-        <div class='col-xs-3 col-md-2' id='cp-logo'>
-          <a href='/'>
-            <div id='cp-logo-image'></div>
+        <div class='col-xs-12 col-sm-8 col-sm-push-2 col-md-8 col-md-push-2' id='cp-header__logo' title='Welcome to CrashProbe'></div>
+        <a href='http://hockeyapp.net/features/'>
+          <div class='hidden-xs col-sm-4 col-sm-push-2' id='cp-header__presentedby--banner' title='http://hockeyapp.net/features/'></div>
+        </a>
+        <div class='col-xs-12 visible-xs' id='cp-header__presentedby--wordmark'>
+          <p>
+            Presented by HockeyApp
+          </p>
+        </div>
+        <div class='col-xs-12' id='cp-header__text--slogan'>
+          <span style='font-weight: 600; color: white;'>
+            Crash report data
+          </span>
+          <br>
+          from multiple services on multiple CPU architectures.
+        </div>
+        <div class='row' id='cp-header__ossupport'>
+          <a href='/ios/'>
+            <div class='cp-header__ossupport col-xs-5 col-sm-3 col-md-2 col-xs-push-1 col-sm-push-3 col-md-push-4' id='cp-header__ossupport--ios'></div>
+          </a>
+          <a href='/mac/'>
+            <div class='cp-header__ossupport col-xs-5 col-sm-3 col-md-2 col-xs-push-1 col-sm-push-3 col-md-push-4' id='cp-header__ossupport--macos'></div>
           </a>
         </div>
-        <div class='col-xs-8 col-sm-push-1 col-md-9 col-md-push-1' id='cp-presentor'>
-          <a href='http://hockeyapp.net/features/'>
-            <div id='cp-banner-hockeyapp'></div>
-          </a>
+      </div>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <h1>
+            We <span style="font-weight: 600;">analyzed</span> all of the reports<br />and <span style="font-weight: 600;">categorized</span> them as follows
+          </h1>
         </div>
       </div>
-      <div class='row' id='cp-xs-nav'>
-        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6' id='cp-os-selector'>
-          <li class='cp-os-ios'>
-            <a href='/ios/'>
-              <div></div>
-              iOS
-            </a>
-          </li>
-          <li class='cp-os-macos'>
-            <a href='/mac/'>
-              <div></div>
-              OS X
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class='row' id='cp-content'>
-        <div class='col-xs-6 col-sm-6 col-md-6' id='cp-featuredetail'>
-          <h1 class='cp-h1'>
-            Introduction
-          </h1>
-          <p class='cp-p'>
-            Every day more and more apps and new versions of existing apps are being released. While these apps are getting more sophisticated, it is also important to
-            make sure problems and especially crashes can be fixed very quickly.
-          </p>
-          <p class='cp-p'>
-            A lot of services and frameworks have emerged in the past years to help developer solve these crashes more quickly. <a href="http://hockeyapp.net/features/">HockeyApp</a> launched in May 2011 and is using and supporting the development of the proven and reliable Open Source framework <a href="http://plcrashreporter.org/">PLCrashReporter</a> ever since.
-          </p>
-          <p class='cp-p'>
-            In our effort to ensure best possible and most accurate crash reports, we decided to create and open source <b>CrashProbe</b>. The <b>CrashProbe</b> open source project that provides a set of currently 21 test crashes that cover a wide area of different crashing scenarios on iOS and OS X.
-          </p>
-          <p class='cp-p'>
-            Two components are required to provide accurate crash reports:
-            <ol>
-              <li>
-                An async-safe crash reporting framework that can be embedded into apps to catch crash details
-              </li>
-              <li>
-                Symbolication process that adds more details to a crash report including class names, filenames and line numbers
-              </li>
-            </ol>
-          </p>
-        </div>
-        <div class='col-xs-6 col-sm-6 col-md-6' id='cp-featuredetail'>
-          <h1 class='cp-h1'>
-            Open Source
-          </h1>
-          <p class='cp-p'>
-            You can perform all tests yourself with any crash reporting framework on iOS and OS X and compare the quality of the symbolicated crash reports yourself.
-          </p>
-          <p class='cp-p'>
-            The source code is available under the MIT license on <a href="http://github.com/">GitHub</a>: <a href="https://github.com/bitstadium/CrashProbe">https://github.com/bitstadium/CrashProbe</a>
-          </p>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-10 col-sm-push-1 cp-indicator__feature'>
+          <div class='row'>
+            <div class='col-xs-4' id='cp-indicator__feature--notavailable'></div>
+            <div class='col-xs-4' id='cp-indicator__feature--unknown'></div>
+            <div class='col-xs-4' id='cp-indicator__feature--correct'></div>
+          </div>
         </div>
       </div>
-      <div class='row' id='cp-content'>
-        <div class='col-xs-6 col-sm-6 col-md-6' id='cp-featuredetail'>
-          <h1 class='cp-h1'>
-            Results
-          </h1>
-          <p class='cp-p'>
-            The CrashProbe site provides crash report data from multiple services on multiple CPU architectures.
-            Choose one of the following platforms:
-          </p>
-          <table class='col-xs-12' id='cp-featuretable' style='margin-bottom: 20px;'>
-            <tbody>
-              <tr style='height:105px;'>
-                <td style='background-image:none;'>
-                  <ul id='cp-os-selector' style='text-align: left; text-indent: 20px; margin-top:10px;'>
-                    <li class='cp-os-ios'>
-                      <a href='/ios/'>
-                        <div></div>
-                        iOS
-                      </a>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-              <tr style='height:105px;'>
-                <td style='background-image:none;'>
-                  <ul id='cp-os-selector' style='text-align: left; margin-top:10px;'>
-                    <li class='cp-os-macos'>
-                      <a href='/mac/'>
-                        <div></div>
-                        OS X
-                      </a>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class='col-xs-6 col-sm-6 col-md-6' id='cp-featuredetail'>
-          <h1 class='cp-h1'>
-            Report details
-          </h1>
-          <p class='cp-p'>
-            We analyzed all of the reports and categorized them as follows:<br/><br/>
-          </p>
-          <table class='col-xs-12' id='cp-featuretable' style='margin-bottom: 20px;'>
-            <tbody>
-              <tr>
-                <td class='cp-feature-indicator cp-feature-header cp-feature-na' style='background-image:none;width: 150px;'>
-                  <div></div>
-                </td>
-                <td style='text-align: left;'>
-                  No crash report available or not showing the correct method that triggered the crash.
-                </td>
-              </tr>
-              <tr>
-                <td class='cp-feature-indicator cp-feature-header cp-feature-unknown' style='background-image:none;width: 150px;'>
-                  <div></div>
-                </td>
-                <td style='text-align: left;'>
-                  The crash report is missing important information, missing frame(s), wrong class names, wrong methods and/or showing wrong line numbers.
-                </td>
-              </tr>
-              <tr>
-                <td class='cp-feature-indicator cp-feature-header cp-feature-available' style='background-image:none;width: 150px;'>
-                  <div></div>
-                </td>
-                <td style='text-align: left;'>
-                  The crash report shows exactly (100%) what happens in the code.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class='clear'></div>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-10 col-sm-push-1' id='cp-text__feature'>
+          <div class='row'>
+            <div class='cp-text__feature col-xs-4'>
+              No crash report available or not showing the method that triggered the crash.
+            </div>
+            <div class='cp-text__feature col-xs-4'>
+              <span style="font-weight: 700;">The crash report is missing important information,</span> missing frame(s), wrong class names, wrong methods and/or showing wrong line numbers.
+            </div>
+            <div class='cp-text__feature col-xs-4'>
+              <span style="font-weight: 700;">The crash report is 100%<br />accurate,</span> matching the flow in the app.
+            </div>
+          </div>
         </div>
       </div>
-      <div class='row' id='cp-footer'>
-        <div class='col-xs-3' id='cp-copyright'>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-10 col-sm-push-1' id='cp-introduction'>
+          <div class='row'>
+            <h2 class='col-xs-12'>
+              <p>Introduction</p>
+            </h2>
+          </div>
+          <div class='row'>
+            <h2 class='col-xs-12'>
+              <p class='subtitle'>
+                Every day more and more apps and new versions of existing apps are being released. While these apps are getting more sophisticated, it is also important to make sure problems and especially crashes can be fixed very quickly.
+              </p>
+              <p class='index'>
+                <span style="font-weight: 600;">CrashProbe</span> is an <a href="https://github.com/bitstadium/CrashProbe">open-source</a> crash reporting benchmark that tests the accuracy and reliability of popular iOS and Mac OS X crash reporting services. Each service is tested against realistic instrumented crashes, with the resulting crash reports validated for accuracy and usefulness in diagnosing crashes.
+              </p>
+            </h2>
+          </div>
+          <div class='row'>
+            <div class='col-xs-6'>
+              <p class='index'>
+                CrashProbe is sponsored by HockeyApp. Launched in May 2011, <a href="http://hockeyapp.net/features/">HockeyApp</a> has long used and supported the ongoing development of <a href="http://plcrashreporter.org/">PLCrashReporter</a>, a proven and reliable Open Source crash reporting framework.
+              </p>
+              <p class='index'>
+                In our effort to ensure best possible and most accurate crash reports, we decided to create and open source a test suite that we could use to test <a href="http://plcrashreporter.org/">PLCrashReporter</a>, and improve <a href="http://hockeyapp.net/features/">HockeyApp</a>. The result, <span style="font-weight: 600;">CrashProbe</span>, provides a set of instrumented test cases that cover a wide area of different crashing scenarios on iOS and OS X.
+              </p>
+            </div>
+            <div class='col-xs-6 index'>
+              <p class='index'>
+                <span style="font-size: 20px; font-weight: 600;">Two components, working in concert, are required to provide accurate crash reports:</span>
+                <br>
+                <br>
+                1. <span style="font-weight: 600;">An async-safe crash reporting framework</span> that can be embedded into apps to accurately capture crash details.
+                <br>
+                <br>
+                2. <span style="font-weight: 600;">A server-side symbolication process</span> that adds more details to a crash report including class names, filenames and line numbers.
+              </p>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12'>
+              <span style='font-weight: 600; font-size: 20px;'>Open Source</span>
+              <br>
+              <br>
+              <p class='index'>
+                You can perform all tests yourself with any crash reporting framework on iOS and OS X and compare the quality of the symbolicated crash reports yourself. The source code is available under the MIT license on GitHub: <a class="index" href="ttps://github.com/bitstadium/CrashProbe">https://github.com/bitstadium/CrashProbe</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <div class='footer-wrapper row' id='cp-footer'>
+        <div class='col-xs-3 col-md-push-1' id='cp-copyright'>
           &copy; 2014 Bit Stadium GmbH
         </div>
-        <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
+        <div class='col-xs-5 col-md-push-1' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/11/2014.
+            All tests were performed and are accurate as of 05/15/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>

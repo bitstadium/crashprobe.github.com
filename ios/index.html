@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>iOS Crash Reports</title>
+    <title>CrashProbe - Presented by HockeyApp - iOS</title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class='container'>
+    <div class='container' id='content-container'>
       <div class='row' id='cp-header'>
-        <div class='col-xs-3 col-md-2' id='cp-logo'>
+        <div class='col-xs-3 col-md-2 col-md-push-1' id='cp-logo'>
           <a href='/'>
             <div id='cp-logo-image'></div>
           </a>
         </div>
-        <div class='col-xs-8 col-sm-push-1 col-md-9 col-md-push-1' id='cp-presentor'>
+        <div class='col-xs-8 col-xs-push-1 col-sm-push-1 col-md-8 col-md-push-1' id='cp-presentor'>
           <a href='http://hockeyapp.net/features/'>
             <div id='cp-banner-hockeyapp'></div>
           </a>
@@ -133,7 +133,7 @@
             </li>
           </ul>
         </nav>
-        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6' id='cp-os-selector'>
+        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
           <li class='cp-active-os cp-os-ios'>
             <a href='/ios/'>
               <div></div>
@@ -149,120 +149,118 @@
         </ul>
       </div>
       <div class='row' id='cp-content'>
-        <nav class='col-xs-12 col-sm-3 col-md-2 hidden-xs' id='cp-featurenav'>
-          <ul class='nav nav-tabs nav-stacked bs-docs-sidebar affic'>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                async-safety
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/01/'>Hold pthread Lock</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                esoteric
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/02/'>Corrupt Malloc</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/03/'>Corrupt ObjC</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/04/'>DWARF Unwinding</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/05/'>Overwrite Link Register</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/06/'>Smash Stack Bottom</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/07/'>Smash Stack Top</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                exceptions
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/08/'>C++ Exception</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/09/'>Objective-C Exception</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                objective-c
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/10/'>Access Non-Object</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/11/'>Inside objc_msgSend</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/12/'>Released Object</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigbus
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/13/'>Read-Only Page</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigill
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/14/'>Privileged Instruction</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/15/'>Undefined Instruction</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigsegv
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/16/'>NULL Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/17/'>Bad Pointer</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/18/'>NX Page</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/19/'>Stack Overflow</a>
-              </li>
-            </ul>
-            <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-              <li class='cp-mainfeature'>
-                sigtrap
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/20/'>Call __builtin_trap</a>
-              </li>
-              <li class='cp-subfeature visible-lg visible-md visible-sm'>
-                <a href='/ios/21/'>Call abort</a>
-              </li>
-            </ul>
+        <nav class='col-xs-12 col-sm-3 col-md-2 col-md-push-1 hidden-xs' id='cp-featurenav'>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              async-safety
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/01/'>Hold pthread Lock</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              esoteric
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/02/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/03/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/04/'>DWARF Unwinding</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/05/'>Overwrite Link Register</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/06/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/07/'>Smash Stack Top</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              exceptions
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/08/'>C++ Exception</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/09/'>Objective-C Exception</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              objective-c
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/10/'>Access Non-Object</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/11/'>Inside objc_msgSend</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/12/'>Released Object</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigbus
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/13/'>Read-Only Page</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigill
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/14/'>Privileged Instruction</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/15/'>Undefined Instruction</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigsegv
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/16/'>NULL Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/17/'>Bad Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/18/'>NX Page</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/19/'>Stack Overflow</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigtrap
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/20/'>Call __builtin_trap</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/21/'>Call abort</a>
+            </li>
           </ul>
         </nav>
-        <div class='col-xs-12 col-sm-8 col-md-9 col-sm-push-1' id='cp-featuredetail'>
+        <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'></h1>
           <h1 class='cp-h1'>
             Overview
           </h1>
           <p class='cp-p'>
-            The tests have been done on the following devices:
+            The tests have been performed on the following devices:
             <ol>
               <li>armv7: iPod 5th gen, iOS 7.1.1</li>
               <li>armv7s: iPhone 5, iOS 7.1.1</li>
@@ -303,9 +301,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 280px;'>44</div>
-                    <div class='cp-chart-incomplete' style='width: 77px;'>12</div>
-                    <div class='cp-chart-wrong' style='width: 45px;'>7</div>
+                    <div class='cp-chart-complete' style='width: 238px;'>44</div>
+                    <div class='cp-chart-incomplete' style='width: 66px;'>12</div>
+                    <div class='cp-chart-wrong' style='width: 38px;'>7</div>
                   </div>
                 </td>
               </tr>
@@ -315,9 +313,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 210px;'>33</div>
-                    <div class='cp-chart-incomplete' style='width: 64px;'>10</div>
-                    <div class='cp-chart-wrong' style='width: 128px;'>20</div>
+                    <div class='cp-chart-complete' style='width: 179px;'>33</div>
+                    <div class='cp-chart-incomplete' style='width: 55px;'>10</div>
+                    <div class='cp-chart-wrong' style='width: 108px;'>20</div>
                   </div>
                 </td>
               </tr>
@@ -328,9 +326,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 115px;'>18</div>
-                    <div class='cp-chart-incomplete' style='width: 185px;'>29</div>
-                    <div class='cp-chart-wrong' style='width: 102px;'>16</div>
+                    <div class='cp-chart-complete' style='width: 98px;'>18</div>
+                    <div class='cp-chart-incomplete' style='width: 158px;'>29</div>
+                    <div class='cp-chart-wrong' style='width: 86px;'>16</div>
                   </div>
                 </td>
               </tr>
@@ -341,9 +339,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 90px;'>14</div>
-                    <div class='cp-chart-incomplete' style='width: 191px;'>30</div>
-                    <div class='cp-chart-wrong' style='width: 121px;'>19</div>
+                    <div class='cp-chart-complete' style='width: 77px;'>14</div>
+                    <div class='cp-chart-incomplete' style='width: 162px;'>30</div>
+                    <div class='cp-chart-wrong' style='width: 103px;'>19</div>
                   </div>
                 </td>
               </tr>
@@ -354,9 +352,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 103px;'>16</div>
-                    <div class='cp-chart-incomplete' style='width: 51px;'>8</div>
-                    <div class='cp-chart-wrong' style='width: 248px;'>39</div>
+                    <div class='cp-chart-complete' style='width: 87px;'>16</div>
+                    <div class='cp-chart-incomplete' style='width: 44px;'>8</div>
+                    <div class='cp-chart-wrong' style='width: 211px;'>39</div>
                   </div>
                 </td>
               </tr>
@@ -364,13 +362,16 @@
           </table>
         </div>
       </div>
-      <div class='row' id='cp-footer'>
-        <div class='col-xs-3' id='cp-copyright'>
+      <div class='content-pusher'></div>
+    </div>
+    <div class='container'>
+      <div class='footer-wrapper row' id='cp-footer'>
+        <div class='col-xs-3 col-md-push-1' id='cp-copyright'>
           &copy; 2014 Bit Stadium GmbH
         </div>
-        <div class='col-xs-6' id='cp-copyright' style='text-align:center;font-weight:normal;'>
+        <div class='col-xs-5 col-md-push-1' id='cp-copyright' style='text-align:center;font-weight:normal;'>
           <small>
-            All tests were performed and are accurate as of 05/11/2014.
+            All tests were performed and are accurate as of 05/15/2014.
           </small>
         </div>
         <div class='col-xs-3' id='cp-footermenu'>
