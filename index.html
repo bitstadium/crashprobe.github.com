@@ -43,7 +43,7 @@
       <div class='row'>
         <div class='col-xs-12'>
           <h1>
-            We <span style="font-weight: 600;">analyzed</span> all of the reports<br />and <span style="font-weight: 600;">categorized</span> them as follows
+            We <span style="font-weight: 600;">analyzed</span> all of the reports<br />and <span style="font-weight: 600;">categorized</span> them as follows:
           </h1>
         </div>
       </div>
@@ -60,13 +60,13 @@
         <div class='col-xs-12 col-sm-10 col-sm-push-1' id='cp-text__feature'>
           <div class='row'>
             <div class='cp-text__feature col-xs-4'>
-              No crash report available or not showing the method that triggered the crash.
+              No crash report created or the crash report did not contain the method that caused the crash.
             </div>
             <div class='cp-text__feature col-xs-4'>
-              <span style="font-weight: 700;">The crash report is missing important information,</span> missing frame(s), wrong class names, wrong methods and/or showing wrong line numbers.
+              The crash report has missing frames, wrong class names, wrong methods, or shows wrong line numbers.
             </div>
             <div class='cp-text__feature col-xs-4'>
-              <span style="font-weight: 700;">The crash report is 100%<br />accurate,</span> matching the flow in the app.
+              The crash report is 100% accurate and matches the control flow of the app.
             </div>
           </div>
         </div>
@@ -79,46 +79,41 @@
             </h2>
           </div>
           <div class='row'>
-            <h2 class='col-xs-12'>
-              <p class='subtitle'>
-                Every day more and more apps and new versions of existing apps are being released. While these apps are getting more sophisticated, it is also important to make sure problems and especially crashes can be fixed very quickly.
-              </p>
-              <p class='index'>
-                <span style="font-weight: 600;">CrashProbe</span> is an <a href="https://github.com/bitstadium/CrashProbe">open-source</a> crash reporting benchmark that tests the accuracy and reliability of popular iOS and Mac OS X crash reporting services. Each service is tested against realistic instrumented crashes, with the resulting crash reports validated for accuracy and usefulness in diagnosing crashes.
-              </p>
-            </h2>
-          </div>
-          <div class='row'>
-            <div class='col-xs-6'>
-              <p class='index'>
-                CrashProbe is sponsored by HockeyApp. Launched in May 2011, <a href="http://hockeyapp.net/features/">HockeyApp</a> has long used and supported the ongoing development of <a href="http://plcrashreporter.org/">PLCrashReporter</a>, a proven and reliable Open Source crash reporting framework.
-              </p>
-              <p class='index'>
-                In our effort to ensure best possible and most accurate crash reports, we decided to create and open source a test suite that we could use to test <a href="http://plcrashreporter.org/">PLCrashReporter</a>, and improve <a href="http://hockeyapp.net/features/">HockeyApp</a>. The result, <span style="font-weight: 600;">CrashProbe</span>, provides a set of instrumented test cases that cover a wide area of different crashing scenarios on iOS and OS X.
-              </p>
-            </div>
-            <div class='col-xs-6 index'>
-              <p class='index'>
-                <span style="font-size: 20px; font-weight: 600;">Two components, working in concert, are required to provide accurate crash reports:</span>
-                <br>
-                <br>
-                1. <span style="font-weight: 600;">An async-safe crash reporting framework</span> that can be embedded into apps to accurately capture crash details.
-                <br>
-                <br>
-                2. <span style="font-weight: 600;">A server-side symbolication process</span> that adds more details to a crash report including class names, filenames and line numbers.
-              </p>
-            </div>
-          </div>
-          <div class='row'>
             <div class='col-xs-12'>
-              <span style='font-weight: 600; font-size: 20px;'>Open Source</span>
-              <br>
-              <br>
               <p class='index'>
-                You can perform all tests yourself with any crash reporting framework on iOS and OS X and compare the quality of the symbolicated crash reports. The source code is available under the MIT license on GitHub: <a class="index" href="ttps://github.com/bitstadium/CrashProbe">https://github.com/bitstadium/CrashProbe</a>
+                There are many crash reporting services and all claim to provide the <u>best</u> crash reports. So we started wondering which service actually holds up to their claims?
+              </p>
+              <p class='index'>
+                CrashProbe is an open-source crash reporting test suite presented by HockeyApp that benchmarks and compares popular iOS and Mac OS X crash reporting services. In our effort to ensure the best possible and most accurate crash reports, we created an open source test suite that we use to test PLCrashReporter and improve HockeyApp.
+              </p>
+              <p class='index'>
+                Two components are involved in the crash reporting process:
+              </p>
+              <ol>
+                <li>
+                  <p class='index'>
+                    <span style="font-weight: 600;">A crash reporting framework</span> that can be embedded into apps to capture crashes and exceptions.
+                  </p>
+                </li>
+                <li>
+                  <p class='index'>
+                    <span style="font-weight: 600;">A server-side process</span> that symbolicates the crash reports to add details like class names, filenames, line numbers, and additional information like the reason.
+                  </p>
+                </li>
+              </ol>
+              <p class='index'>
+                Both components in this process are important, so even if a service is using the same framework as another service, the crash report can still be quite different.
+              </p>
+              <p class='index'>
+                CrashProbe is open source, so you can perform all tests yourself with any crash reporting framework. Compare the quality of the symbolicated crash reports yourself on iOS and OS X. The source code is available under the MIT license on GitHub: <a class="index" href="ttps://github.com/bitstadium/CrashProbe">https://github.com/bitstadium/CrashProbe</a>
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-xs-12'>
+          &nbsp;
         </div>
       </div>
     </div>
