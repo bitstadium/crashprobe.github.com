@@ -5,6 +5,7 @@
     <title>CrashProbe - Presented by HockeyApp - OS X</title>
     <link href='/favicon.png' rel='shortcut icon'>
     <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/javascripts/public.js" type="text/javascript"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -249,7 +250,7 @@
           <p class='cp-p'>
             The following chart shows an overview of all tests:
           </p>
-          <table class='col-xs-12' id='cp-featuretable'>
+          <table class='col-xs-12 index-mac' id='cp-featuretable'>
             <thead>
               <tr>
                 <th style='text-indent: 100px;'>
@@ -257,9 +258,9 @@
                 </th>
                 <th>
                   <div class='cp-chart cp-chart-mac-legend'>
-                    <div class='cp-chart-complete'>accurate</div>
-                    <div class='cp-chart-incomplete'>imprecise</div>
-                    <div class='cp-chart-wrong'>insufficient</div>
+                    <div class='cp-chart-complete' style='width: 33%'>accurate</div>
+                    <div class='cp-chart-incomplete' style='width: 33%'>imprecise</div>
+                    <div class='cp-chart-wrong' style='width: 33%'>insufficient</div>
                   </div>
                 </th>
               </tr>
@@ -272,9 +273,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 268px;'>15</div>
-                    <div class='cp-chart-incomplete' style='width: 37px;'>2</div>
-                    <div class='cp-chart-wrong' style='width: 37px;'>2</div>
+                    <div class='cp-chart-complete' data-width='15'></div>
+                    <div class='cp-chart-incomplete' data-width='2'></div>
+                    <div class='cp-chart-wrong' data-width='2'></div>
                   </div>
                 </td>
               </tr>
@@ -284,9 +285,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 162px;'>9</div>
-                    <div class='cp-chart-incomplete' style='width: 126px;'>7</div>
-                    <div class='cp-chart-wrong' style='width: 54px;'>3</div>
+                    <div class='cp-chart-complete' data-width='9'></div>
+                    <div class='cp-chart-incomplete' data-width='7'></div>
+                    <div class='cp-chart-wrong' data-width='3'></div>
                   </div>
                 </td>
               </tr>
@@ -297,9 +298,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' style='width: 90px;'>5</div>
-                    <div class='cp-chart-incomplete' style='width: 144px;'>8</div>
-                    <div class='cp-chart-wrong' style='width: 108px;'>6</div>
+                    <div class='cp-chart-complete' data-width='5'></div>
+                    <div class='cp-chart-incomplete' data-width='8'></div>
+                    <div class='cp-chart-wrong' data-width='6'></div>
                   </div>
                 </td>
               </tr>
