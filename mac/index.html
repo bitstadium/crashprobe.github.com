@@ -38,23 +38,6 @@
               </ul>
             </li>
             <li class='dropdown-submenu cp-mainfeature-dropdown'>
-              <a href='#'>esoteric</a>
-              <ul class='dropdown-menu'>
-                <li>
-                  <a href='/mac/02/'>Corrupt Malloc</a>
-                </li>
-                <li>
-                  <a href='/mac/03/'>Corrupt ObjC</a>
-                </li>
-                <li>
-                  <a href='/mac/06/'>Smash Stack Bottom</a>
-                </li>
-                <li>
-                  <a href='/mac/07/'>Smash Stack Top</a>
-                </li>
-              </ul>
-            </li>
-            <li class='dropdown-submenu cp-mainfeature-dropdown'>
               <a href='#'>exceptions</a>
               <ul class='dropdown-menu'>
                 <li>
@@ -126,6 +109,23 @@
                 </li>
               </ul>
             </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>various</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/mac/02/'>Corrupt Malloc</a>
+                </li>
+                <li>
+                  <a href='/mac/03/'>Corrupt ObjC</a>
+                </li>
+                <li>
+                  <a href='/mac/06/'>Smash Stack Bottom</a>
+                </li>
+                <li>
+                  <a href='/mac/07/'>Smash Stack Top</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
         <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
@@ -151,23 +151,6 @@
             </li>
             <li class='cp-subfeature visible-lg visible-md visible-sm'>
               <a href='/mac/01/'>Hold pthread Lock</a>
-            </li>
-          </ul>
-          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-            <li class='cp-mainfeature'>
-              esoteric
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/mac/02/'>Corrupt Malloc</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/mac/03/'>Corrupt ObjC</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/mac/06/'>Smash Stack Bottom</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/mac/07/'>Smash Stack Top</a>
             </li>
           </ul>
           <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
@@ -242,10 +225,27 @@
               <a href='/mac/21/'>Call abort</a>
             </li>
           </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              various
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/mac/02/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/mac/03/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/mac/06/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/mac/07/'>Smash Stack Top</a>
+            </li>
+          </ul>
         </nav>
         <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'>
-            Overview
+            OS X Results
           </h1>
           <p class='cp-p'>
             The following chart shows an overview of all tests:
@@ -269,7 +269,6 @@
               <tr id='cp-HockeyApp'>
                 <td>
                   HockeyApp
-                  v2.1.0
                 </td>
                 <td>
                   <div class='cp-chart'>
@@ -294,7 +293,6 @@
               <tr id='cp-Crashlytics'>
                 <td>
                   Crashlytics
-                  v2.1.2
                 </td>
                 <td>
                   <div class='cp-chart'>
@@ -321,6 +319,13 @@
                 <li>Xcode 5.1.1</li>
                 <li>Release build configuration</li>
               </ol>
+            </p>
+            <p class='cp-p'>
+              SDK versions:
+              <ul>
+                <li>HockeySDK 2.1.0</li>
+                <li>Crashlytics 2.1.2</li>
+              </ul>
             </p>
           </div>
         </div>

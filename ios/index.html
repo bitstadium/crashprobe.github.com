@@ -38,29 +38,6 @@
               </ul>
             </li>
             <li class='dropdown-submenu cp-mainfeature-dropdown'>
-              <a href='#'>esoteric</a>
-              <ul class='dropdown-menu'>
-                <li>
-                  <a href='/ios/02/'>Corrupt Malloc</a>
-                </li>
-                <li>
-                  <a href='/ios/03/'>Corrupt ObjC</a>
-                </li>
-                <li>
-                  <a href='/ios/04/'>DWARF Unwinding</a>
-                </li>
-                <li>
-                  <a href='/ios/05/'>Overwrite Link Register</a>
-                </li>
-                <li>
-                  <a href='/ios/06/'>Smash Stack Bottom</a>
-                </li>
-                <li>
-                  <a href='/ios/07/'>Smash Stack Top</a>
-                </li>
-              </ul>
-            </li>
-            <li class='dropdown-submenu cp-mainfeature-dropdown'>
               <a href='#'>exceptions</a>
               <ul class='dropdown-menu'>
                 <li>
@@ -132,6 +109,29 @@
                 </li>
               </ul>
             </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>various</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/02/'>Corrupt Malloc</a>
+                </li>
+                <li>
+                  <a href='/ios/03/'>Corrupt ObjC</a>
+                </li>
+                <li>
+                  <a href='/ios/04/'>DWARF Unwinding</a>
+                </li>
+                <li>
+                  <a href='/ios/05/'>Overwrite Link Register</a>
+                </li>
+                <li>
+                  <a href='/ios/06/'>Smash Stack Bottom</a>
+                </li>
+                <li>
+                  <a href='/ios/07/'>Smash Stack Top</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
         <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
@@ -157,29 +157,6 @@
             </li>
             <li class='cp-subfeature visible-lg visible-md visible-sm'>
               <a href='/ios/01/'>Hold pthread Lock</a>
-            </li>
-          </ul>
-          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
-            <li class='cp-mainfeature'>
-              esoteric
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/ios/02/'>Corrupt Malloc</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/ios/03/'>Corrupt ObjC</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/ios/04/'>DWARF Unwinding</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/ios/05/'>Overwrite Link Register</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/ios/06/'>Smash Stack Bottom</a>
-            </li>
-            <li class='cp-subfeature visible-lg visible-md visible-sm'>
-              <a href='/ios/07/'>Smash Stack Top</a>
             </li>
           </ul>
           <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
@@ -254,10 +231,33 @@
               <a href='/ios/21/'>Call abort</a>
             </li>
           </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              various
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/02/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/03/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/04/'>DWARF Unwinding</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/05/'>Overwrite Link Register</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/06/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/07/'>Smash Stack Top</a>
+            </li>
+          </ul>
         </nav>
         <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'>
-            Overview
+            iOS Results
           </h1>
           <p class='cp-p'>
             The following chart shows an overview of all tests:
@@ -281,7 +281,6 @@
               <tr id='cp-HockeyApp'>
                 <td>
                   HockeyApp
-                  v3.5.5
                 </td>
                 <td>
                   <div class='cp-chart'>
@@ -306,7 +305,6 @@
               <tr id='cp-Crashlytics'>
                 <td>
                   Crashlytics
-                  v2.1.9
                 </td>
                 <td>
                   <div class='cp-chart'>
@@ -319,7 +317,6 @@
               <tr id='cp-Crittercism'>
                 <td>
                   Crittercism
-                  v4.3.3
                 </td>
                 <td>
                   <div class='cp-chart'>
@@ -332,7 +329,6 @@
               <tr id='cp-TestFlight'>
                 <td>
                   TestFlight
-                  v3.0
                 </td>
                 <td>
                   <div class='cp-chart'>
@@ -346,7 +342,7 @@
           </table>
           <div style='clear: both'></div>
           <div style='margin-top: 40px'>
-            <p class='cp-p'>
+            <p class='cp-p setup'>
               The tests have been performed on the following devices:
               <ol>
                 <li>armv7: iPod 5th gen, iOS 7.1.1</li>
@@ -354,13 +350,22 @@
                 <li>arm64: iPad mini with Retina display, iOS 7.1.1</li>
               </ol>
             </p>
-            <p class='cp-p'>
+            <p class='cp-p setup'>
               Build environment:
               <ol>
                 <li>OS X 10.9.2</li>
                 <li>Xcode 5.1.1</li>
                 <li>Release build configuration</li>
               </ol>
+            </p>
+            <p class='cp-p setup'>
+              SDK versions:
+              <ul>
+                <li>HockeySDK 3.5.5</li>
+                <li>Crashlytics 2.1.9</li>
+                <li>Crittercism 4.3.3</li>
+                <li>TestFlight 3.0.0</li>
+              </ul>
             </p>
           </div>
         </div>
