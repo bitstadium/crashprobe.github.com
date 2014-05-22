@@ -250,7 +250,7 @@
         <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
           <h1 class='cp-h1'>Corrupt the Objective-C runtime's structures</h1>
           <p class='cp-p'>
-            Write garbage into data areas used by the Objective-C runtime to track classes and objects.
+            Write garbage into data areas used by the Objective-C runtime to track classes and objects.<br/><br/>Bugs of this nature are why crash reporters cannot use Objective-C in their crash handling code, as attempting to do so is likely to lead to a crash in the crash reporting code.
           </p>
           <table class='col-xs-12' id='cp-featuretable'>
             <thead>
