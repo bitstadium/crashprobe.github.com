@@ -262,20 +262,20 @@
             <tbody>
               <tr id='cp-HockeyApp'>
                 <td class='title'>HockeyApp</td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp','x86_64');"></div>
+                <td class='complete cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp','x86_64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Apple'>
                 <td class='title'>Apple</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64');"></div>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown incomplete'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Crashlytics'>
                 <td class='title'>Crashlytics</td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64');"></div>
+                <td class='complete cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64', $(this));"></div>
                 </td>
               </tr>
             </tbody>
@@ -290,7 +290,7 @@
           <div class='crashreport col-xs-12' id='CrashReports_Description'>
             <p class='cp-p'>
               <strong>
-                Click or tap the status icons above to see the crashing thread’s stack trace with further info.
+                Click a status icon above to see the crashing thread’s stack trace with further info.
               </strong>
             </p>
           </div>
