@@ -48,7 +48,7 @@
           </h1>
         </div>
       </div>
-      <div class='row'>
+      <div class='row hidden-xs'>
         <div class='col-xs-12 col-sm-10 col-sm-push-1 cp-indicator__feature'>
           <div class='row'>
             <div class='col-xs-4' id='cp-indicator__feature--notavailable'></div>
@@ -57,7 +57,7 @@
           </div>
         </div>
       </div>
-      <div class='row'>
+      <div class='row hidden-xs'>
         <div class='col-xs-12 col-sm-10 col-sm-push-1' id='cp-text__feature'>
           <div class='row'>
             <div class='cp-text__feature col-xs-4'>
@@ -67,6 +67,28 @@
               <strong>The crash report has missing frames</strong>, wrong class names, wrong methods, or shows wrong line numbers.
             </div>
             <div class='cp-text__feature col-xs-4'>
+              <strong>The crash report is 100% accurate</strong> and matches the control flow of the app.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row visible-xs'>
+        <div class='col-xs-12 col-sm-10 col-sm-push-1 cp-indicator__feature'>
+          <div class='row'>
+            <div class='col-xs-12' id='cp-indicator__feature--notavailable'></div>
+            <div class='cp-text__feature col-xs-12'>
+              <strong>No crash report created</strong> or the crash report did not contain the method that caused the crash.
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12' id='cp-indicator__feature--unknown'></div>
+            <div class='cp-text__feature col-xs-12'>
+              <strong>The crash report has missing frames</strong>, wrong class names, wrong methods, or shows wrong line numbers.
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12' id='cp-indicator__feature--correct'></div>
+            <div class='cp-text__feature col-xs-12'>
               <strong>The crash report is 100% accurate</strong> and matches the control flow of the app.
             </div>
           </div>
@@ -106,7 +128,7 @@
                 Both components in this process are important, so even if a service is using the same framework as another service, the crash report can still be quite different.
               </p>
               <p class='index'>
-                CrashProbe is open source, so you can perform all tests yourself with any crash reporting framework. Compare the quality of the symbolicated crash reports yourself on iOS and OS X. The source code is available under the MIT license on GitHub: <a class="index" href="https://github.com/bitstadium/CrashProbe">https://github.com/bitstadium/CrashProbe</a>
+                CrashProbe is open source, so you can perform all tests yourself with any crash reporting framework. Compare the quality of the symbolicated crash reports yourself on iOS and OS X. The source code is available under the MIT license on <a class="index" href="https://github.com/bitstadium/CrashProbe">GitHub</a>.
               </p>
             </div>
           </div>
@@ -115,24 +137,24 @@
     </div>
     <div class='container'>
       <div class='footer-wrapper row' id='cp-footer'>
-        <div class='col-xs-3 col-md-push-1' id='cp-copyright'>
+        <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-1' id='cp-copyright'>
           <small>
             Copyright &copy; 2014 Bit Stadium GmbH
           </small>
         </div>
-        <div class='col-xs-5 col-md-push-1' id='cp-copyright' style='text-align:center;font-weight:normal;'>
+        <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
           <small>
             All tests are accurate as of 05/15/2014.
           </small>
         </div>
-        <div class='col-xs-3 col-xs-push-1 col-md-push-0' id='cp-footermenu'>
+        <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-0' id='cp-footermenu'>
           <small>
             <a href='/imprint'>Imprint</a>
             |
             <a href='http://support.hockeyapp.net/discussion/new'>Contact</a>
           </small>
         </div>
-        <div class='col-xs-10 col-xs-push-1 col-md-push-1' id='cp-trademarks'>
+        <div class='col-xs-10 col-xs-push-0 col-md-push-1' id='cp-trademarks'>
           <small>
             HockeyApp, the HockeyApp logo, CrashProbe, and the CrashProbe logo are trademarks of Bit Stadium GmbH.
             Apple, the Apple logo, iOS, and Mac OS are trademarks registered to Apple Inc.
