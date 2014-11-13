@@ -129,6 +129,9 @@
                 <li>
                   <a href='/ios/21/'>Smash Stack Top</a>
                 </li>
+                <li>
+                  <a href='/ios/22/'>Swift</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -257,6 +260,9 @@
             <li class='cp-subfeature visible-lg visible-md visible-sm'>
               <a href='/ios/21/'>Smash Stack Top</a>
             </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/22/'>Swift</a>
+            </li>
           </ul>
         </nav>
         <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
@@ -269,7 +275,6 @@
               <tr>
                 <th style='text-indent: 100px;'>Provider</th>
                 <th>ARMv7</th>
-                <th>ARMv7s</th>
                 <th>ARM64</th>
               </tr>
             </thead>
@@ -279,10 +284,6 @@
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7s', $(this));"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
@@ -297,10 +298,6 @@
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'armv7s', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
                 </td>
               </tr>
@@ -312,11 +309,29 @@
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'armv7s', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Raygun'>
+                <td class='title'>Raygun</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'armv7', $(this));"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'arm64', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Bugsnag'>
+                <td class='title'>Bugsnag</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Crittercism'>
@@ -327,26 +342,29 @@
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crittercism', 'armv7s', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crittercism', 'arm64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-TestFlight'>
-                <td class='title'>TestFlight</td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+              <tr id='cp-NewRelic'>
+                <td class='title'>New Relic</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight', 'armv7', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('NewRelic', 'armv7', $(this));"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight', 'armv7s', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('NewRelic', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Splunk'>
+                <td class='title'>Splunk MINT Express</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Splunk', 'armv7', $(this));"></div>
                 </td>
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('TestFlight', 'arm64', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Splunk', 'arm64', $(this));"></div>
                 </td>
               </tr>
             </tbody>
@@ -367,11 +385,7 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???           0xa5a5a5a4 0x0 + 0&#x000A;1 CrashProbeiOS 0x001197d5 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7s'>
-            <h2 class='cp-h2'>HockeyApp - armv7s</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a4 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???         0xa5a5a5a4 0x0 + 0&#x000A;1 CrashLibiOS 0x001e49c1 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
@@ -379,51 +393,59 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x38633808 kevent64 + 24&#x000A;1 libdispatch.dylib      0x38575078 _dispatch_mgr_invoke + 228&#x000A;2 libdispatch.dylib      0x38574dfe _dispatch_mgr_thread$VARIANT$mp + 34&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7s'>
-            <h2 class='cp-h2'>Apple - armv7s</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x3a60b804 kevent64 + 24&#x000A;1 libdispatch.dylib      0x3a55a050 _dispatch_mgr_invoke + 228&#x000A;2 libdispatch.dylib      0x3a5542de _dispatch_mgr_thread + 34&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.libdispatch-manager&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x39e8e2c8 kevent64 + 24&#x000A;1 libdispatch.dylib      0x39db0e44 _dispatch_mgr_invoke + 276&#x000A;2 libdispatch.dylib      0x39db0b76 _dispatch_mgr_thread$VARIANT$mp + 34&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
             <h2 class='cp-h2'>Apple - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Subtype: EXC_ARM_DA_ALIGN at 0xa5a5a5a5a5a5a5a5&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x0000000192cb9aa8 kevent64 + 8&#x000A;1 libdispatch.dylib      0x0000000192bbd998 _dispatch_mgr_thread + 48&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Subtype: EXC_ARM_DA_ALIGN at 0xa5a5a5a5a5a5a5a5&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.libdispatch-manager&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x0000000196a14c94 kevent64 + 8&#x000A;1 libdispatch.dylib      0x00000001968fc97c _dispatch_mgr_invoke + 272&#x000A;2 libdispatch.dylib      0x00000001968ef3b0 _dispatch_mgr_thread + 48&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
             <h2 class='cp-h2'>Crashlytics - armv7</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 ???           0xa5a5a5a4 &#x000A;1 CrashProbeiOS 0x000f1131 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7s'>
-            <h2 class='cp-h2'>Crashlytics - armv7s</h2>
-            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 ???         0xa5a5a5a4 &#x000A;1 CrashLibiOS 0x001879c1 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
             <h2 class='cp-h2'>Crashlytics - arm64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
+            <h2 class='cp-h2'>Raygun - armv7</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No matching image found in crash report | Missing class, method, filename, and line number</span>&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_arm64'>
+            <h2 class='cp-h2'>Raygun - arm64</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No matching image found in crash report | Missing class, method, filename, and line number</span>&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
+            <h2 class='cp-h2'>Bugsnag - armv7</h2>
+            <pre class='cp-featurecode'>Segmentation fault: 11: &#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:50:0 -[BugsnagEvent addSignal:]&#x000A;bugsnag/BugsnagNotifier.m:73:0 -[BugsnagNotifier notifySignal:]&#x000A;bugsnag/Bugsnag.m:67:0 handle_signal&#x000A;libsystem_platform.dylib:0 _sigtramp&#x000A;<span class="cp-wrong">CrashLibiOS:0 -[CRLCrashSmashStackBottom crash] | Missing filename, and line number</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_arm64'>
+            <h2 class='cp-h2'>Bugsnag - arm64</h2>
+            <pre class='cp-featurecode'>Bus error: 10: &#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:50:0 -[BugsnagEvent addSignal:]&#x000A;bugsnag/BugsnagNotifier.m:73:0 -[BugsnagNotifier notifySignal:]&#x000A;bugsnag/Bugsnag.m:67:0 handle_signal&#x000A;libsystem_platform.dylib:0 _sigtramp&#x000A;<span class="cp-wrong">CrashLibiOS:0 -[CRLCrashSmashStackBottom crash] | Missing filename, and line number</span></pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7'>
             <h2 class='cp-h2'>Crittercism - armv7</h2>
-            <pre class='cp-featurecode'>Name: SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7s'>
-            <h2 class='cp-h2'>Crittercism - armv7s</h2>
             <pre class='cp-featurecode'>Name: SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_arm64'>
             <h2 class='cp-h2'>Crittercism - arm64</h2>
             <pre class='cp-featurecode'>Name: SIGBUS&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_armv7'>
-            <h2 class='cp-h2'>TestFlight - armv7</h2>
-            <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;0	CrashProbeiOS	0x00022fd8	testflight_backtrace&#x000A;1	CrashProbeiOS	0x00022814	TFSignalHandler&#x000A;2	libsystem_platform.dylib	0x386aaf92	_sigtramp&#x000A;3	CrashProbeiOS	0x000296cc	-[CRLCrashSmashStackBottom crash] in CRLCrashSmashStackBottom.m on Line 54</pre>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_NewRelic_armv7'>
+            <h2 class='cp-h2'>NewRelic - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 0xa5a5a5a4 0 + 2779096484&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_armv7s'>
-            <h2 class='cp-h2'>TestFlight - armv7s</h2>
-            <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;0 CrashProbeiOS            0x0003f044 testflight_backtrace&#x000A;1 CrashProbeiOS            0x0003e884 TFSignalHandler&#x000A;2 libsystem_platform.dylib 0x3a681722 _sigtramp&#x000A;3                          0x0000000b&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_NewRelic_arm64'>
+            <h2 class='cp-h2'>NewRelic - arm64</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_TestFlight_arm64'>
-            <h2 class='cp-h2'>TestFlight - arm64</h2>
-            <pre class='cp-featurecode'>SIGBUS&#x000A;&#x000A;Crashed Thread:&#x000A;0 CrashProbeiOS            0x1000dfbef testflight_backtrace&#x000A;1 CrashProbeiOS            0x1000df1f3 TFSignalHandler&#x000A;2 libsystem_platform.dylib 0x192d4fb1b _sigtramp&#x000A;3                          0xa5a5a5a5a5a5a5a4 0xa5a5a5a5a5a5a5a4&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Splunk_armv7'>
+            <h2 class='cp-h2'>Splunk - armv7</h2>
+            <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Thread:&#x000A;0	???	0xa5a5a5a4 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Splunk_arm64'>
+            <h2 class='cp-h2'>Splunk - arm64</h2>
+            <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Thread:&#x000A;0	???	0xa5a5a5a5a5a5a5a5 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='clear'></div>
         </div>
@@ -439,7 +461,7 @@
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
           <small>
-            All tests are accurate as of 05/15/2014.
+            All tests are accurate as of 11/09/2014.
           </small>
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-0' id='cp-footermenu'>
@@ -455,7 +477,10 @@
             Apple, the Apple logo, iOS, and Mac OS are trademarks registered to Apple Inc.
             Crittercism and the Crittercism logo are trademarks of Crittercism, Inc.
             Crashlytics and the Crashlytics logo are trademarks of Twitter, Inc.
-            TestFlight and the TestFlight logo are trademarks of Burstly, Inc.
+            Raygun and the Raygun logo are trademarks of Mindscape Limited
+            Bugsnag and the Bugsnag logo are trademarks of Bugsnag, Inc.
+            New Relic and the New Relic logo are trademarks of New Relic, Inc.
+            Splunk MINT Express and the Splunk MINT Express logo are trademarks of Splunk, Inc.
           </small>
         </div>
       </div>

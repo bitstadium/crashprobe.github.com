@@ -123,6 +123,9 @@
                 <li>
                   <a href='/mac/21/'>Smash Stack Top</a>
                 </li>
+                <li>
+                  <a href='/mac/22/'>Swift</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -245,6 +248,9 @@
             <li class='cp-subfeature visible-lg visible-md visible-sm'>
               <a href='/mac/21/'>Smash Stack Top</a>
             </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/mac/22/'>Swift</a>
+            </li>
           </ul>
         </nav>
         <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
@@ -281,6 +287,13 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Bugsnag'>
+                <td class='title'>Bugsnag</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na wrong'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag','x86_64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-Crittercism'>
                 <td>
                   Crittercism
@@ -315,15 +328,19 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: description&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  libobjc.A.dylib 0x00007fff92f11fd2 cache_getImp + 18&#x000A;1  libobjc.A.dylib 0x00007fff92f1f32a lookUpImpOrForward + 384&#x000A;2  libobjc.A.dylib 0x00007fff92f12169 objc_msgSend + 233&#x000A;3  CrashLib        0x00000001034f893c -[CRLCrashCorruptObjC crash] (CRLCrashCorruptObjC.m:70)&#x000A;4  CrashProbe      0x00000001034eb5a3 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;5  AppKit          0x00007fff91721340 -[NSApplication sendAction:to:from:] + 327&#x000A;6  AppKit          0x00007fff917211be -[NSControl sendAction:to:] + 86&#x000A;7  AppKit          0x00007fff9176dced -[NSCell _sendActionFrom:] + 128&#x000A;8  AppKit          0x00007fff917876c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;9  AppKit          0x00007fff91786a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;10 AppKit          0x00007fff917861ad -[NSControl mouseDown:] + 706&#x000A;11 AppKit          0x00007fff91707b48 -[NSWindow sendEvent:] + 11296&#x000A;12 AppKit          0x00007fff916a66e4 -[NSApplication sendEvent:] + 2021&#x000A;13 HockeySDK       0x000000010350d8b3 -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;14 AppKit          0x00007fff914f6b89 -[NSApplication run] + 646&#x000A;15 AppKit          0x00007fff914e1913 NSApplicationMain + 940&#x000A;16 CrashProbe      0x00000001034eb90c main (main.m:13)&#x000A;17 libdyld.dylib   0x00007fff9027a5fd start + 1</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_NOOP at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  libobjc.A.dylib       0x00007fff84004012 cache_getImp + 18&#x000A;1  libobjc.A.dylib       0x00007fff84018a71 lookUpImpOrForward + 390&#x000A;2  libobjc.A.dylib       0x00007fff840041ac objc_msgSend + 236&#x000A;3  CrashLib              0x000000010eabc274 -[CRLCrashCorruptObjC crash] (CRLCrashCorruptObjC.m:70)&#x000A;4  CrashProbe            0x000000010eab2423 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;5  libsystem_trace.dylib 0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;6  AppKit                0x00007fff8fbf45e7 -[NSApplication sendAction:to:from:] + 410&#x000A;7  AppKit                0x00007fff8fbf4410 -[NSControl sendAction:to:] + 86&#x000A;8  AppKit                0x00007fff8fdc8daf __26-[NSCell _sendActionFrom:]_block_invoke + 131&#x000A;9  libsystem_trace.dylib 0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;10 AppKit                0x00007fff8fc3cf2c -[NSCell _sendActionFrom:] + 144&#x000A;11 AppKit                0x00007fff8fdafab2 -[NSButtonCell _sendActionFrom:] + 39&#x000A;12 libsystem_trace.dylib 0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;13 AppKit                0x00007fff8fc57a66 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2731&#x000A;14 AppKit                0x00007fff8fc56cc1 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 491&#x000A;15 AppKit                0x00007fff8fc56289 -[NSControl mouseDown:] + 714&#x000A;16 AppKit                0x00007fff9014ffef -[NSWindow _reallySendEvent:] + 12827&#x000A;17 AppKit                0x00007fff8fbda65c -[NSWindow sendEvent:] + 368&#x000A;18 AppKit                0x00007fff8fb8c1e6 -[NSApplication sendEvent:] + 2238&#x000A;19 HockeySDK             0x000000010ead4885 -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;20 AppKit                0x00007fff8fa18fe8 -[NSApplication run] + 711&#x000A;21 AppKit                0x00007fff8fa04424 NSApplicationMain + 1832&#x000A;22 CrashProbe            0x000000010eab2789 main (main.m:13)&#x000A;23 libdyld.dylib         0x00007fff90e3f5c9 start + 1</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000015c3b0&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0  libobjc.A.dylib          0x00007fff92f11fd2 cache_getImp + 18&#x000A;1  libobjc.A.dylib          0x00007fff92f1f32a lookUpImpOrForward + 384&#x000A;2  libobjc.A.dylib          0x00007fff92f12169 objc_msgSend + 233&#x000A;3  net.hockeyapp.CrashLib   0x000000010086e93c -[CRLCrashCorruptObjC crash] + 69 (CRLCrashCorruptObjC.m:70)&#x000A;4  net.hockeyapp.CrashProbe 0x0000000100861633 -[CRLMainWindowController causeCrash:] + 75 (CRLMainWindowController.m:72)&#x000A;5  com.apple.AppKit         0x00007fff91721340 -[NSApplication sendAction:to:from:] + 327&#x000A;6  com.apple.AppKit         0x00007fff917211be -[NSControl sendAction:to:] + 86&#x000A;7  com.apple.AppKit         0x00007fff9176dced -[NSCell _sendActionFrom:] + 128&#x000A;8  com.apple.AppKit         0x00007fff917876c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;9  com.apple.AppKit         0x00007fff91786a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;10 com.apple.AppKit         0x00007fff917861ad -[NSControl mouseDown:] + 706&#x000A;11 com.apple.AppKit         0x00007fff91707b48 -[NSWindow sendEvent:] + 11296&#x000A;12 com.apple.AppKit         0x00007fff916a66e4 -[NSApplication sendEvent:] + 2021&#x000A;13 com.apple.AppKit         0x00007fff914f6b89 -[NSApplication run] + 646&#x000A;14 com.apple.AppKit         0x00007fff914e1913 NSApplicationMain + 940&#x000A;15 net.hockeyapp.CrashProbe 0x000000010086199c main + 9 (main.m:13)&#x000A;16 libdyld.dylib            0x00007fff9027a5fd start + 1</pre>
+            <pre class='cp-featurecode'>Exception Type:        EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes:       EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x61800014ea70&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0  libobjc.A.dylib          0x00007fff84004012 cache_getImp + 18&#x000A;1  libobjc.A.dylib          0x00007fff84018a71 lookUpImpOrForward + 390&#x000A;2  libobjc.A.dylib          0x00007fff840041ac objc_msgSend + 236&#x000A;3  net.hockeyapp.CrashLib   0x0000000103bbf0fc -[CRLCrashCorruptObjC crash] + 69 (CRLCrashCorruptObjC.m:70)&#x000A;4  net.hockeyapp.CrashProbe 0x0000000103bb6473 -[CRLMainWindowController causeCrash:] + 75 (CRLMainWindowController.m:72)&#x000A;5  libsystem_trace.dylib    0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;6  com.apple.AppKit         0x00007fff8fbf45e7 -[NSApplication sendAction:to:from:] + 410&#x000A;7  com.apple.AppKit         0x00007fff8fbf4410 -[NSControl sendAction:to:] + 86&#x000A;8  com.apple.AppKit         0x00007fff8fdc8daf __26-[NSCell _sendActionFrom:]_block_invoke + 131&#x000A;9  libsystem_trace.dylib    0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;10 com.apple.AppKit         0x00007fff8fc3cf2c -[NSCell _sendActionFrom:] + 144&#x000A;11 com.apple.AppKit         0x00007fff8fdafab2 -[NSButtonCell _sendActionFrom:] + 39&#x000A;12 libsystem_trace.dylib    0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;13 com.apple.AppKit         0x00007fff8fc57a66 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2731&#x000A;14 com.apple.AppKit         0x00007fff8fc56cc1 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 491&#x000A;15 com.apple.AppKit         0x00007fff8fc56289 -[NSControl mouseDown:] + 714&#x000A;16 com.apple.AppKit         0x00007fff9014ffef -[NSWindow _reallySendEvent:] + 12827&#x000A;17 com.apple.AppKit         0x00007fff8fbda65c -[NSWindow sendEvent:] + 368&#x000A;18 com.apple.AppKit         0x00007fff8fb8c1e6 -[NSApplication sendEvent:] + 2238&#x000A;19 com.apple.AppKit         0x00007fff8fa18fe8 -[NSApplication run] + 711&#x000A;20 com.apple.AppKit         0x00007fff8fa04424 NSApplicationMain + 1832&#x000A;21 net.hockeyapp.CrashProbe 0x0000000103bb67d9 main + 9 (main.m:13)&#x000A;22 libdyld.dylib            0x00007fff90e3f5c9 start + 1</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0  libobjc.A.dylib 0x00007fff92f11fd2 cache_getImp + 18&#x000A;1  libobjc.A.dylib 0x00007fff92f12169 objc_msgSend + 233&#x000A;2  CrashLib        0x000000010023c93c -[CRLCrashCorruptObjC crash] (CRLCrashCorruptObjC.m:70)&#x000A;3  CrashProbe      0x00000001001f3da3 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;4  AppKit          0x00007fff91721340 -[NSApplication sendAction:to:from:] + 327&#x000A;5  AppKit          0x00007fff917211be -[NSControl sendAction:to:] + 86&#x000A;6  AppKit          0x00007fff9176dced -[NSCell _sendActionFrom:] + 128&#x000A;7  AppKit          0x00007fff917876c5 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2316&#x000A;8  AppKit          0x00007fff91786a97 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 487&#x000A;9  AppKit          0x00007fff917861ad -[NSControl mouseDown:] + 706&#x000A;10 AppKit          0x00007fff91707b48 -[NSWindow sendEvent:] + 11296&#x000A;11 AppKit          0x00007fff916a66e4 -[NSApplication sendEvent:] + 2021&#x000A;12 AppKit          0x00007fff914f6b89 -[NSApplication run] + 646&#x000A;13 AppKit          0x00007fff914e1913 NSApplicationMain + 940&#x000A;14 CrashProbe      0x00000001001f410c main (main.m:13)&#x000A;15 libdyld.dylib   0x00007fff9027a5fd start + 1</pre>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0  libobjc.A.dylib       0x00007fff84004012 cache_getImp + 18&#x000A;1  libobjc.A.dylib       0x00007fff840041ac objc_msgSend + 236&#x000A;2  CrashLib              0x0000000101812274 -[CRLCrashCorruptObjC crash] (CRLCrashCorruptObjC.m:70)&#x000A;3  CrashProbe            0x00000001017babf3 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;4  libsystem_trace.dylib 0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;5  AppKit                0x00007fff8fbf45e7 -[NSApplication sendAction:to:from:] + 410&#x000A;6  AppKit                0x00007fff8fbf4410 -[NSControl sendAction:to:] + 86&#x000A;7  AppKit                0x00007fff8fdc8daf __26-[NSCell _sendActionFrom:]_block_invoke + 131&#x000A;8  libsystem_trace.dylib 0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;9  AppKit                0x00007fff8fc3cf2c -[NSCell _sendActionFrom:] + 144&#x000A;10 AppKit                0x00007fff8fdafab2 -[NSButtonCell _sendActionFrom:] + 39&#x000A;11 libsystem_trace.dylib 0x00007fff82981cd7 _os_activity_initiate + 75&#x000A;12 AppKit                0x00007fff8fc57a66 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2731&#x000A;13 AppKit                0x00007fff8fc56cc1 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 491&#x000A;14 AppKit                0x00007fff8fc56289 -[NSControl mouseDown:] + 714&#x000A;15 AppKit                0x00007fff9014ffef -[NSWindow _reallySendEvent:] + 12827&#x000A;16 AppKit                0x00007fff8fbda65c -[NSWindow sendEvent:] + 368&#x000A;17 AppKit                0x00007fff8fb8c1e6 -[NSApplication sendEvent:] + 2238&#x000A;18 AppKit                0x00007fff8fa18fe8 -[NSApplication run] + 711&#x000A;19 AppKit                0x00007fff8fa04424 NSApplicationMain + 1832&#x000A;20 CrashProbe            0x00000001017baf59 main (main.m:13)&#x000A;21 libdyld.dylib         0x00007fff90e3f5c9 start + 1</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
+            <h2 class='cp-h2'>Bugsnag - x86_64</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report, app locks up.</span></pre>
           </div>
           <div class='clear'></div>
         </div>
@@ -339,7 +356,7 @@
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
           <small>
-            All tests are accurate as of 05/15/2014.
+            All tests are accurate as of 11/09/2014.
           </small>
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-0' id='cp-footermenu'>
@@ -355,7 +372,10 @@
             Apple, the Apple logo, iOS, and Mac OS are trademarks registered to Apple Inc.
             Crittercism and the Crittercism logo are trademarks of Crittercism, Inc.
             Crashlytics and the Crashlytics logo are trademarks of Twitter, Inc.
-            TestFlight and the TestFlight logo are trademarks of Burstly, Inc.
+            Raygun and the Raygun logo are trademarks of Mindscape Limited
+            Bugsnag and the Bugsnag logo are trademarks of Bugsnag, Inc.
+            New Relic and the New Relic logo are trademarks of New Relic, Inc.
+            Splunk MINT Express and the Splunk MINT Express logo are trademarks of Splunk, Inc.
           </small>
         </div>
       </div>

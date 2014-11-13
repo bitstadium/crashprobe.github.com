@@ -129,6 +129,9 @@
                 <li>
                   <a href='/ios/21/'>Smash Stack Top</a>
                 </li>
+                <li>
+                  <a href='/ios/22/'>Swift</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -257,6 +260,9 @@
             <li class='cp-subfeature visible-lg visible-md visible-sm'>
               <a href='/ios/21/'>Smash Stack Top</a>
             </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/22/'>Swift</a>
+            </li>
           </ul>
         </nav>
         <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
@@ -288,9 +294,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' data-width='44'></div>
-                    <div class='cp-chart-incomplete' data-width='12'></div>
-                    <div class='cp-chart-wrong' data-width='7'></div>
+                    <div class='cp-chart-complete' data-width='32'></div>
+                    <div class='cp-chart-incomplete' data-width='8'></div>
+                    <div class='cp-chart-wrong' data-width='4'></div>
                   </div>
                 </td>
               </tr>
@@ -300,9 +306,9 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' data-width='33'></div>
-                    <div class='cp-chart-incomplete' data-width='10'></div>
-                    <div class='cp-chart-wrong' data-width='20'></div>
+                    <div class='cp-chart-complete' data-width='19'></div>
+                    <div class='cp-chart-incomplete' data-width='15'></div>
+                    <div class='cp-chart-wrong' data-width='10'></div>
                   </div>
                 </td>
               </tr>
@@ -312,9 +318,33 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' data-width='18'></div>
-                    <div class='cp-chart-incomplete' data-width='29'></div>
-                    <div class='cp-chart-wrong' data-width='16'></div>
+                    <div class='cp-chart-complete' data-width='15'></div>
+                    <div class='cp-chart-incomplete' data-width='20'></div>
+                    <div class='cp-chart-wrong' data-width='9'></div>
+                  </div>
+                </td>
+              </tr>
+              <tr id='cp-Raygun'>
+                <td>
+                  Raygun
+                </td>
+                <td>
+                  <div class='cp-chart'>
+                    <div class='cp-chart-complete' data-width='0'></div>
+                    <div class='cp-chart-incomplete' data-width='25'></div>
+                    <div class='cp-chart-wrong' data-width='19'></div>
+                  </div>
+                </td>
+              </tr>
+              <tr id='cp-Bugsnag'>
+                <td>
+                  Bugsnag
+                </td>
+                <td>
+                  <div class='cp-chart'>
+                    <div class='cp-chart-complete' data-width='0'></div>
+                    <div class='cp-chart-incomplete' data-width='15'></div>
+                    <div class='cp-chart-wrong' data-width='29'></div>
                   </div>
                 </td>
               </tr>
@@ -324,21 +354,33 @@
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' data-width='9'></div>
-                    <div class='cp-chart-incomplete' data-width='34'></div>
-                    <div class='cp-chart-wrong' data-width='20'></div>
+                    <div class='cp-chart-complete' data-width='0'></div>
+                    <div class='cp-chart-incomplete' data-width='0'></div>
+                    <div class='cp-chart-wrong' data-width='44'></div>
                   </div>
                 </td>
               </tr>
-              <tr id='cp-TestFlight'>
+              <tr id='cp-NewRelic'>
                 <td>
-                  TestFlight
+                  New Relic
                 </td>
                 <td>
                   <div class='cp-chart'>
-                    <div class='cp-chart-complete' data-width='16'></div>
-                    <div class='cp-chart-incomplete' data-width='8'></div>
-                    <div class='cp-chart-wrong' data-width='39'></div>
+                    <div class='cp-chart-complete' data-width='0'></div>
+                    <div class='cp-chart-incomplete' data-width='0'></div>
+                    <div class='cp-chart-wrong' data-width='44'></div>
+                  </div>
+                </td>
+              </tr>
+              <tr id='cp-Splunk'>
+                <td>
+                  Splunk MINT Express
+                </td>
+                <td>
+                  <div class='cp-chart'>
+                    <div class='cp-chart-complete' data-width='0'></div>
+                    <div class='cp-chart-incomplete' data-width='0'></div>
+                    <div class='cp-chart-wrong' data-width='44'></div>
                   </div>
                 </td>
               </tr>
@@ -349,26 +391,28 @@
             <p class='cp-p setup'>
               The tests have been performed on the following devices:
               <ol>
-                <li>armv7: iPod 5th gen, iOS 7.1.1</li>
-                <li>armv7s: iPhone 5, iOS 7.1.1</li>
-                <li>arm64: iPad mini with Retina display, iOS 7.1.1</li>
+                <li>armv7: iPod 5th gen, iOS 8.1</li>
+                <li>arm64: iPhone 5S, iOS 8.1</li>
               </ol>
             </p>
             <p class='cp-p setup'>
               Build environment:
               <ol>
-                <li>OS X 10.9.2</li>
-                <li>Xcode 5.1.1</li>
+                <li>OS X 10.10</li>
+                <li>Xcode 6.1</li>
                 <li>Release build configuration</li>
               </ol>
             </p>
             <p class='cp-p setup'>
               SDK versions:
               <ul>
-                <li>HockeySDK 3.5.5</li>
-                <li>Crashlytics 2.1.9</li>
-                <li>Crittercism 4.3.3</li>
-                <li>TestFlight 3.0.0</li>
+                <li>HockeySDK 3.6.1</li>
+                <li>Crashlytics 2.2.6</li>
+                <li>Raygun 1.42</li>
+                <li>Bugsnag 3.1.3</li>
+                <li>Crittercism 5.0.4</li>
+                <li>NewRelic 4.83</li>
+                <li>Splunk 4.0.21</li>
               </ul>
             </p>
           </div>
@@ -385,7 +429,7 @@
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
           <small>
-            All tests are accurate as of 05/15/2014.
+            All tests are accurate as of 11/09/2014.
           </small>
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-0' id='cp-footermenu'>
@@ -401,7 +445,10 @@
             Apple, the Apple logo, iOS, and Mac OS are trademarks registered to Apple Inc.
             Crittercism and the Crittercism logo are trademarks of Crittercism, Inc.
             Crashlytics and the Crashlytics logo are trademarks of Twitter, Inc.
-            TestFlight and the TestFlight logo are trademarks of Burstly, Inc.
+            Raygun and the Raygun logo are trademarks of Mindscape Limited
+            Bugsnag and the Bugsnag logo are trademarks of Bugsnag, Inc.
+            New Relic and the New Relic logo are trademarks of New Relic, Inc.
+            Splunk MINT Express and the Splunk MINT Express logo are trademarks of Splunk, Inc.
           </small>
         </div>
       </div>
