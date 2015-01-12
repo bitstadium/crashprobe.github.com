@@ -1,1 +1,0 @@
-!function(n){n.fn.anchorScroll=function(t){var e={speed:800,fx:"jswing"},t=n.extend(e,t);return n(this).each(function(){var e=this;n(e).click(function(r){var o=(window.location.href,n(e).attr("href")),f=n(o).offset().top;return n("html,body").animate({scrollTop:f},t.speed,t.fx),r.preventDefault(),!1})})}}(jQuery);
