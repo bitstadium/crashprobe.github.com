@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>CrashProbe - Presented by HockeyApp - Overwrite link register</title>
+    <link href='/favicon.png' rel='shortcut icon'>
+    <link href="/stylesheets/public.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" media="screen" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/javascripts/public.js" type="text/javascript"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class='container' id='content-container'>
+      <div class='row' id='cp-header'>
+        <div class='col-xs-3 col-sm-3 col-md-2 col-md-push-1' id='cp-logo'>
+          <a href='/'>
+            <div id='cp-logo-image'></div>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-5 col-md-6 col-md-push-1'></div>
+        <a href='http://hockeyapp.net/features/'>
+          <div class='hidden-xs col-sm-4 col-sm-push-2' id='cp-header__presentedby--banner' title='http://hockeyapp.net/features/'></div>
+        </a>
+      </div>
+      <div class='row' id='cp-xs-nav'>
+        <nav class='dropdown cp-featurenav-dropdown col-xs-3 visible-xs'>
+          <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Menu</a>
+          <ul class='dropdown-menu' id='cp-ul-mainfeatures-dropdown'>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>async-safety</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/01/'>Hold pthread Lock</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>exceptions</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/02/'>C++ Exception</a>
+                </li>
+                <li>
+                  <a href='/ios/03/'>Objective-C Exception</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>objective-c</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/04/'>Access Non-Object</a>
+                </li>
+                <li>
+                  <a href='/ios/05/'>Inside objc_msgSend</a>
+                </li>
+                <li>
+                  <a href='/ios/06/'>Released Object</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>sigbus</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/07/'>Read-Only Page</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>sigill</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/08/'>Privileged Instruction</a>
+                </li>
+                <li>
+                  <a href='/ios/09/'>Undefined Instruction</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>sigsegv</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/10/'>NULL Pointer</a>
+                </li>
+                <li>
+                  <a href='/ios/11/'>Bad Pointer</a>
+                </li>
+                <li>
+                  <a href='/ios/12/'>NX Page</a>
+                </li>
+                <li>
+                  <a href='/ios/13/'>Stack Overflow</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>sigtrap</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/14/'>Call __builtin_trap</a>
+                </li>
+                <li>
+                  <a href='/ios/15/'>Call abort</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown-submenu cp-mainfeature-dropdown'>
+              <a href='#'>various</a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/ios/16/'>Corrupt Malloc</a>
+                </li>
+                <li>
+                  <a href='/ios/17/'>Corrupt ObjC</a>
+                </li>
+                <li>
+                  <a href='/ios/18/'>DWARF Unwinding</a>
+                </li>
+                <li>
+                  <a href='/ios/19/'>Overwrite Link Register</a>
+                </li>
+                <li>
+                  <a href='/ios/20/'>Smash Stack Bottom</a>
+                </li>
+                <li>
+                  <a href='/ios/21/'>Smash Stack Top</a>
+                </li>
+                <li>
+                  <a href='/ios/22/'>Swift</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <ul class='col-xs-9 col-sm-8 col-sm-push-4 col-md-6 col-md-push-5' id='cp-os-selector'>
+          <li class='cp-active-os cp-os-ios'>
+            <a href='/ios/'>
+              <div></div>
+              iOS
+            </a>
+          </li>
+          <li class='cp-os-macos'>
+            <a href='/mac/'>
+              <div></div>
+              OS X
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='row' id='cp-content'>
+        <nav class='col-xs-12 col-sm-3 col-md-2 col-md-push-1 hidden-xs' id='cp-featurenav'>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios'>Overview</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              async-safety
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/01/'>Hold pthread Lock</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              exceptions
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/02/'>C++ Exception</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/03/'>Objective-C Exception</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              objective-c
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/04/'>Access Non-Object</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/05/'>Inside objc_msgSend</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/06/'>Released Object</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigbus
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/07/'>Read-Only Page</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigill
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/08/'>Privileged Instruction</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/09/'>Undefined Instruction</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigsegv
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/10/'>NULL Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/11/'>Bad Pointer</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/12/'>NX Page</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/13/'>Stack Overflow</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              sigtrap
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/14/'>Call __builtin_trap</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/15/'>Call abort</a>
+            </li>
+          </ul>
+          <ul class='cp-ul-featurenav col-xs-2 col-sm-12 col-md-12'>
+            <li class='cp-mainfeature'>
+              various
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/16/'>Corrupt Malloc</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/17/'>Corrupt ObjC</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/18/'>DWARF Unwinding</a>
+            </li>
+            <li class='cp-active-feature cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/19/'>Overwrite Link Register</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/20/'>Smash Stack Bottom</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/21/'>Smash Stack Top</a>
+            </li>
+            <li class='cp-subfeature visible-lg visible-md visible-sm'>
+              <a href='/ios/22/'>Swift</a>
+            </li>
+          </ul>
+        </nav>
+        <div class='col-xs-12 col-sm-8 col-sm-push-1 col-md-7 col-md-push-2' id='cp-featuredetail'>
+          <h1 class='cp-h1'>Overwrite link register</h1>
+          <p class='cp-p'>
+            Trigger a crash after first overwriting the link register.<br/><br/>Crash reporters that insert a stack frame based on the link register can generate duplicate or incorrect stack frames in the report. This does not apply to architectures that do not use a link register, such as x86-64.
+          </p>
+          <table class='col-xs-12' id='cp-featuretable'>
+            <thead>
+              <tr>
+                <th style='text-indent: 100px;'>Provider</th>
+                <th>ARMv7</th>
+                <th>ARM64</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id='cp-HockeyApp'>
+                <td class='title'>HockeyApp</td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Apple'>
+                <td class='title'>Apple</td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Crashlytics'>
+                <td class='title'>Crashlytics</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Raygun'>
+                <td class='title'>Raygun</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Bugsnag'>
+                <td class='title'>Bugsnag</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Crittercism'>
+                <td class='title'>Crittercism</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crittercism', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crittercism', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-NewRelic'>
+                <td class='title'>New Relic</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('NewRelic', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('NewRelic', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-Splunk'>
+                <td class='title'>Splunk MINT Express</td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Splunk', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Splunk', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='clear'></div>
+          <div class='cp-featurecode col-xs-12'>
+            <h2 class='cp-h2'>
+              Expected Report Details:
+            </h2>
+            <pre class='cp-featurecode'>-[CRLCrashOverwriteLinkRegister crash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe/CRLCrashOverwriteLinkRegister.m#L53">CRLCrashOverwriteLinkRegister.m:53</a>)<br>-[CRLDetailViewController doCrash] (<a href="https://github.com/bitstadium/CrashProbe/blob/master/CrashProbe%20iOS/CRLDetailViewController.m#L53">CRLDetailViewController.m:53</a>)<br></pre>
+          </div>
+          <div class='crashreport col-xs-12' id='CrashReports_Description'>
+            <p class='cp-p'>
+              <strong>
+                Click a status icon above to see the crashing thread’s stack trace with further info.
+              </strong>
+            </p>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
+            <h2 class='cp-h2'>HockeyApp - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x0021d95a -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:53)&#x000A;1  CrashProbeiOS    0x00086bd7 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x27699427 -[UIApplication sendAction:to:from:forEvent:] + 68&#x000A;3  UIKit            0x276993c9 -[UIControl sendAction:to:forEvent:] + 42&#x000A;4  UIKit            0x27683fcd -[UIControl _sendActionsForEvents:withEvent:] + 582&#x000A;5  UIKit            0x27698df9 -[UIControl touchesEnded:withEvent:] + 582&#x000A;6  UIKit            0x2765db47 _UIGestureRecognizerUpdate + 10156&#x000A;7  UIKit            0x27692afd -[UIWindow _sendGesturesForEvent:] + 782&#x000A;8  UIKit            0x276923cd -[UIWindow sendEvent:] + 518&#x000A;9  UIKit            0x27668b5d -[UIApplication sendEvent:] + 194&#x000A;10 UIKit            0x278dc4e3 _UIApplicationHandleEventFromQueueEvent + 13872&#x000A;11 UIKit            0x2766759f _UIApplicationHandleEventQueue + 1292&#x000A;12 CoreFoundation   0x2418a5e7 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 12&#x000A;13 CoreFoundation   0x241899fb __CFRunLoopDoSources0 + 220&#x000A;14 CoreFoundation   0x24188079 __CFRunLoopRun + 766&#x000A;15 CoreFoundation   0x240d5981 CFRunLoopRunSpecific + 474&#x000A;16 CoreFoundation   0x240d5793 CFRunLoopRunInMode + 104&#x000A;17 GraphicsServices 0x2b487051 GSEventRunModal + 134&#x000A;18 UIKit            0x276c7981 UIApplicationMain + 1438&#x000A;19 CrashProbeiOS    0x00085e87 main (main.m:16)&#x000A;20 libdyld.dylib    0x31e82aaf start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
+            <h2 class='cp-h2'>HockeyApp - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: class&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x00000001001ce670 -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:53)&#x000A;1  CrashProbeiOS    0x00000001000f2fd4 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x000000018a3910f8 -[UIApplication sendAction:to:from:forEvent:] + 92&#x000A;3  UIKit            0x000000018a37a22c -[UIControl _sendActionsForEvents:withEvent:] + 608&#x000A;4  UIKit            0x000000018a390a94 -[UIControl touchesEnded:withEvent:] + 588&#x000A;5  UIKit            0x000000018a350450 _UIGestureRecognizerUpdate + 8532&#x000A;6  UIKit            0x000000018a38a5bc -[UIWindow _sendGesturesForEvent:] + 1040&#x000A;7  UIKit            0x000000018a389c5c -[UIWindow sendEvent:] + 656&#x000A;8  UIKit            0x000000018a35d38c -[UIApplication sendEvent:] + 260&#x000A;9  UIKit            0x000000018a5fc1b4 _UIApplicationHandleEventFromQueueEvent + 14988&#x000A;10 UIKit            0x000000018a35b8f4 _UIApplicationHandleEventQueue + 1612&#x000A;11 CoreFoundation   0x0000000185b660e8 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 20&#x000A;12 CoreFoundation   0x0000000185b6538c __CFRunLoopDoSources0 + 260&#x000A;13 CoreFoundation   0x0000000185b6343c __CFRunLoopRun + 708&#x000A;14 CoreFoundation   0x0000000185a911f4 CFRunLoopRunSpecific + 392&#x000A;15 GraphicsServices 0x000000018ec275a4 GSEventRunModal + 164&#x000A;16 UIKit            0x000000018a3c2784 UIApplicationMain + 1484&#x000A;17 CrashProbeiOS    0x00000001000f1ea0 main (main.m:16)&#x000A;18 libdyld.dylib    0x0000000196916a08 start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
+            <h2 class='cp-h2'>Apple - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0x00000000&#x000A;Triggered by Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x0012595a -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:53)&#x000A;1  CrashProbeiOS    0x0001588a -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x2f5f3422 -[UIApplication sendAction:to:from:forEvent:] + 66&#x000A;3  UIKit            0x2f5f33c4 -[UIControl sendAction:to:forEvent:] + 40&#x000A;4  UIKit            0x2f5ddfc8 -[UIControl _sendActionsForEvents:withEvent:] + 580&#x000A;5  UIKit            0x2f5f2df4 -[UIControl touchesEnded:withEvent:] + 580&#x000A;6  UIKit            0x2f5f2ace -[UIWindow _sendTouchesForEvent:] + 518&#x000A;7  UIKit            0x2f5ec3dc -[UIWindow sendEvent:] + 536&#x000A;8  UIKit            0x2f5c2b58 -[UIApplication sendEvent:] + 192&#x000A;9  UIKit            0x2f8364de _UIApplicationHandleEventFromQueueEvent + 13870&#x000A;10 UIKit            0x2f5c159a _UIApplicationHandleEventQueue + 1290&#x000A;11 CoreFoundation   0x2c0e45e4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 12&#x000A;12 CoreFoundation   0x2c0e39f6 __CFRunLoopDoSources0 + 218&#x000A;13 CoreFoundation   0x2c0e2074 __CFRunLoopRun + 764&#x000A;14 CoreFoundation   0x2c02f97c CFRunLoopRunSpecific + 472&#x000A;15 CoreFoundation   0x2c02f78e CFRunLoopRunInMode + 102&#x000A;16 GraphicsServices 0x333e104c GSEventRunModal + 132&#x000A;17 UIKit            0x2f62197c UIApplicationMain + 1436&#x000A;18 CrashProbeiOS    0x00014c52 main (main.m:16)&#x000A;19 libdyld.dylib    0x39ddcaac start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
+            <h2 class='cp-h2'>Apple - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0x0000000000000000&#x000A;Triggered by Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x00000001000fa670 -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:53)&#x000A;1  CrashProbeiOS    0x00000001000da6a4 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x000000018a3910f4 -[UIApplication sendAction:to:from:forEvent:] + 92&#x000A;3  UIKit            0x000000018a37a228 -[UIControl _sendActionsForEvents:withEvent:] + 608&#x000A;4  UIKit            0x000000018a390a90 -[UIControl touchesEnded:withEvent:] + 588&#x000A;5  UIKit            0x000000018a39071c -[UIWindow _sendTouchesForEvent:] + 696&#x000A;6  UIKit            0x000000018a389c70 -[UIWindow sendEvent:] + 680&#x000A;7  UIKit            0x000000018a35d388 -[UIApplication sendEvent:] + 260&#x000A;8  UIKit            0x000000018a5fc1b0 _UIApplicationHandleEventFromQueueEvent + 14988&#x000A;9  UIKit            0x000000018a35b8f0 _UIApplicationHandleEventQueue + 1612&#x000A;10 CoreFoundation   0x0000000185b660e4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 20&#x000A;11 CoreFoundation   0x0000000185b65388 __CFRunLoopDoSources0 + 260&#x000A;12 CoreFoundation   0x0000000185b63438 __CFRunLoopRun + 708&#x000A;13 CoreFoundation   0x0000000185a911f0 CFRunLoopRunSpecific + 392&#x000A;14 GraphicsServices 0x000000018ec275a0 GSEventRunModal + 164&#x000A;15 UIKit            0x000000018a3c2780 UIApplicationMain + 1484&#x000A;16 CrashProbeiOS    0x00000001000d96b0 main (main.m:16)&#x000A;17 libdyld.dylib    0x0000000196916a04 start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
+            <h2 class='cp-h2'>Crashlytics - armv7</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0x00000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0  CrashLibiOS      0x0016295a -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:49) | Wrong line number</span>&#x000A;<span class="cp-wrong">1  CrashLibiOS      0x00162957 -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:49) | Invalid frame</span>&#x000A;2  CrashProbeiOS    0x0000e537 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;3  UIKit            0x3025a427 -[UIApplication sendAction:to:from:forEvent:] + 70&#x000A;4  UIKit            0x3025a3c9 -[UIControl sendAction:to:forEvent:] + 44&#x000A;5  UIKit            0x30244fcd -[UIControl _sendActionsForEvents:withEvent:] + 584&#x000A;6  UIKit            0x30259df9 -[UIControl touchesEnded:withEvent:] + 584&#x000A;7  UIKit            0x3021eb47 _UIGestureRecognizerUpdate + 10158&#x000A;8  UIKit            0x30253afd -[UIWindow _sendGesturesForEvent:] + 784&#x000A;9  UIKit            0x302533cd -[UIWindow sendEvent:] + 520&#x000A;10 UIKit            0x30229b5d -[UIApplication sendEvent:] + 196&#x000A;11 UIKit            0x3049d4e3 _UIApplicationHandleEventFromQueueEvent + 13874&#x000A;12 UIKit            0x3022859f _UIApplicationHandleEventQueue + 1294&#x000A;13 CoreFoundation   0x2cd4b5e7 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 14&#x000A;14 CoreFoundation   0x2cd4a9fb __CFRunLoopDoSources0 + 222&#x000A;15 CoreFoundation   0x2cd49079 __CFRunLoopRun + 768&#x000A;16 CoreFoundation   0x2cc96981 CFRunLoopRunSpecific + 476&#x000A;17 CoreFoundation   0x2cc96793 CFRunLoopRunInMode + 106&#x000A;18 GraphicsServices 0x34048051 GSEventRunModal + 136&#x000A;19 UIKit            0x30288981 UIApplicationMain + 1440&#x000A;20 CrashProbeiOS    0x0000d87f main (main.m:16)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
+            <h2 class='cp-h2'>Crashlytics - arm64</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0  CrashLibiOS      0x00000001000ea670 -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:49) | Wrong line number</span>&#x000A;<span class="cp-wrong">1  CrashLibiOS      0x00000001000ea654 -[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:42) | Invalid frame</span>&#x000A;2  CrashProbeiOS    0x0000000100069224 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;3  UIKit            0x00000001872750f8 -[UIApplication sendAction:to:from:forEvent:] + 96&#x000A;4  UIKit            0x000000018725e22c -[UIControl _sendActionsForEvents:withEvent:] + 612&#x000A;5  UIKit            0x0000000187274a94 -[UIControl touchesEnded:withEvent:] + 592&#x000A;6  UIKit            0x0000000187234450 _UIGestureRecognizerUpdate + 8536&#x000A;7  UIKit            0x000000018726e5bc -[UIWindow _sendGesturesForEvent:] + 1044&#x000A;8  UIKit            0x000000018726dc5c -[UIWindow sendEvent:] + 660&#x000A;9  UIKit            0x000000018724138c -[UIApplication sendEvent:] + 264&#x000A;10 UIKit            0x00000001874e01b4 _UIApplicationHandleEventFromQueueEvent + 14992&#x000A;11 UIKit            0x000000018723f8f4 _UIApplicationHandleEventQueue + 1616&#x000A;12 CoreFoundation   0x0000000182a4a0e8 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 24&#x000A;13 CoreFoundation   0x0000000182a4938c __CFRunLoopDoSources0 + 264&#x000A;14 CoreFoundation   0x0000000182a4743c __CFRunLoopRun + 712&#x000A;15 CoreFoundation   0x00000001829751f4 CFRunLoopRunSpecific + 396&#x000A;16 GraphicsServices 0x000000018bb0b5a4 GSEventRunModal + 168&#x000A;17 UIKit            0x00000001872a6784 UIApplicationMain + 1488&#x000A;18 CrashProbeiOS    0x000000010006816c main (main.m:16)&#x000A;19 libdyld.dylib    0x00000001937faa08 start + 4</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
+            <h2 class='cp-h2'>Raygun - armv7</h2>
+            <pre class='cp-featurecode'>-[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:53)&#x000A;-[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;main (main.m:16)&#x000A;<span class="cp-wrong">No matching symbols found for /usr/lib/system/libdyld.dylib | Missing class, and method</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_arm64'>
+            <h2 class='cp-h2'>Raygun - arm64</h2>
+            <pre class='cp-featurecode'>-[CRLCrashOverwriteLinkRegister crash] (CRLCrashOverwriteLinkRegister.m:53)&#x000A;-[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices | Missing class, and method</span>&#x000A;<span class="cp-wrong">No matching symbols found for /System/Library/Frameworks/UIKit.framework/UIKit | Missing class, and method</span>&#x000A;main (main.m:16)&#x000A;<span class="cp-wrong">No matching symbols found for /usr/lib/system/libdyld.dylib | Missing class, and method</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
+            <h2 class='cp-h2'>Bugsnag - armv7</h2>
+            <pre class='cp-featurecode'>Segmentation fault: 11: &#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:50:0 -[BugsnagEvent addSignal:]&#x000A;bugsnag/BugsnagNotifier.m:73:0 -[BugsnagNotifier notifySignal:]&#x000A;bugsnag/Bugsnag.m:67:0 handle_signal&#x000A;libsystem_platform.dylib:0 _sigtramp&#x000A;<span class="cp-wrong">CrashLibiOS:0 -[CRLCrashOverwriteLinkRegister crash] | Missing filename, and line number</span>&#x000A;CrashProbe iOS/CRLDetailViewController.m:53:0 -[CRLDetailViewController doCrash]&#x000A;UIKit:0 -[UIApplication sendAction:to:from:forEvent:]&#x000A;UIKit:0 -[UIControl sendAction:to:forEvent:]&#x000A;UIKit:0 -[UIControl _sendActionsForEvents:withEvent:]&#x000A;UIKit:0 -[UIControl touchesEnded:withEvent:]&#x000A;UIKit:0 -[UIWindow _sendTouchesForEvent:]&#x000A;UIKit:0 -[UIWindow sendEvent:]&#x000A;UIKit:0 -[UIApplication sendEvent:]&#x000A;UIKit:0 _UIApplicationHandleEventFromQueueEvent&#x000A;UIKit:0 _UIApplicationHandleEventQueue&#x000A;CoreFoundation:0 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;CoreFoundation:0 __CFRunLoopDoSources0&#x000A;CoreFoundation:0 __CFRunLoopRun&#x000A;CoreFoundation:0 CFRunLoopRunSpecific&#x000A;CoreFoundation:0 CFRunLoopRunInMode&#x000A;GraphicsServices:0 GSEventRunModal&#x000A;UIKit:0 UIApplicationMain&#x000A;CrashProbe iOS/main.m:16:0 main&#x000A;libdyld.dylib:0 start</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_arm64'>
+            <h2 class='cp-h2'>Bugsnag - arm64</h2>
+            <pre class='cp-featurecode'>Segmentation fault: 11: &#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:50:0 -[BugsnagEvent addSignal:]&#x000A;bugsnag/BugsnagNotifier.m:73:0 -[BugsnagNotifier notifySignal:]&#x000A;bugsnag/Bugsnag.m:67:0 handle_signal&#x000A;libsystem_platform.dylib:0 _sigtramp&#x000A;<span class="cp-wrong">CrashLibiOS:0 -[CRLCrashOverwriteLinkRegister crash] | Missing filename, and line number</span>&#x000A;CrashProbe iOS/CRLDetailViewController.m:53:0 -[CRLDetailViewController doCrash]&#x000A;UIKit:0 -[UIApplication sendAction:to:from:forEvent:]&#x000A;UIKit:0 -[UIControl _sendActionsForEvents:withEvent:]&#x000A;UIKit:0 -[UIControl touchesEnded:withEvent:]&#x000A;UIKit:0 -[UIWindow _sendTouchesForEvent:]&#x000A;UIKit:0 -[UIWindow sendEvent:]&#x000A;UIKit:0 -[UIApplication sendEvent:]&#x000A;UIKit:0 _UIApplicationHandleEventFromQueueEvent&#x000A;UIKit:0 _UIApplicationHandleEventQueue&#x000A;CoreFoundation:0 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;CoreFoundation:0 __CFRunLoopDoSources0&#x000A;CoreFoundation:0 __CFRunLoopRun&#x000A;CoreFoundation:0 CFRunLoopRunSpecific&#x000A;GraphicsServices:0 GSEventRunModal&#x000A;UIKit:0 UIApplicationMain&#x000A;CrashProbe iOS/main.m:16:0 main&#x000A;libdyld.dylib:0 start</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7'>
+            <h2 class='cp-h2'>Crittercism - armv7</h2>
+            <pre class='cp-featurecode'>Name: SIGSEGV&#x000A;Reason: SEGV_ACCERR&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">0  CrashLibiOS      0x0024295a 0x0023c000 + 26970 | Missing class, method, filename, and line number</span>&#x000A;1  CrashProbeiOS    0x000dec0b -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x262cd427 -[UIApplication sendAction:to:from:forEvent:] + 68&#x000A;3  UIKit            0x262cd3c9 -[UIControl sendAction:to:forEvent:] + 42&#x000A;4  UIKit            0x262b7fcd -[UIControl _sendActionsForEvents:withEvent:] + 582&#x000A;5  UIKit            0x262ccdf9 -[UIControl touchesEnded:withEvent:] + 582&#x000A;6  UIKit            0x26291b47 _UIGestureRecognizerUpdate + 10156&#x000A;7  UIKit            0x262c6afd -[UIWindow _sendGesturesForEvent:] + 782&#x000A;8  UIKit            0x262c63cd -[UIWindow sendEvent:] + 518&#x000A;9  UIKit            0x2629cb5d -[UIApplication sendEvent:] + 194&#x000A;10 UIKit            0x265104e3 _UIApplicationHandleEventFromQueueEvent + 13872&#x000A;11 UIKit            0x2629b59f _UIApplicationHandleEventQueue + 1292&#x000A;12 CoreFoundation   0x22dbe5e7 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 12&#x000A;13 CoreFoundation   0x22dbd9fb __CFRunLoopDoSources0 + 220&#x000A;14 CoreFoundation   0x22dbc079 __CFRunLoopRun + 766&#x000A;15 CoreFoundation   0x22d09981 CFRunLoopRunSpecific + 474&#x000A;16 CoreFoundation   0x22d09793 CFRunLoopRunInMode + 104&#x000A;17 GraphicsServices 0x2a0bb051 GSEventRunModal + 134&#x000A;18 UIKit            0x262fb981 UIApplicationMain + 1438&#x000A;19 CrashProbeiOS    0x000ddfa7 main (main.m:16)&#x000A;20 libdyld.dylib    0x30ab6aaf start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_arm64'>
+            <h2 class='cp-h2'>Crittercism - arm64</h2>
+            <pre class='cp-featurecode'>Name: SIGSEGV&#x000A;&#x000A;Crashed Thread:&#x000A;<span class="cp-wrong">0  CrashLibiOS      0x0000000100136670 0x0000000100130000 + 26224 | Missing class, method, filename, and line number</span>&#x000A;1  CrashProbeiOS    0x00000001000b64a0 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x000000018c6550f8 -[UIApplication sendAction:to:from:forEvent:] + 92&#x000A;3  UIKit            0x000000018c63e22c -[UIControl _sendActionsForEvents:withEvent:] + 608&#x000A;4  UIKit            0x000000018c654a94 -[UIControl touchesEnded:withEvent:] + 588&#x000A;5  UIKit            0x000000018c614450 _UIGestureRecognizerUpdate + 8532&#x000A;6  UIKit            0x000000018c64e5bc -[UIWindow _sendGesturesForEvent:] + 1040&#x000A;7  UIKit            0x000000018c64dc5c -[UIWindow sendEvent:] + 656&#x000A;8  UIKit            0x000000018c62138c -[UIApplication sendEvent:] + 260&#x000A;9  UIKit            0x000000018c8c01b4 _UIApplicationHandleEventFromQueueEvent + 14988&#x000A;10 UIKit            0x000000018c61f8f4 _UIApplicationHandleEventQueue + 1612&#x000A;11 CoreFoundation   0x0000000187e2a0e8 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 20&#x000A;12 CoreFoundation   0x0000000187e2938c __CFRunLoopDoSources0 + 260&#x000A;13 CoreFoundation   0x0000000187e2743c __CFRunLoopRun + 708&#x000A;14 CoreFoundation   0x0000000187d551f4 CFRunLoopRunSpecific + 392&#x000A;15 GraphicsServices 0x0000000190eeb5a4 GSEventRunModal + 164&#x000A;16 UIKit            0x000000018c686784 UIApplicationMain + 1484&#x000A;17 CrashProbeiOS    0x00000001000b5480 main (main.m:16)&#x000A;18 libdyld.dylib    0x0000000198bdaa08 start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_NewRelic_armv7'>
+            <h2 class='cp-h2'>NewRelic - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">0  CrashLibiOS      0x2a795a   0 + 2783578 | Missing class, method, filename, and line number</span>&#x000A;1  CrashProbeiOS    0xd74b3    [CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x25405427 [UIApplication sendAction:to:from:forEvent:] + 263207&#x000A;3  UIKit            0x254053c9 [UIControl sendAction:to:forEvent:] + 263113&#x000A;4  UIKit            0x253effcd [UIControl _sendActionsForEvents:withEvent:] + 176077&#x000A;5  UIKit            0x25404df9 [UIControl touchesEnded:withEvent:] + 261625&#x000A;6  UIKit            0x253c9b47 __UIGestureRecognizerUpdate + 19271&#x000A;7  UIKit            0x253feafd [UIWindow _sendGesturesForEvent:] + 236285&#x000A;8  UIKit            0x253fe3cd [UIWindow sendEvent:] + 234445&#x000A;9  UIKit            0x253d4b5d [UIApplication sendEvent:] + 64349&#x000A;10 UIKit            0x256484e3 __UIApplicationHandleEventFromQueueEvent + 2634979&#x000A;11 UIKit            0x253d359f __UIApplicationHandleEventQueue + 58783&#x000A;12 CoreFoundation   0x21ef65e7 ___CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 845287&#x000A;13 CoreFoundation   0x21ef59fb ___CFRunLoopDoSources0 + 842235&#x000A;14 CoreFoundation   0x21ef4079 ___CFRunLoopRun + 835705&#x000A;15 CoreFoundation   0x21e41981 _CFRunLoopRunSpecific + 104833&#x000A;16 CoreFoundation   0x21e41793 _CFRunLoopRunInMode + 104339&#x000A;17 GraphicsServices 0x291f3051 _GSEventRunModal + 36945&#x000A;18 UIKit            0x25433981 _UIApplicationMain + 452993&#x000A;19 CrashProbeiOS    0xd684f    main (main.m:16)&#x000A;20 libdyld.dylib    0x2fbeeaaf _start + 6831</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_NewRelic_arm64'>
+            <h2 class='cp-h2'>NewRelic - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'SIGSEGV', reason: ''&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">0  CrashLibiOS      0x10015e670 0 + 4296402544 | Missing class, method, filename, and line number</span>&#x000A;1  CrashProbeiOS    0x1000459ec [CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x189ed10f8 [UIApplication sendAction:to:from:forEvent:] + 282872&#x000A;3  UIKit            0x189eba22c [UIControl _sendActionsForEvents:withEvent:] + 188972&#x000A;4  UIKit            0x189ed0a94 [UIControl touchesEnded:withEvent:] + 281236&#x000A;5  UIKit            0x189e90450 __UIGestureRecognizerUpdate + 17488&#x000A;6  UIKit            0x189eca5bc [UIWindow _sendGesturesForEvent:] + 255420&#x000A;7  UIKit            0x189ec9c5c [UIWindow sendEvent:] + 253020&#x000A;8  UIKit            0x189e9d38c [UIApplication sendEvent:] + 70540&#x000A;9  UIKit            0x18a13c1b4 __UIApplicationHandleEventFromQueueEvent + 2818484&#x000A;10 UIKit            0x189e9b8f4 __UIApplicationHandleEventQueue + 63732&#x000A;11 CoreFoundation   0x1856a60e8 ___CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 909544&#x000A;12 CoreFoundation   0x1856a538c ___CFRunLoopDoSources0 + 906124&#x000A;13 CoreFoundation   0x1856a343c ___CFRunLoopRun + 898108&#x000A;14 CoreFoundation   0x1855d11f4 _CFRunLoopRunSpecific + 37364&#x000A;15 GraphicsServices 0x18e7675a4 _GSEventRunModal + 46500&#x000A;16 UIKit            0x189f02784 _UIApplicationMain + 485252&#x000A;17 CrashProbeiOS    0x1000449cc main (main.m:16)&#x000A;18 libdyld.dylib    0x196456a08 _start + 10760</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Splunk_armv7'>
+            <h2 class='cp-h2'>Splunk - armv7</h2>
+            <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Thread:&#x000A;<span class="cp-wrong">0  CrashLibiOS      -[SLKAFHTTPResponseSerializer init] (in CrashProbeiOS) + 98	 | Wrong class, method. Missing filename, and line number</span>&#x000A;1  CrashProbeiOS    -[CRLDetailViewController doCrash] (in CrashProbeiOS) (CRLDetailViewController.m:53) + 21883&#x000A;2  UIKit            +[SLKSSHardwareInfo systemUptime] (in CrashProbeiOS) + 15&#x000A;3  UIKit            -[SplunkNSURLSessionDataDelegateInterceptor setRequest:] (in CrashProbeiOS) + 9&#x000A;4  UIKit            -[DeviceInfo getDeviceModel] (in CrashProbeiOS) + 85&#x000A;5  UIKit            -[SplunkNSURLSessionDataDelegateInterceptor URLSession:task:needNewBodyStream:] (in CrashProbeiOS) + 333&#x000A;6  UIKit            -[SplunkNSURLSessionDataDelegateInterceptor URLSession:task:didReceiveChallenge:completionHandler:] (in CrashProbeiOS) + 127&#x000A;7  UIKit            -[SplunkNSURLConnectionDataDelegateInterceptor connection:didCancelAuthenticationChallenge:] (in CrashProbeiOS) + 241&#x000A;8  UIKit            __copy_helper_block_280 (in CrashProbeiOS) + 17&#x000A;9  UIKit            0x265104e3 + 2634979&#x000A;10 UIKit            __52-[MintRequestWorker sendEventAsync:completionBlock:]_block_invoke_2 (in CrashProbeiOS) + 255&#x000A;11 CoreFoundation   0x22dbe5e7 + 845287&#x000A;12 CoreFoundation   0x22dbd9fb + 842235&#x000A;13 CoreFoundation   0x22dbc079 + 835705&#x000A;14 CoreFoundation   __106-[MintServiceRepository executeRequestAsyncWithUrl:requestData:requestType:contentType:andCompletedBlock:]_block_invoke87 (in CrashProbeiOS) + 465&#x000A;15 CoreFoundation   __copy_helper_block_ (in CrashProbeiOS) + 31&#x000A;16 GraphicsServices -[SLKAFCompoundResponseSerializer responseObjectForResponse:data:error:] (in CrashProbeiOS) + 413&#x000A;17 UIKit            stub helpers (in CrashProbeiOS) + 8285&#x000A;18 CrashProbeiOS    main (in CrashProbeiOS) (main.m:16) + 18679&#x000A;19 libdyld.dylib    _mh_execute_header (in CrashProbeiOS) + 6831</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Splunk_arm64'>
+            <h2 class='cp-h2'>Splunk - arm64</h2>
+            <pre class='cp-featurecode'>SIGSEGV&#x000A;&#x000A;Thread:&#x000A;<span class="cp-wrong">0  CrashLibiOS      -[CRLDetailViewController viewWillAppear:] (in CrashProbeiOS) (CRLDetailViewController.m:48) + 26224 | Wrong class, method, filename, and line number</span>&#x000A;1  CrashProbeiOS    -[CRLDetailViewController doCrash] (in CrashProbeiOS) (CRLDetailViewController.m:53) + 26368&#x000A;2  UIKit            -[SplunkNSURLConnectionDataDelegateInterceptor connection:didReceiveData:lengthReceived:] (in CrashProbeiOS) + 48&#x000A;3  UIKit            +[SLKSSUUID deviceSignature] (in CrashProbeiOS) + 1436&#x000A;4  UIKit            -[SplunkNSURLConnectionDataDelegateInterceptor connection:didReceiveAuthenticationChallenge:] (in CrashProbeiOS) + 324&#x000A;5  UIKit            _mh_execute_header (in CrashProbeiOS) + 17488&#x000A;6  UIKit            -[LimitedExtraDataList removeWithKey:] (in CrashProbeiOS) + 40&#x000A;7  UIKit            +[SLKSSProcessorInfo numberProcessors] (in CrashProbeiOS) + 104&#x000A;8  UIKit            -[MintRequestWorker sendEventAsync:completionBlock:] (in CrashProbeiOS) + 780&#x000A;9  UIKit            0x18c8c01b4 + 2818484&#x000A;10 UIKit            -[MintBase enableLogging:] (in CrashProbeiOS) + 28&#x000A;11 CoreFoundation   0x187e2a0e8 + 909544&#x000A;12 CoreFoundation   0x187e2938c + 906124&#x000A;13 CoreFoundation   0x187e2743c + 898108&#x000A;14 CoreFoundation   -[SLKAFJSONResponseSerializer responseObjectForResponse:data:error:] (in CrashProbeiOS) + 1172&#x000A;15 GraphicsServices +[TrStart getInstanceWithTransactionName:appEnvironment:andPerformance:] (in CrashProbeiOS) + 168&#x000A;16 UIKit            plcrash__crash_report__pack_to_buffer (in CrashProbeiOS) + 68&#x000A;17 CrashProbeiOS    main (in CrashProbeiOS) (main.m:16) + 22196&#x000A;18 libdyld.dylib    _mh_execute_header (in CrashProbeiOS) + 10760</pre>
+          </div>
+          <div class='clear'></div>
+        </div>
+      </div>
+      <div class='content-pusher'></div>
+    </div>
+    <div class='container'>
+      <div class='footer-wrapper row' id='cp-footer'>
+        <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-1' id='cp-copyright'>
+          <small>
+            Copyright &copy; 2015 Bit Stadium GmbH
+          </small>
+        </div>
+        <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
+          <small>
+            All tests are accurate as of 11/09/2014.
+          </small>
+        </div>
+        <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-0' id='cp-footermenu'>
+          <small>
+            <a href='/imprint'>Imprint</a>
+            |
+            <a href='http://support.hockeyapp.net/discussion/new'>Contact</a>
+          </small>
+        </div>
+        <div class='col-xs-10 col-xs-push-0 col-md-push-1' id='cp-trademarks'>
+          <small>
+            HockeyApp, the HockeyApp logo, CrashProbe, and the CrashProbe logo are trademarks of Bit Stadium GmbH.
+            Apple, the Apple logo, iOS, and Mac OS are trademarks registered to Apple Inc.
+            Crittercism and the Crittercism logo are trademarks of Crittercism, Inc.
+            Crashlytics and the Crashlytics logo are trademarks of Twitter, Inc.
+            Raygun and the Raygun logo are trademarks of Mindscape Limited.
+            Bugsnag and the Bugsnag logo are trademarks of Bugsnag, Inc.
+            New Relic and the New Relic logo are trademarks of New Relic, Inc.
+            Splunk MINT Express and the Splunk MINT Express logo are trademarks of Splunk, Inc.
+          </small>
+        </div>
+      </div>
+    </div>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script type="text/javascript"> var _gauges = _gauges || []; (function() { var t   = document.createElement('script'); t.type  = 'text/javascript'; t.async = true; t.id    = 'gauges-tracker'; t.setAttribute('data-site-id', '537f25cb8bfdf705e5002a32'); t.src = '//secure.gaug.es/track.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(t, s); })();</script>
+    <script type="text/javascript">var appInsights=window.appInsights||function(config){function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t}({instrumentationKey:"fdf56150-4138-4000-bda1-450dc44d6059"});window.appInsights=appInsights;appInsights.trackPageView();</script>
+  </body>
+</html>
+
