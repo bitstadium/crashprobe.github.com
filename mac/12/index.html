@@ -285,6 +285,25 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'x86_64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-AppInsights'>
+                <td class='title'>
+                  Application Insights
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    1.0-Beta.1
+                    <span title='Data provided by Microsoft'>
+                      Date:
+                      07/07/2015
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'x86_64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-Crashlytics'>
                 <td class='title'>
                   Crashlytics
@@ -359,6 +378,10 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGILL&#x000A;Exception Codes: ILL_NOOP at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">0  CrashLib              0x0000000104cc4d20 -[CRLCrashNXPage crash] + 4 | Missing line number</span>&#x000A;1  CrashProbe            0x0000000104cb9423 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;2  libsystem_trace.dylib 0x00007fff91233cd7 _os_activity_initiate + 75&#x000A;3  AppKit                0x00007fff8bc45fb1 -[NSApplication sendAction:to:from:] + 452&#x000A;4  AppKit                0x00007fff8bc5ba46 -[NSControl sendAction:to:] + 86&#x000A;5  AppKit                0x00007fff8bc5b962 __26-[NSCell _sendActionFrom:]_block_invoke + 131&#x000A;6  libsystem_trace.dylib 0x00007fff91233cd7 _os_activity_initiate + 75&#x000A;7  AppKit                0x00007fff8bc5b8bf -[NSCell _sendActionFrom:] + 144&#x000A;8  libsystem_trace.dylib 0x00007fff91233cd7 _os_activity_initiate + 75&#x000A;9  AppKit                0x00007fff8bc59db3 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2821&#x000A;10 AppKit                0x00007fff8bcb245f -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 770&#x000A;11 AppKit                0x00007fff8bc58466 -[NSControl mouseDown:] + 714&#x000A;12 AppKit                0x00007fff8c1c22fc -[NSWindow _reallySendEvent:isDelayedEvent:] + 14125&#x000A;13 AppKit                0x00007fff8bb51d76 -[NSWindow sendEvent:] + 470&#x000A;14 AppKit                0x00007fff8bb4e312 -[NSApplication sendEvent:] + 2504&#x000A;15 HockeySDK             0x0000000104ce09c7 -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;16 AppKit                0x00007fff8ba77c68 -[NSApplication run] + 711&#x000A;17 AppKit                0x00007fff8b9f4354 NSApplicationMain + 1832&#x000A;18 CrashProbe            0x0000000104cb9789 main (main.m:13)&#x000A;19 libdyld.dylib         0x00007fff8aaa75c9 start + 1</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_x86_64'>
+            <h2 class='cp-h2'>AppInsights - x86_64</h2>
+            <pre class='cp-featurecode'>SIGILL: &#x000A;   <span class="cp-wrong">at -[CRLCrashNXPage crash] (CrashLib) | Missing line number</span>&#x000A;   at -[CRLMainWindowController causeCrash:] (CrashProbe: CRLMainWindowController.m: 72)&#x000A;   at _os_activity_initiate (libsystem_trace.dylib)&#x000A;   at -[NSApplication sendAction:to:from:] (AppKit)&#x000A;   at -[NSControl sendAction:to:] (AppKit)&#x000A;   at __26-[NSCell _sendActionFrom:]_block_invoke (AppKit)&#x000A;   at _os_activity_initiate (libsystem_trace.dylib)&#x000A;   at -[NSCell _sendActionFrom:] (AppKit)&#x000A;   at _os_activity_initiate (libsystem_trace.dylib)&#x000A;   at -[NSCell trackMouse:inRect:ofView:untilMouseUp:] (AppKit)&#x000A;   at -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] (AppKit)&#x000A;   at -[NSControl mouseDown:] (AppKit)&#x000A;   at -[NSWindow _reallySendEvent:isDelayedEvent:] (AppKit)&#x000A;   at -[NSWindow sendEvent:] (AppKit)&#x000A;   at -[NSApplication sendEvent:] (AppKit)&#x000A;   at 0x00000001064a2e14 (ApplicationInsightsOSX)&#x000A;   at -[NSApplication run] (AppKit)&#x000A;   at NSApplicationMain (AppKit)&#x000A;   at main (CrashProbe: main.m: 13)&#x000A;   at start (libdyld.dylib)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
