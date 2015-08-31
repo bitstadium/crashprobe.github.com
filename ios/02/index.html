@@ -285,10 +285,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    3.7.0
+                    3.7.3
                     <span title='Data provided by Bit Stadium GmbH'>
                       Date:
-                      06/24/2015
+                      08/31/2015
                       (i)
                     </span>
                   </font>
@@ -300,29 +300,6 @@
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-AppInsights'>
-                <td class='title'>
-                  Application Insights
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    1.0-Beta.5
-                    <span title='Data provided by Microsoft'>
-                      Date:
-                      07/07/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Apple'>
@@ -502,19 +479,11 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x3094bdf0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 libc++abi.dylib  0x2fb00def std::__terminate(void (*)()) + 79&#x000A;1 libc++abi.dylib  0x2fb008b9 __cxa_rethrow + 98&#x000A;2 libobjc.A.dylib  0x302dddbf objc_exception_rethrow + 40&#x000A;3 CoreFoundation   0x21f51a3d CFRunLoopRunSpecific + 630&#x000A;4 CoreFoundation   0x21f517b3 CFRunLoopRunInMode + 104&#x000A;5 GraphicsServices 0x296d21a9 GSEventRunModal + 134&#x000A;6 UIKit            0x256dc695 UIApplicationMain + 1438&#x000A;7 CrashProbeiOS    0x000b485f main (main.m:16)&#x000A;8 libdyld.dylib    0x30885aaf start + 0</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x3771edf0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 libc++abi.dylib  0x368aedef std::__terminate(void (*)()) + 76&#x000A;1 libc++abi.dylib  0x368ae8b9 __cxa_rethrow + 98&#x000A;2 libobjc.A.dylib  0x3708adbf objc_exception_rethrow + 40&#x000A;3 CoreFoundation   0x28b0776d CFRunLoopRunSpecific + 630&#x000A;4 CoreFoundation   0x28b074e3 CFRunLoopRunInMode + 104&#x000A;5 GraphicsServices 0x304cc1a9 GSEventRunModal + 134&#x000A;6 UIKit            0x2c2b9445 UIApplicationMain + 1438&#x000A;7 CrashProbeiOS    0x000f3bbf main (main.m:16)&#x000A;8 libdyld.dylib    0x37658aaf start + 0</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x195ab3270&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 libc++abi.dylib  0x0000000194b05bb4 std::__terminate(void (*)()) + 12&#x000A;1 libc++abi.dylib  0x0000000194b0573c __cxa_rethrow + 140&#x000A;2 libobjc.A.dylib  0x000000019531c294 objc_exception_rethrow + 40&#x000A;3 CoreFoundation   0x00000001839d9384 CFRunLoopRunSpecific + 568&#x000A;4 GraphicsServices 0x000000018d1ef6fc GSEventRunModal + 164&#x000A;5 UIKit            0x000000018859efac UIApplicationMain + 1484&#x000A;6 CrashProbeiOS    0x00000001000f76ec main (main.m:16)&#x000A;7 libdyld.dylib    0x000000019599aa08 start + 0</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_armv7'>
-            <h2 class='cp-h2'>AppInsights - armv7</h2>
-            <pre class='cp-featurecode'>SIGABRT: kaboom_exception*: If this had been a real exception, you would be cursing now.&#x000A;   <span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;   at std::__terminate(void (*)()) (libc++abi.dylib)&#x000A;   at __cxa_rethrow (libc++abi.dylib)&#x000A;   at objc_exception_rethrow (libobjc.A.dylib)&#x000A;   at CFRunLoopRunSpecific (CoreFoundation)&#x000A;   at CFRunLoopRunInMode (CoreFoundation)&#x000A;   at GSEventRunModal (GraphicsServices)&#x000A;   at UIApplicationMain (UIKit)&#x000A;   at main (CrashProbeiOS: main.m: 16)&#x000A;   at start (libdyld.dylib)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_arm64'>
-            <h2 class='cp-h2'>AppInsights - arm64</h2>
-            <pre class='cp-featurecode'>SIGABRT: kaboom_exception*: If this had been a real exception, you would be cursing now.&#x000A;   <span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;   at std::__terminate(void (*)()) (libc++abi.dylib)&#x000A;   at __cxa_rethrow (libc++abi.dylib)&#x000A;   at objc_exception_rethrow (libobjc.A.dylib)&#x000A;   at CFRunLoopRunSpecific (CoreFoundation)&#x000A;   at GSEventRunModal (GraphicsServices)&#x000A;   at UIApplicationMain (UIKit)&#x000A;   at main (CrashProbeiOS: main.m: 16)&#x000A;   at start (libdyld.dylib)</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x19473b270&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 libc++abi.dylib  0x0000000193775bb4 std::__terminate(void (*)()) + 12&#x000A;1 libc++abi.dylib  0x000000019377573c __cxa_rethrow + 140&#x000A;2 libobjc.A.dylib  0x0000000193f78294 objc_exception_rethrow + 40&#x000A;3 CoreFoundation   0x00000001824fd024 CFRunLoopRunSpecific + 568&#x000A;4 GraphicsServices 0x000000018be076fc GSEventRunModal + 164&#x000A;5 UIKit            0x00000001870fed94 UIApplicationMain + 1484&#x000A;6 CrashProbeiOS    0x00000001000be5b8 main (main.m:16)&#x000A;7 libdyld.dylib    0x0000000194622a08 start + 0</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>

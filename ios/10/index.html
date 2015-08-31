@@ -285,10 +285,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    3.7.0
+                    3.7.3
                     <span title='Data provided by Bit Stadium GmbH'>
                       Date:
-                      06/24/2015
+                      08/31/2015
                       (i)
                     </span>
                   </font>
@@ -300,29 +300,6 @@
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-AppInsights'>
-                <td class='title'>
-                  Application Insights
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    1.0-Beta.5
-                    <span title='Data provided by Microsoft'>
-                      Date:
-                      07/07/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Apple'>
@@ -502,19 +479,11 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x001ee47e -[CRLCrashNULL crash] (CRLCrashNULL.m:37)&#x000A;1  CrashProbeiOS    0x000535af -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x256ada7b -[UIApplication sendAction:to:from:forEvent:] + 68&#x000A;3  UIKit            0x256ada21 -[UIControl sendAction:to:forEvent:] + 42&#x000A;4  UIKit            0x256985c5 -[UIControl _sendActionsForEvents:withEvent:] + 582&#x000A;5  UIKit            0x256ad461 -[UIControl touchesEnded:withEvent:] + 582&#x000A;6  UIKit            0x256ad133 -[UIWindow _sendTouchesForEvent:] + 520&#x000A;7  UIKit            0x256a6a41 -[UIWindow sendEvent:] + 538&#x000A;8  UIKit            0x2567cc05 -[UIApplication sendEvent:] + 194&#x000A;9  UIKit            0x258f331f _UIApplicationHandleEventFromQueueEvent + 14536&#x000A;10 UIKit            0x2567b607 _UIApplicationHandleEventQueue + 1348&#x000A;11 CoreFoundation   0x2200822f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 12&#x000A;12 CoreFoundation   0x22007643 __CFRunLoopDoSources0 + 220&#x000A;13 CoreFoundation   0x22005cc1 __CFRunLoopRun + 766&#x000A;14 CoreFoundation   0x21f519a1 CFRunLoopRunSpecific + 474&#x000A;15 CoreFoundation   0x21f517b3 CFRunLoopRunInMode + 104&#x000A;16 GraphicsServices 0x296d21a9 GSEventRunModal + 134&#x000A;17 UIKit            0x256dc695 UIApplicationMain + 1438&#x000A;18 CrashProbeiOS    0x0005285f main (main.m:16)&#x000A;19 libdyld.dylib    0x30885aaf start + 0</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x001fef4a -[CRLCrashNULL crash] (CRLCrashNULL.m:37)&#x000A;1  CrashProbeiOS    0x0006590f -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x2c28a82b -[UIApplication sendAction:to:from:forEvent:] + 68&#x000A;3  UIKit            0x2c28a7d1 -[UIControl sendAction:to:forEvent:] + 42&#x000A;4  UIKit            0x2c275375 -[UIControl _sendActionsForEvents:withEvent:] + 582&#x000A;5  UIKit            0x2c28a211 -[UIControl touchesEnded:withEvent:] + 582&#x000A;6  UIKit            0x2c289ee3 -[UIWindow _sendTouchesForEvent:] + 520&#x000A;7  UIKit            0x2c2837f1 -[UIWindow sendEvent:] + 538&#x000A;8  UIKit            0x2c2599b5 -[UIApplication sendEvent:] + 194&#x000A;9  UIKit            0x2c4d00ff _UIApplicationHandleEventFromQueueEvent + 14536&#x000A;10 UIKit            0x2c2583b7 _UIApplicationHandleEventQueue + 1348&#x000A;11 CoreFoundation   0x28bbe00f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 12&#x000A;12 CoreFoundation   0x28bbd423 __CFRunLoopDoSources0 + 220&#x000A;13 CoreFoundation   0x28bbbaa1 __CFRunLoopRun + 766&#x000A;14 CoreFoundation   0x28b076d1 CFRunLoopRunSpecific + 474&#x000A;15 CoreFoundation   0x28b074e3 CFRunLoopRunInMode + 104&#x000A;16 GraphicsServices 0x304cc1a9 GSEventRunModal + 134&#x000A;17 UIKit            0x2c2b9445 UIApplicationMain + 1438&#x000A;18 CrashProbeiOS    0x00064bbf main (main.m:16)&#x000A;19 libdyld.dylib    0x37658aaf start + 0</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x0000000100170cb4 -[CRLCrashNULL crash] (CRLCrashNULL.m:37)&#x000A;1  CrashProbeiOS    0x00000001000a481c -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x000000018856d404 -[UIApplication sendAction:to:from:forEvent:] + 92&#x000A;3  UIKit            0x00000001885564e0 -[UIControl _sendActionsForEvents:withEvent:] + 608&#x000A;4  UIKit            0x000000018856cda0 -[UIControl touchesEnded:withEvent:] + 588&#x000A;5  UIKit            0x000000018852bfc0 _UIGestureRecognizerUpdate + 8532&#x000A;6  UIKit            0x0000000188566898 -[UIWindow _sendGesturesForEvent:] + 1040&#x000A;7  UIKit            0x0000000188565f50 -[UIWindow sendEvent:] + 656&#x000A;8  UIKit            0x000000018853918c -[UIApplication sendEvent:] + 260&#x000A;9  UIKit            0x00000001887da324 _UIApplicationHandleEventFromQueueEvent + 15420&#x000A;10 UIKit            0x00000001885376a0 _UIApplicationHandleEventQueue + 1712&#x000A;11 CoreFoundation   0x0000000183ab0240 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 20&#x000A;12 CoreFoundation   0x0000000183aaf4e4 __CFRunLoopDoSources0 + 260&#x000A;13 CoreFoundation   0x0000000183aad594 __CFRunLoopRun + 708&#x000A;14 CoreFoundation   0x00000001839d92d4 CFRunLoopRunSpecific + 392&#x000A;15 GraphicsServices 0x000000018d1ef6fc GSEventRunModal + 164&#x000A;16 UIKit            0x000000018859efac UIApplicationMain + 1484&#x000A;17 CrashProbeiOS    0x00000001000a36ec main (main.m:16)&#x000A;18 libdyld.dylib    0x000000019599aa08 start + 0</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_armv7'>
-            <h2 class='cp-h2'>AppInsights - armv7</h2>
-            <pre class='cp-featurecode'>SIGSEGV: Selector name found in current argument registers: crash&#x000A;   at -[CRLCrashNULL crash] (CrashLibiOS: CRLCrashNULL.m: 37)&#x000A;   at -[CRLDetailViewController doCrash] (CrashProbeiOS: CRLDetailViewController.m: 53)&#x000A;   at -[UIApplication sendAction:to:from:forEvent:] (UIKit)&#x000A;   at -[UIControl sendAction:to:forEvent:] (UIKit)&#x000A;   at -[UIControl _sendActionsForEvents:withEvent:] (UIKit)&#x000A;   at -[UIControl touchesEnded:withEvent:] (UIKit)&#x000A;   at -[UIWindow _sendTouchesForEvent:] (UIKit)&#x000A;   at -[UIWindow sendEvent:] (UIKit)&#x000A;   at -[UIApplication sendEvent:] (UIKit)&#x000A;   at _UIApplicationHandleEventFromQueueEvent (UIKit)&#x000A;   at _UIApplicationHandleEventQueue (UIKit)&#x000A;   at __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ (CoreFoundation)&#x000A;   at __CFRunLoopDoSources0 (CoreFoundation)&#x000A;   at __CFRunLoopRun (CoreFoundation)&#x000A;   at CFRunLoopRunSpecific (CoreFoundation)&#x000A;   at CFRunLoopRunInMode (CoreFoundation)&#x000A;   at GSEventRunModal (GraphicsServices)&#x000A;   at UIApplicationMain (UIKit)&#x000A;   at main (CrashProbeiOS: main.m: 16)&#x000A;   at start (libdyld.dylib)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_arm64'>
-            <h2 class='cp-h2'>AppInsights - arm64</h2>
-            <pre class='cp-featurecode'>SIGSEGV: Selector name found in current argument registers: crash&#x000A;   at -[CRLCrashNULL crash] (CrashLibiOS: CRLCrashNULL.m: 37)&#x000A;   at -[CRLDetailViewController doCrash] (CrashProbeiOS: CRLDetailViewController.m: 53)&#x000A;   at -[UIApplication sendAction:to:from:forEvent:] (UIKit)&#x000A;   at -[UIControl _sendActionsForEvents:withEvent:] (UIKit)&#x000A;   at -[UIControl touchesEnded:withEvent:] (UIKit)&#x000A;   at _UIGestureRecognizerUpdate (UIKit)&#x000A;   at -[UIWindow _sendGesturesForEvent:] (UIKit)&#x000A;   at -[UIWindow sendEvent:] (UIKit)&#x000A;   at -[UIApplication sendEvent:] (UIKit)&#x000A;   at _UIApplicationHandleEventFromQueueEvent (UIKit)&#x000A;   at _UIApplicationHandleEventQueue (UIKit)&#x000A;   at __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ (CoreFoundation)&#x000A;   at __CFRunLoopDoSources0 (CoreFoundation)&#x000A;   at __CFRunLoopRun (CoreFoundation)&#x000A;   at CFRunLoopRunSpecific (CoreFoundation)&#x000A;   at GSEventRunModal (GraphicsServices)&#x000A;   at UIApplicationMain (UIKit)&#x000A;   at main (CrashProbeiOS: main.m: 16)&#x000A;   at start (libdyld.dylib)</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0  CrashLibiOS      0x00000001001b5a0c -[CRLCrashNULL crash] (CRLCrashNULL.m:37)&#x000A;1  CrashProbeiOS    0x00000001000ef6e8 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            0x00000001870cd1ec -[UIApplication sendAction:to:from:forEvent:] + 92&#x000A;3  UIKit            0x00000001870b62c8 -[UIControl _sendActionsForEvents:withEvent:] + 608&#x000A;4  UIKit            0x00000001870ccb88 -[UIControl touchesEnded:withEvent:] + 588&#x000A;5  UIKit            0x000000018708bda8 _UIGestureRecognizerUpdate + 8532&#x000A;6  UIKit            0x00000001870c6680 -[UIWindow _sendGesturesForEvent:] + 1040&#x000A;7  UIKit            0x00000001870c5d38 -[UIWindow sendEvent:] + 656&#x000A;8  UIKit            0x0000000187098f74 -[UIApplication sendEvent:] + 260&#x000A;9  UIKit            0x000000018733a124 _UIApplicationHandleEventFromQueueEvent + 15420&#x000A;10 UIKit            0x0000000187097488 _UIApplicationHandleEventQueue + 1712&#x000A;11 CoreFoundation   0x00000001825d3f8c __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 20&#x000A;12 CoreFoundation   0x00000001825d3230 __CFRunLoopDoSources0 + 260&#x000A;13 CoreFoundation   0x00000001825d12e0 __CFRunLoopRun + 708&#x000A;14 CoreFoundation   0x00000001824fcf74 CFRunLoopRunSpecific + 392&#x000A;15 GraphicsServices 0x000000018be076fc GSEventRunModal + 164&#x000A;16 UIKit            0x00000001870fed94 UIApplicationMain + 1484&#x000A;17 CrashProbeiOS    0x00000001000ee5b8 main (main.m:16)&#x000A;18 libdyld.dylib    0x0000000194622a08 start + 0</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>

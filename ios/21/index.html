@@ -285,10 +285,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    3.7.0
+                    3.7.3
                     <span title='Data provided by Bit Stadium GmbH'>
                       Date:
-                      06/24/2015
+                      08/31/2015
                       (i)
                     </span>
                   </font>
@@ -300,29 +300,6 @@
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-AppInsights'>
-                <td class='title'>
-                  Application Insights
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    1.0-Beta.5
-                    <span title='Data provided by Microsoft'>
-                      Date:
-                      07/07/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('AppInsights', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Apple'>
@@ -502,19 +479,11 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???         0xa5a5a5a4 0x0 + 0&#x000A;1 CrashLibiOS 0x0020b951 -[CRLCrashSmashStackTop crash] (CRLCrashSmashStackTop.m:54)</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???         0xa5a5a5a4 0x0 + 0&#x000A;1 CrashLibiOS 0x0023541d -[CRLCrashSmashStackTop crash] (CRLCrashSmashStackTop.m:54)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0xa5a5a5a5a5a5a5a5&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a5a5a5a5a5 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_armv7'>
-            <h2 class='cp-h2'>AppInsights - armv7</h2>
-            <pre class='cp-featurecode'>SIGSEGV: &#x000A;   at 0xa5a5a5a4 (???)&#x000A;   at -[CRLCrashSmashStackTop crash] (CrashLibiOS: CRLCrashSmashStackTop.m: 54)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_AppInsights_arm64'>
-            <h2 class='cp-h2'>AppInsights - arm64</h2>
-            <pre class='cp-featurecode'>SIGBUS: &#x000A;   at 0xa5a5a5a5a5a5a5a5 (???)&#x000A;   <span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>
