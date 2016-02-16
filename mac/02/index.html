@@ -285,6 +285,25 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'x86_64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Bugsnag'>
+                <td class='title'>
+                  Bugsnag
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    4.1.0
+                    <span title='Data provided by Bugsnag, Inc'>
+                      Date:
+                      01/28/2016
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'x86_64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-Crashlytics'>
                 <td class='title'>
                   Crashlytics
@@ -321,25 +340,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'x86_64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Bugsnag'>
-                <td class='title'>
-                  Bugsnag
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.1.3
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      11/09/2014
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'x86_64', $(this));"></div>
-                </td>
-              </tr>
             </tbody>
           </table>
           <div class='clear'></div>
@@ -360,6 +360,10 @@
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x7fff894df002&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;0  libc++abi.dylib       0x00007fff9259419e std::__terminate(void (*)()) + 8&#x000A;1  libc++abi.dylib       0x00007fff92593c12 __cxa_throw + 120&#x000A;2  CrashLib              0x000000010c5516e6 -[CRLCrashCXXException crash] (CRLCrashCXXException.mm:52)&#x000A;3  CrashProbe            0x000000010c53fb4e -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;4  libsystem_trace.dylib 0x00007fff84dea07a _os_activity_initiate + 74&#x000A;5  AppKit                0x00007fff8df9551d -[NSApplication sendAction:to:from:] + 459&#x000A;6  AppKit                0x00007fff8dfaa486 -[NSControl sendAction:to:] + 85&#x000A;7  AppKit                0x00007fff8dfaa3b0 __26-[NSCell _sendActionFrom:]_block_invoke + 130&#x000A;8  libsystem_trace.dylib 0x00007fff84dea07a _os_activity_initiate + 74&#x000A;9  AppKit                0x00007fff8dfaa30d -[NSCell _sendActionFrom:] + 143&#x000A;10 libsystem_trace.dylib 0x00007fff84dea07a _os_activity_initiate + 74&#x000A;11 AppKit                0x00007fff8dfa8932 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2692&#x000A;12 AppKit                0x00007fff8dffdd58 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 743&#x000A;13 AppKit                0x00007fff8dfa705c -[NSControl mouseDown:] + 668&#x000A;14 AppKit                0x00007fff8e554d1d -[NSWindow _handleMouseDownEvent:isDelayedEvent:] + 6321&#x000A;15 AppKit                0x00007fff8e555fad -[NSWindow _reallySendEvent:isDelayedEvent:] + 211&#x000A;16 AppKit                0x00007fff8deae735 -[NSWindow sendEvent:] + 516&#x000A;17 AppKit                0x00007fff8deaae49 -[NSApplication sendEvent:] + 2539&#x000A;18 HockeySDK             0x000000010c56ae1a -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;19 AppKit                0x00007fff8ddde03a -[NSApplication run] + 795&#x000A;20 AppKit                0x00007fff8dd60520 NSApplicationMain + 1175&#x000A;21 CrashProbe            0x000000010c53feb3 main (main.m:13)&#x000A;22 libdyld.dylib         0x00007fff850755ad start + 0&#x000A;23 ???                   0x0000000000000001 0x0 + 0</pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
+            <h2 class='cp-h2'>Bugsnag - x86_64</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
             <pre class='cp-featurecode'>Crashed: com.twitter.crashlytics.mac.exception&#x000A;SIGABRT ABORT at 0x00007fff894df002&#x000A;&#x000A;Fatal Exception: kaboom_exception*&#x000A;If this had been a real exception, you would be cursing now.&#x000A;&#x000A;Thread : Crashed: com.twitter.crashlytics.mac.exception&#x000A;0  CrashProbe            0x00010870f04f CLSProcessRecordAllThreads + 4454326351&#x000A;1  CrashProbe            0x00010870f3a0 CLSProcessRecordAllThreads + 4454327200&#x000A;2  CrashProbe            0x000108700275 CLSHandler + 4454265461&#x000A;3  CrashProbe            0x00010870da78 __CLSExceptionRecord_block_invoke + 4454320760&#x000A;4  libdispatch.dylib     0x7fff8634e33f _dispatch_client_callout + 8&#x000A;5  libdispatch.dylib     0x7fff8634f926 _dispatch_barrier_sync_f_invoke + 74&#x000A;6  CrashProbe            0x00010870d4bf CLSExceptionRecord + 4454319295&#x000A;7  CrashProbe            0x00010870cf35 CLSTerminateHandler() + 4454317877&#x000A;8  libc++abi.dylib       0x7fff9259419e std::__terminate(void (*)()) + 8&#x000A;9  libc++abi.dylib       0x7fff92593c12 __cxxabiv1::exception_cleanup_func(_Unwind_Reason_Code, _Unwind_Exception*) + 119&#x000A;10 CrashLib              0x0001087796e6 -[CRLCrashCXXException crash] (CRLCrashCXXException.mm:52)&#x000A;11 CrashProbe            0x0001086f76e1 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;12 libsystem_trace.dylib 0x7fff84dea07a _os_activity_initiate + 75&#x000A;13 AppKit                0x7fff8df9551d -[NSApplication sendAction:to:from:] + 460&#x000A;14 AppKit                0x7fff8dfaa486 -[NSControl sendAction:to:] + 86&#x000A;15 AppKit                0x7fff8dfaa3b0 __26-[NSCell _sendActionFrom:]_block_invoke + 131&#x000A;16 libsystem_trace.dylib 0x7fff84dea07a _os_activity_initiate + 75&#x000A;17 AppKit                0x7fff8dfaa30d -[NSCell _sendActionFrom:] + 144&#x000A;18 libsystem_trace.dylib 0x7fff84dea07a _os_activity_initiate + 75&#x000A;19 AppKit                0x7fff8dfa8932 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2693&#x000A;20 AppKit                0x7fff8dffdd58 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 744&#x000A;21 AppKit                0x7fff8dfa705c -[NSControl mouseDown:] + 669&#x000A;22 AppKit                0x7fff8e554d1d -[NSWindow _handleMouseDownEvent:isDelayedEvent:] + 6322&#x000A;23 AppKit                0x7fff8e555fad -[NSWindow _reallySendEvent:isDelayedEvent:] + 212&#x000A;24 AppKit                0x7fff8deae735 -[NSWindow sendEvent:] + 517&#x000A;25 AppKit                0x7fff8deaae49 -[NSApplication sendEvent:] + 2540&#x000A;26 AppKit                0x7fff8ddde03a -[NSApplication run] + 796&#x000A;27 AppKit                0x7fff8dd60520 NSApplicationMain + 1176&#x000A;28 CrashProbe            0x0001086f7a46 main (main.m:13)&#x000A;29 libdyld.dylib         0x7fff850755ad start + 1</pre>
@@ -367,10 +371,6 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:        EXC_CRASH (SIGABRT)&#x000A;Exception Codes:       0x0000000000000000, 0x0000000000000000&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000014f200&#x000A;terminating with uncaught exception of type kaboom_exception*&#x000A;abort() called&#x000A;&#x000A;<span class="cp-wrong">Missing exception reason</span>&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0  libsystem_kernel.dylib   0x00007fff8a48a286 __pthread_kill + 10&#x000A;1  libsystem_c.dylib        0x00007fff8f803b53 abort + 129&#x000A;2  libc++abi.dylib          0x00007fff8e221a21 abort_message + 257&#x000A;3  libc++abi.dylib          0x00007fff8e2499d1 default_terminate_handler() + 267&#x000A;4  libobjc.A.dylib          0x00007fff900827eb _objc_terminate() + 124&#x000A;5  libc++abi.dylib          0x00007fff8e2470a1 std::__terminate(void (*)()) + 8&#x000A;6  libc++abi.dylib          0x00007fff8e246b30 __cxa_throw + 121&#x000A;7  net.hockeyapp.CrashLib   0x0000000104135046 -[CRLCrashCXXException crash] + 60 (CRLCrashCXXException.mm:52)&#x000A;8  net.hockeyapp.CrashProbe 0x0000000104129473 -[CRLMainWindowController causeCrash:] + 75 (CRLMainWindowController.m:72)&#x000A;9  libsystem_trace.dylib    0x00007fff91233cd7 _os_activity_initiate + 75&#x000A;10 com.apple.AppKit         0x00007fff8bc45fb1 -[NSApplication sendAction:to:from:] + 452&#x000A;11 com.apple.AppKit         0x00007fff8bc5ba46 -[NSControl sendAction:to:] + 86&#x000A;12 com.apple.AppKit         0x00007fff8bc5b962 __26-[NSCell _sendActionFrom:]_block_invoke + 131&#x000A;13 libsystem_trace.dylib    0x00007fff91233cd7 _os_activity_initiate + 75&#x000A;14 com.apple.AppKit         0x00007fff8bc5b8bf -[NSCell _sendActionFrom:] + 144&#x000A;15 libsystem_trace.dylib    0x00007fff91233cd7 _os_activity_initiate + 75&#x000A;16 com.apple.AppKit         0x00007fff8bc59db3 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2821&#x000A;17 com.apple.AppKit         0x00007fff8bcb245f -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 770&#x000A;18 com.apple.AppKit         0x00007fff8bc58466 -[NSControl mouseDown:] + 714&#x000A;19 com.apple.AppKit         0x00007fff8c1c22fc -[NSWindow _reallySendEvent:isDelayedEvent:] + 14125&#x000A;20 com.apple.AppKit         0x00007fff8bb51d76 -[NSWindow sendEvent:] + 470&#x000A;21 com.apple.AppKit         0x00007fff8bb4e312 -[NSApplication sendEvent:] + 2504&#x000A;22 com.apple.AppKit         0x00007fff8ba77c68 -[NSApplication run] + 711&#x000A;23 com.apple.AppKit         0x00007fff8b9f4354 NSApplicationMain + 1832&#x000A;24 net.hockeyapp.CrashProbe 0x00000001041297d9 main + 9 (main.m:13)&#x000A;25 libdyld.dylib            0x00007fff8aaa75c9 start + 1</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
-            <h2 class='cp-h2'>Bugsnag - x86_64</h2>
-            <pre class='cp-featurecode'>Abort trap: 6: &#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:50:0 -[BugsnagEvent addSignal:]&#x000A;bugsnag/BugsnagNotifier.m:73:0 -[BugsnagNotifier notifySignal:]&#x000A;bugsnag/Bugsnag.m:67:0 handle_signal&#x000A;libsystem_platform.dylib:0 sigtramp&#x000A;libsystem_c.dylib:0 abort&#x000A;libc++abi.dylib:0 _cxa_bad_cast&#x000A;libc++abi.dylib:0 ZL26default_unexpected_handlerv&#x000A;libobjc.A.dylib:0 ZL15_objc_terminatev&#x000A;libc++abi.dylib:0 ZSt11__terminatePFvvE&#x000A;libc++abi.dylib:0 ZN10__cxxabiv1L22exception_cleanup_funcE19_Unwind_Reason_CodeP17_Unwind_Exception&#x000A;<span class="cp-wrong">CrashLib:0 -[CRLCrashCXXException crash] | Missing filename, and line number</span>&#x000A;CrashProbe/CRLMainWindowController.m:72:0 -[CRLMainWindowController causeCrash:]&#x000A;libsystem_trace.dylib:0 os_activity_initiate&#x000A;AppKit:0 -[NSApplication sendAction:to:from:]&#x000A;AppKit:0 -[NSControl sendAction:to:]&#x000A;AppKit:0 _26-[NSCell _sendActionFrom:]_block_invoke&#x000A;libsystem_trace.dylib:0 os_activity_initiate&#x000A;AppKit:0 -[NSCell _sendActionFrom:]&#x000A;AppKit:0 -[NSButtonCell _sendActionFrom:]&#x000A;libsystem_trace.dylib:0 os_activity_initiate&#x000A;AppKit:0 -[NSCell trackMouse:inRect:ofView:untilMouseUp:]&#x000A;AppKit:0 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:]&#x000A;AppKit:0 -[NSControl mouseDown:]&#x000A;AppKit:0 -[NSWindow _reallySendEvent:]&#x000A;AppKit:0 -[NSWindow sendEvent:]&#x000A;AppKit:0 -[NSApplication sendEvent:]&#x000A;AppKit:0 -[NSApplication run]&#x000A;AppKit:0 NSApplicationMain&#x000A;CrashProbe/main.m:13:0 main&#x000A;libdyld.dylib:0 start</pre>
           </div>
           <div class='clear'></div>
         </div>

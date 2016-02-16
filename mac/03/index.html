@@ -285,6 +285,25 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'x86_64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Bugsnag'>
+                <td class='title'>
+                  Bugsnag
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    4.1.0
+                    <span title='Data provided by Bugsnag, Inc'>
+                      Date:
+                      01/28/2016
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'x86_64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-Crashlytics'>
                 <td class='title'>
                   Crashlytics
@@ -321,25 +340,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'x86_64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Bugsnag'>
-                <td class='title'>
-                  Bugsnag
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.1.3
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      11/09/2014
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'x86_64', $(this));"></div>
-                </td>
-              </tr>
             </tbody>
           </table>
           <div class='clear'></div>
@@ -360,6 +360,10 @@
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x7fff894df002&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'NSGenericException', reason: 'An uncaught exception! SCREAM.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;0  CoreFoundation        0x00007fff877aaaca __exceptionPreprocess + 154&#x000A;1  libobjc.A.dylib       0x00007fff8fe21f7e objc_exception_throw + 48&#x000A;2  CrashLib              0x00000001058e7640 -[CRLCrashObjCException crash] (CRLCrashObjCException.m:41)&#x000A;3  CrashProbe            0x00000001058dbb4e -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;4  libsystem_trace.dylib 0x00007fff84dea07a _os_activity_initiate + 74&#x000A;5  AppKit                0x00007fff8df9551d -[NSApplication sendAction:to:from:] + 459&#x000A;6  AppKit                0x00007fff8dfaa486 -[NSControl sendAction:to:] + 85&#x000A;7  AppKit                0x00007fff8dfaa3b0 __26-[NSCell _sendActionFrom:]_block_invoke + 130&#x000A;8  libsystem_trace.dylib 0x00007fff84dea07a _os_activity_initiate + 74&#x000A;9  AppKit                0x00007fff8dfaa30d -[NSCell _sendActionFrom:] + 143&#x000A;10 libsystem_trace.dylib 0x00007fff84dea07a _os_activity_initiate + 74&#x000A;11 AppKit                0x00007fff8dfa8932 -[NSCell trackMouse:inRect:ofView:untilMouseUp:] + 2692&#x000A;12 AppKit                0x00007fff8dffdd58 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:] + 743&#x000A;13 AppKit                0x00007fff8dfa705c -[NSControl mouseDown:] + 668&#x000A;14 AppKit                0x00007fff8e554d1d -[NSWindow _handleMouseDownEvent:isDelayedEvent:] + 6321&#x000A;15 AppKit                0x00007fff8e555fad -[NSWindow _reallySendEvent:isDelayedEvent:] + 211&#x000A;16 AppKit                0x00007fff8deae735 -[NSWindow sendEvent:] + 516&#x000A;17 AppKit                0x00007fff8deaae49 -[NSApplication sendEvent:] + 2539&#x000A;18 HockeySDK             0x0000000105903e1a -[BITCrashExceptionApplication sendEvent:] (BITCrashExceptionApplication.m:76)&#x000A;19 AppKit                0x00007fff8ddde03a -[NSApplication run] + 795&#x000A;20 AppKit                0x00007fff8dd60520 NSApplicationMain + 1175&#x000A;21 CrashProbe            0x00000001058dbeb3 main (main.m:13)&#x000A;22 libdyld.dylib         0x00007fff850755ad start + 0&#x000A;23 ???                   0x0000000000000001 0x0 + 0</pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
+            <h2 class='cp-h2'>Bugsnag - x86_64</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_CRASH (SIGABRT)&#x000A;An uncaught exception! SCREAM.&#x000A;&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 CrashProbe    -[CRLApplication reportException:] (CRLApplication.m:15)&#x000A;1 AppKit        -[NSApplication run]&#x000A;2 AppKit        NSApplicationMain&#x000A;3 CrashProbe    main (main.m:13)&#x000A;4 libdyld.dylib start</pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
             <h2 class='cp-h2'>Crashlytics - x86_64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
@@ -367,10 +371,6 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
-            <h2 class='cp-h2'>Bugsnag - x86_64</h2>
-            <pre class='cp-featurecode'>NSGenericException: An uncaught exception! SCREAM.&#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:56:0 -[BugsnagEvent addException:]&#x000A;bugsnag/BugsnagNotifier.m:88:0 -[BugsnagNotifier notifyException:withData:atSeverity:inBackground:]&#x000A;bugsnag/OSX/BugsnagOSXNotifier.m:68:0 -[BugsnagOSXNotifier exceptionHandler:shouldLogException:mask:]&#x000A;ExceptionHandling:0 -[NSExceptionHandler _handleException:mask:]&#x000A;ExceptionHandling:0 NSExceptionHandlerExceptionRaiser&#x000A;libobjc.A.dylib:0 objc_exception_throw&#x000A;<span class="cp-wrong">CrashLib:0 ZNK16kaboom_exception4whatEv | Missing class, method, filename, and line number</span>&#x000A;CrashProbe/CRLMainWindowController.m:72:0 -[CRLMainWindowController causeCrash:]&#x000A;libsystem_trace.dylib:0 os_activity_initiate&#x000A;AppKit:0 -[NSApplication sendAction:to:from:]&#x000A;AppKit:0 -[NSControl sendAction:to:]&#x000A;AppKit:0 _26-[NSCell _sendActionFrom:]_block_invoke&#x000A;libsystem_trace.dylib:0 os_activity_initiate&#x000A;AppKit:0 -[NSCell _sendActionFrom:]&#x000A;AppKit:0 -[NSButtonCell _sendActionFrom:]&#x000A;libsystem_trace.dylib:0 os_activity_initiate&#x000A;AppKit:0 -[NSCell trackMouse:inRect:ofView:untilMouseUp:]&#x000A;AppKit:0 -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:]&#x000A;AppKit:0 -[NSControl mouseDown:]&#x000A;AppKit:0 -[NSWindow _reallySendEvent:]&#x000A;AppKit:0 -[NSWindow sendEvent:]&#x000A;AppKit:0 -[NSApplication sendEvent:]&#x000A;AppKit:0 -[NSApplication run]&#x000A;AppKit:0 NSApplicationMain&#x000A;CrashProbe/main.m:13:0 main&#x000A;libdyld.dylib:0 start</pre>
           </div>
           <div class='clear'></div>
         </div>

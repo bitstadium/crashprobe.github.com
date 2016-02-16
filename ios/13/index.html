@@ -302,6 +302,29 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Bugsnag'>
+                <td class='title'>
+                  Bugsnag
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    4.1.0
+                    <span title='Data provided by Bugsnag, Inc'>
+                      Date:
+                      01/28/2016
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-Apple'>
                 <td class='title'>
                   Apple
@@ -367,29 +390,6 @@
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'arm64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-Bugsnag'>
-                <td class='title'>
-                  Bugsnag
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.1.3
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      11/09/2014
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Crittercism'>
@@ -485,6 +485,14 @@
             <h2 class='cp-h2'>HockeyApp - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x16fc87ff0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x0000000100383eb4 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x0000000100383ec8 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x0000000100383ec8 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
+            <h2 class='cp-h2'>Bugsnag - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS&#x000A;Stack overflow in -[CRLDetailViewController doCrash]&#x000A;&#x000A;0   CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;131 CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;132 CrashProbe iOS   -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;133 UIKit            -[UIApplication sendAction:to:from:forEvent:]&#x000A;134 UIKit            -[UIControl sendAction:to:forEvent:]&#x000A;135 UIKit            -[UIControl _sendActionsForEvents:withEvent:]&#x000A;136 UIKit            -[UIControl touchesEnded:withEvent:]&#x000A;137 UIKit            _UIGestureRecognizerUpdate&#x000A;138 UIKit            -[UIWindow _sendGesturesForEvent:]&#x000A;139 UIKit            -[UIWindow sendEvent:]&#x000A;140 UIKit            -[UIApplication sendEvent:]&#x000A;141 UIKit            _UIApplicationHandleEventQueue&#x000A;142 CoreFoundation   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;143 CoreFoundation   __CFRunLoopDoSources0&#x000A;144 CoreFoundation   __CFRunLoopRun&#x000A;145 CoreFoundation   CFRunLoopRunSpecific&#x000A;146 CoreFoundation   CFRunLoopRunInMode&#x000A;147 GraphicsServices GSEventRunModal&#x000A;148 UIKit            UIApplicationMain&#x000A;149 CrashProbe iOS   main (main.m:16)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_arm64'>
+            <h2 class='cp-h2'>Bugsnag - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Stack overflow in -[CRLDetailViewController doCrash]&#x000A;&#x000A;0   CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;131 CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;132 CrashProbe iOS   -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;133 UIKit            -[UIApplication sendAction:to:from:forEvent:]&#x000A;134 UIKit            -[UIControl sendAction:to:forEvent:]&#x000A;135 UIKit            -[UIControl _sendActionsForEvents:withEvent:]&#x000A;136 UIKit            -[UIControl touchesEnded:withEvent:]&#x000A;137 UIKit            _UIGestureRecognizerUpdate&#x000A;138 UIKit            -[UIWindow _sendGesturesForEvent:]&#x000A;139 UIKit            -[UIWindow sendEvent:]&#x000A;140 UIKit            -[UIApplication sendEvent:]&#x000A;141 UIKit            _UIApplicationHandleEventQueue&#x000A;142 CoreFoundation   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;143 CoreFoundation   __CFRunLoopDoSources0&#x000A;144 CoreFoundation   __CFRunLoopRun&#x000A;145 CoreFoundation   CFRunLoopRunSpecific&#x000A;146 GraphicsServices GSEventRunModal&#x000A;147 UIKit            UIApplicationMain&#x000A;148 CrashProbe iOS   main (main.m:16)&#x000A;149 libdyld.dylib    start</pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_PROTECTION_FAILURE at 0x00074ffc&#x000A;Triggered by Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x0017706c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x0017707c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x0017707c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
@@ -507,14 +515,6 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_arm64'>
             <h2 class='cp-h2'>Raygun - arm64</h2>
-            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
-            <h2 class='cp-h2'>Bugsnag - armv7</h2>
-            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_arm64'>
-            <h2 class='cp-h2'>Bugsnag - arm64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crittercism_armv7'>
