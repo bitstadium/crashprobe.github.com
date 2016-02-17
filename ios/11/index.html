@@ -308,10 +308,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    4.1.0
+                    5.0.0
                     <span title='Data provided by Bugsnag, Inc'>
                       Date:
-                      01/28/2016
+                      02/16/2016
                       (i)
                     </span>
                   </font>
@@ -320,7 +320,7 @@
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'armv7', $(this));"></div>
                 </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
                 </td>
@@ -491,7 +491,7 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_arm64'>
             <h2 class='cp-h2'>Bugsnag - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Attempted to dereference garbage pointer 0x104048000.&#x000A;&#x000A;0  CrashProbe       -[CRLCrashGarbage crash] (CRLCrashGarbage.m:52)&#x000A;<span class="cp-wrong">1                   -[CRLCrashGarbage crash] | Invalid frame</span>&#x000A;2  CrashProbe iOS   -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;3  UIKit            -[UIApplication sendAction:to:from:forEvent:]&#x000A;4  UIKit            -[UIControl sendAction:to:forEvent:]&#x000A;5  UIKit            -[UIControl _sendActionsForEvents:withEvent:]&#x000A;6  UIKit            -[UIControl touchesEnded:withEvent:]&#x000A;7  UIKit            _UIGestureRecognizerUpdate&#x000A;8  UIKit            -[UIWindow _sendGesturesForEvent:]&#x000A;9  UIKit            -[UIWindow sendEvent:]&#x000A;10 UIKit            -[UIApplication sendEvent:]&#x000A;11 UIKit            _UIApplicationHandleEventQueue&#x000A;12 CoreFoundation   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;13 CoreFoundation   __CFRunLoopDoSources0&#x000A;14 CoreFoundation   __CFRunLoopRun&#x000A;15 CoreFoundation   CFRunLoopRunSpecific&#x000A;16 GraphicsServices GSEventRunModal&#x000A;17 UIKit            UIApplicationMain&#x000A;18 CrashProbe iOS   main (main.m:16)&#x000A;19 libdyld.dylib    start</pre>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Attempted to dereference garbage pointer 0x103bb0000.&#x000A;&#x000A;0  CrashProbe       -[CRLCrashGarbage crash] (CRLCrashGarbage.m:52)&#x000A;1  CrashProbe iOS   -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;2  UIKit            -[UIApplication sendAction:to:from:forEvent:]&#x000A;3  UIKit            -[UIControl sendAction:to:forEvent:]&#x000A;4  UIKit            -[UIControl _sendActionsForEvents:withEvent:]&#x000A;5  UIKit            -[UIControl touchesEnded:withEvent:]&#x000A;6  UIKit            _UIGestureRecognizerUpdate&#x000A;7  UIKit            -[UIWindow _sendGesturesForEvent:]&#x000A;8  UIKit            -[UIWindow sendEvent:]&#x000A;9  UIKit            -[UIApplication sendEvent:]&#x000A;10 UIKit            _UIApplicationHandleEventQueue&#x000A;11 CoreFoundation   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;12 CoreFoundation   __CFRunLoopDoSources0&#x000A;13 CoreFoundation   __CFRunLoopRun&#x000A;14 CoreFoundation   CFRunLoopRunSpecific&#x000A;15 GraphicsServices GSEventRunModal&#x000A;16 UIKit            UIApplicationMain&#x000A;17 CrashProbe iOS   main (main.m:16)&#x000A;18 libdyld.dylib    start</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
             <h2 class='cp-h2'>Apple - armv7</h2>
