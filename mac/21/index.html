@@ -262,52 +262,82 @@
             <thead>
               <tr>
                 <th style='text-indent: 100px;'>Provider</th>
-                <th>x86_64</th>
+                <th>X86-64</th>
               </tr>
             </thead>
             <tbody>
               <tr id='cp-HockeyApp'>
-                <td class='title'>HockeyApp</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na wrong'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp','x86_64', $(this));"></div>
+                <td class='title'>
+                  HockeyApp
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    3.2.0
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      12/10/2015
+                      (i)
+                    </span>
+                  </font>
                 </td>
-              </tr>
-              <tr id='cp-Apple'>
-                <td class='title'>Apple</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na wrong'>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple','x86_64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-Crashlytics'>
-                <td class='title'>Crashlytics</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na wrong'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics','x86_64', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'x86_64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Bugsnag'>
-                <td class='title'>Bugsnag</td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na wrong'>
+                <td class='title'>
+                  Bugsnag
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    5.0.0
+                    <span title='Data provided by Bugsnag, Inc'>
+                      Date:
+                      02/16/2016
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag','x86_64', $(this));"></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'x86_64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Crittercism'>
-                <td>
-                  Crittercism
+              <tr id='cp-Crashlytics'>
+                <td class='title'>
+                  Crashlytics
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    3.4.1
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      12/10/2015
+                      (i)
+                    </span>
+                  </font>
                 </td>
-                <td colspan='3'>
-                  not supported
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'x86_64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-TestFlight'>
-                <td>
-                  TestFlight
+              <tr id='cp-Apple'>
+                <td class='title'>
+                  Apple
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      06/24/2015
+                      (i)
+                    </span>
+                  </font>
                 </td>
-                <td colspan='3'>
-                  not supported
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'x86_64', $(this));"></div>
                 </td>
               </tr>
             </tbody>
@@ -328,19 +358,19 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 libsystem_platform.dylib 0x00007fff848b1d6d _platform_bzero$VARIANT$Merom + 93&#x000A;<span class="cp-wrong">Missing frames that show where the crash occured</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
-            <h2 class='cp-h2'>Apple - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:        EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes:       EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000014ab30&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff848b1d6d _platform_bzero$VARIANT$Merom + 93&#x000A;1 ???                      0xa5a5a5a5a5a5a5a5 0 + 11936128518282651045&#x000A;<span class="cp-wrong">Missing frames that show where the crash occured</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
-            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS UNKNOWN at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff848b1d6d _platform_bzero$VARIANT$Merom + 93&#x000A;<span class="cp-wrong">Missing frames that show where the crash occured</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 libsystem_platform.dylib 0x00007fff9a742c92 _platform_bzero$VARIANT$Haswell + 114&#x000A;<span class="cp-wrong">Missing frames that show where the crash occured</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
             <h2 class='cp-h2'>Bugsnag - x86_64</h2>
-            <pre class='cp-featurecode'>Segmentation fault: 11: &#x000A;&#x000A;bugsnag/BugsnagEvent.m:91:0 -[BugsnagEvent getStackTraceWithException:]&#x000A;bugsnag/BugsnagEvent.m:50:0 -[BugsnagEvent addSignal:]&#x000A;bugsnag/BugsnagNotifier.m:73:0 -[BugsnagNotifier notifySignal:]&#x000A;bugsnag/Bugsnag.m:67:0 handle_signal&#x000A;libsystem_platform.dylib:0 sigtramp&#x000A;libsystem_pthread.dylib:0 pthread_mutex_unlock&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
+            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
+            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0  libsystem_platform.dylib 0x7fff9a742c92 _platform_bzero$VARIANT$Haswell + 114&#x000A;<span class="cp-wrong">Missing frames that show where the crash occured</span>&#x000A;1  CrashProbe               0x00010198a6e1 -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
+            <h2 class='cp-h2'>Apple - x86_64</h2>
+            <pre class='cp-featurecode'>Exception Type:        EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes:       EXC_I386_GPFLT&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x60000014ab30&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0 libsystem_platform.dylib 0x00007fff91522cb2 _platform_bzero$VARIANT$Merom + 114&#x000A;1 ???                      0xa5a5a5a5a5a5a5a5 0 + 11936128518282651045&#x000A;<span class="cp-wrong">Missing frames that show where the crash occured</span></pre>
           </div>
           <div class='clear'></div>
         </div>
@@ -350,14 +380,12 @@
     <div class='container'>
       <div class='footer-wrapper row' id='cp-footer'>
         <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-1' id='cp-copyright'>
-          <small>
-            Copyright &copy; 2015 Bit Stadium GmbH
-          </small>
+          <small>Copyright &copy;</small>
+          <small>2016</small>
+          <small>Bit Stadium GmbH</small>
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
-          <small>
-            All tests are accurate as of 11/09/2014.
-          </small>
+          <small></small>
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-0' id='cp-footermenu'>
           <small>
@@ -381,7 +409,6 @@
       </div>
     </div>
     <script src="/javascripts/bootstrap.js"></script>
-    <script type="text/javascript"> var _gauges = _gauges || []; (function() { var t   = document.createElement('script'); t.type  = 'text/javascript'; t.async = true; t.id    = 'gauges-tracker'; t.setAttribute('data-site-id', '537f25cb8bfdf705e5002a32'); t.src = '//secure.gaug.es/track.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(t, s); })();</script>
     <script type="text/javascript">var appInsights=window.appInsights||function(config){function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t}({instrumentationKey:"fdf56150-4138-4000-bda1-450dc44d6059"});window.appInsights=appInsights;appInsights.trackPageView();</script>
   </body>
 </html>
