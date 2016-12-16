@@ -279,6 +279,29 @@
               </tr>
             </thead>
             <tbody>
+              <tr id='cp-Bugsee'>
+                <td class='title'>
+                  Bugsee
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    1.9.10
+                    <span title='Data provided by Bugsee Inc'>
+                      Date:
+                      12/14/2016
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>
                   HockeyApp
@@ -309,7 +332,7 @@
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
                     5.0.0
-                    <span title='Data provided by Bugsnag, Inc'>
+                    <span title='Data provided by Bugsnag Inc'>
                       Date:
                       02/16/2016
                       (i)
@@ -476,6 +499,14 @@
                 Click a status icon above to see the crashing thread’s stack trace with further info.
               </strong>
             </p>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_armv7'>
+            <h2 class='cp-h2'>Bugsee - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_ACCERR at 0xA5A5A5A4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   unknown                             0x-5A5A5A5C unknown&#x000A;1   CrashLibiOS                         0x00376F1F -[CRLCrashSmashStackTop crash] (CRLCrashSmashStackTop.m:54)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_arm64'>
+            <h2 class='cp-h2'>Bugsee - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRALN at 0xA5A5A5A5A5A5A800&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   unknown                             0x-5A5A5A5A5A5A5C00 unknown</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
