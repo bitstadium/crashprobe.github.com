@@ -279,6 +279,29 @@
               </tr>
             </thead>
             <tbody>
+              <tr id='cp-Bugsee'>
+                <td class='title'>
+                  Bugsee
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    1.9.10
+                    <span title='Data provided by Bugsee Inc'>
+                      Date:
+                      12/14/2016
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>
                   HockeyApp
@@ -309,7 +332,7 @@
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
                     5.0.0
-                    <span title='Data provided by Bugsnag, Inc'>
+                    <span title='Data provided by Bugsnag Inc'>
                       Date:
                       02/16/2016
                       (i)
@@ -477,6 +500,14 @@
               </strong>
             </p>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_armv7'>
+            <h2 class='cp-h2'>Bugsee - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x23536C5C&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception "kaboom_exception*", reason: "If this had been a real exception, you would be cursing now."&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0   libc++abi.dylib                     0x23038E17 std::__terminate() (in libc++abi.dylib) + 79&#x000A;1   libc++abi.dylib                     0x230388F9 __cxa_rethrow (in libc++abi.dylib) + 98&#x000A;2   libobjc.A.dylib                     0x23046F5F objc_exception_rethrow + 40&#x000A;3   CoreFoundation                      0x237BB2AF CFRunLoopRunSpecific + 652&#x000A;4   CoreFoundation                      0x237BB015 CFRunLoopRunInMode + 106&#x000A;5   GraphicsServices                    0x24DABAC9 GSEventRunModal + 158&#x000A;6   UIKit                               0x27E8F189 UIApplicationMain + 142&#x000A;7   CrashProbeiOS                       0x0004BFDF main (main.m:16)&#x000A;8   libdyld.dylib                       0x23463873 start + 0</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_arm64'>
+            <h2 class='cp-h2'>Bugsee - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x184773014&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception "kaboom_exception*", reason: "If this had been a real exception, you would be cursing now."&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0   libc++abi.dylib                     0x00000001841CB66C std::__terminate() (in libc++abi.dylib) + 16&#x000A;1   libc++abi.dylib                     0x00000001841CB234 __cxa_rethrow (in libc++abi.dylib) + 140&#x000A;2   libobjc.A.dylib                     0x00000001841DC71C objc_exception_rethrow + 40&#x000A;3   CoreFoundation                      0x000000018567E32C CFRunLoopRunSpecific + 556&#x000A;4   GraphicsServices                    0x0000000187132198 GSEventRunModal + 176&#x000A;5   UIKit                               0x000000018B6C57FC -[UIApplication _run] + 680&#x000A;6   UIKit                               0x000000018B6C0534 UIApplicationMain + 204&#x000A;7   CrashProbeiOS                       0x00000001000A9FF8 main (main.m:16)&#x000A;8   libdyld.dylib                       0x00000001846615B8 start + 0</pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x2588cc84&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 libc++abi.dylib  0x25390e17 std::__terminate(void (*)()) + 76&#x000A;1 libc++abi.dylib  0x253908f9 __cxa_rethrow + 98&#x000A;2 libobjc.A.dylib  0x2539ef5f objc_exception_rethrow + 40&#x000A;3 CoreFoundation   0x25b0cc7f CFRunLoopRunSpecific + 652&#x000A;4 CoreFoundation   0x25b0c9e5 CFRunLoopRunInMode + 106&#x000A;5 GraphicsServices 0x26d58ac9 GSEventRunModal + 158&#x000A;6 UIKit            0x29d9cba1 UIApplicationMain + 142&#x000A;7 CrashProbeiOS    0x001092e7 main (main.m:16)&#x000A;8 ???              0x257bb873 0x0 + 0</pre>
@@ -550,7 +581,7 @@
       <div class='footer-wrapper row' id='cp-footer'>
         <div class='col-xs-12 col-xs-push-0 col-md-3 col-md-push-1' id='cp-copyright'>
           <small>Copyright &copy;</small>
-          <small>2016</small>
+          <small>2017</small>
           <small>Bit Stadium GmbH</small>
         </div>
         <div class='col-xs-12 col-xs-push-0 col-md-5 col-md-push-1' id='cp-copyright' style='text-align: center;font-weight:normal;'>
