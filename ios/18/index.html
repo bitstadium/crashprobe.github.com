@@ -302,6 +302,29 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Sentry'>
+                <td class='title'>
+                  Sentry
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    2.1.7
+                    <span title='Data provided by Sentry.io'>
+                      Date:
+                      04/03/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'arm64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>
                   HockeyApp
@@ -369,29 +392,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Crashlytics'>
-                <td class='title'>
-                  Crashlytics
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.4.1
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      12/10/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'arm64', $(this));"></div>
-                </td>
-              </tr>
               <tr id='cp-Raygun'>
                 <td class='title'>
                   Raygun
@@ -439,6 +439,14 @@
             <h2 class='cp-h2'>Bugsee - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_ACCERR at 0x00000000&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                         0x0000000100248158 CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:35)&#x000A;1   CrashLibiOS                         0x0000000100248210 CRLFramelessDWARF_test + 20&#x000A;2   CrashLibiOS                         0x00000001002481F0 -[CRLFramelessDWARF crash] (CRLFramelessDWARF.m:49)&#x000A;3   CrashProbeiOS                       0x00000001000870B8 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;4   UIKit                               0x000000018B68FD30 -[UIApplication sendAction:to:from:forEvent:] + 92&#x000A;5   UIKit                               0x000000018B68FCB0 -[UIControl sendAction:to:forEvent:] + 76&#x000A;6   UIKit                               0x000000018B67A128 -[UIControl _sendActionsForEvents:withEvent:] + 448&#x000A;7   UIKit                               0x000000018B68F59C -[UIControl touchesEnded:withEvent:] + 580&#x000A;8   UIKit                               0x000000018BC1A628 _UIGestureEnvironmentSortAndSendDelayedTouches + 4480&#x000A;9   UIKit                               0x000000018BC166C0 _UIGestureEnvironmentUpdate + 1160&#x000A;10  UIKit                               0x000000018BC161E0 -[UIGestureEnvironment _deliverEvent:toGestureRecognizers:usingBlock:] + 404&#x000A;11  UIKit                               0x000000018BC1549C -[UIGestureEnvironment _updateGesturesForEvent:window:] + 264&#x000A;12  UIKit                               0x000000018B68A30C -[UIWindow sendEvent:] + 2956&#x000A;13  UIKit                               0x000000018B65ADA0 -[UIApplication sendEvent:] + 336&#x000A;14  UIKit                               0x000000018BE4475C __dispatchPreprocessedEventFromEventQueue + 2732&#x000A;15  UIKit                               0x000000018BE3E130 __handleEventQueue + 780&#x000A;16  CoreFoundation                      0x0000000185752B5C __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 20&#x000A;17  CoreFoundation                      0x00000001857524A4 __CFRunLoopDoSources0 + 520&#x000A;18  CoreFoundation                      0x00000001857500A4 __CFRunLoopRun + 800&#x000A;19  CoreFoundation                      0x000000018567E2B8 CFRunLoopRunSpecific + 440&#x000A;20  GraphicsServices                    0x0000000187132198 GSEventRunModal + 176&#x000A;21  UIKit                               0x000000018B6C57FC -[UIApplication _run] + 680&#x000A;22  UIKit                               0x000000018B6C0534 UIApplicationMain + 204&#x000A;23  CrashProbeiOS                       0x00000001000861A0 main (main.m:16)&#x000A;24  libdyld.dylib                       0x00000001846615B8 start + 0</pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_armv7'>
+            <h2 class='cp-h2'>Sentry - armv7</h2>
+            <pre class='cp-featurecode'>OS Version: iOS 9.3.5 (13G36)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGSEGV)&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference null pointer.&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                     0x123d52            CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:35)&#x000A;1   CrashLibiOS                     0x123dc0            CRLFramelessDWARF_test&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_arm64'>
+            <h2 class='cp-h2'>Sentry - arm64</h2>
+            <pre class='cp-featurecode'>OS Version: iOS 10.2.1 (14D27)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference null pointer.&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                     0x10008c158         CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:35)&#x000A;1   CrashLibiOS                     0x10008c210         CRLFramelessDWARF_test&#x000A;<span class="cp-wrong">Missing frames</span></pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0x0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 CrashLibiOS 0x001e2d52 CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:35)&#x000A;<span class="cp-wrong">Missing frames</span></pre>
@@ -462,14 +470,6 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
             <h2 class='cp-h2'>Apple - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0x0000000000000000&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.libdispatch-manager&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x0000000198088c24 kevent64 + 8&#x000A;1 libdispatch.dylib      0x0000000197f6de6c _dispatch_mgr_invoke + 272&#x000A;2 libdispatch.dylib      0x0000000197f5f998 _dispatch_mgr_thread + 48&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;<span class="cp-wrong">Missing frames</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
-            <h2 class='cp-h2'>Crashlytics - armv7</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0x00000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0 CrashLibiOS 0x413110 CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:34)&#x000A;<span class="cp-wrong">Missing frames</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
-            <h2 class='cp-h2'>Crashlytics - arm64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_INVALID_ADDRESS at 0x0000000000000000&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;<span class="cp-wrong">0  CrashLibiOS       0x1002841cc CRLFramelessDWARF_test_crash (CRLFramelessDWARF.m:34) | Wrong line number</span>&#x000A;1  CrashLibiOS       0x100284284 CRLFramelessDWARF_test (CRLFramelessDWARF_arm64.s:35)&#x000A;2  CrashLibiOS       0x100284264 -[CRLFramelessDWARF crash] (CRLFramelessDWARF.m:49)&#x000A;3  CrashProbeiOS     0x100040d24 -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;4  UIKit             0x18889be50 -[UIApplication sendAction:to:from:forEvent:] + 100&#x000A;5  UIKit             0x18889bdcc -[UIControl sendAction:to:forEvent:] + 80&#x000A;6  UIKit             0x188883a88 -[UIControl _sendActionsForEvents:withEvent:] + 416&#x000A;7  UIKit             0x18889b6e4 -[UIControl touchesEnded:withEvent:] + 572&#x000A;8  UIKit             0x188854294 _UIGestureRecognizerUpdate + 8988&#x000A;9  UIKit             0x188894820 -[UIWindow _sendGesturesForEvent:] + 1132&#x000A;10 UIKit             0x188893e1c -[UIWindow sendEvent:] + 764&#x000A;11 UIKit             0x1888644cc -[UIApplication sendEvent:] + 248&#x000A;12 UIKit             0x188862794 _UIApplicationHandleEventQueue + 5528&#x000A;13 CoreFoundation    0x183b28efc __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 24&#x000A;14 CoreFoundation    0x183b28990 __CFRunLoopDoSources0 + 540&#x000A;15 CoreFoundation    0x183b26690 __CFRunLoopRun + 724&#x000A;16 CoreFoundation    0x183a55680 CFRunLoopRunSpecific + 384&#x000A;17 GraphicsServices  0x184f64088 GSEventRunModal + 180&#x000A;18 UIKit             0x1888ccd90 UIApplicationMain + 204&#x000A;19 CrashProbeiOS     0x10003fda4 main (main.m:16)&#x000A;20 libdispatch.dylib 0x1835f68b8 (Missing)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
             <h2 class='cp-h2'>Raygun - armv7</h2>

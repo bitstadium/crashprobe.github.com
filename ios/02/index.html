@@ -302,6 +302,29 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Sentry'>
+                <td class='title'>
+                  Sentry
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    2.1.7
+                    <span title='Data provided by Sentry.io'>
+                      Date:
+                      04/03/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'arm64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>
                   HockeyApp
@@ -369,29 +392,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Crashlytics'>
-                <td class='title'>
-                  Crashlytics
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.4.1
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      12/10/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'arm64', $(this));"></div>
-                </td>
-              </tr>
               <tr id='cp-Raygun'>
                 <td class='title'>
                   Raygun
@@ -439,6 +439,14 @@
             <h2 class='cp-h2'>Bugsee - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x184773014&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception "kaboom_exception*", reason: "If this had been a real exception, you would be cursing now."&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0   libc++abi.dylib                     0x00000001841CB66C std::__terminate() (in libc++abi.dylib) + 16&#x000A;1   libc++abi.dylib                     0x00000001841CB234 __cxa_rethrow (in libc++abi.dylib) + 140&#x000A;2   libobjc.A.dylib                     0x00000001841DC71C objc_exception_rethrow + 40&#x000A;3   CoreFoundation                      0x000000018567E32C CFRunLoopRunSpecific + 556&#x000A;4   GraphicsServices                    0x0000000187132198 GSEventRunModal + 176&#x000A;5   UIKit                               0x000000018B6C57FC -[UIApplication _run] + 680&#x000A;6   UIKit                               0x000000018B6C0534 UIApplicationMain + 204&#x000A;7   CrashProbeiOS                       0x00000001000A9FF8 main (main.m:16)&#x000A;8   libdyld.dylib                       0x00000001846615B8 start + 0</pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_armv7'>
+            <h2 class='cp-h2'>Sentry - armv7</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_arm64'>
+            <h2 class='cp-h2'>Sentry - arm64</h2>
+            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGABRT&#x000A;Exception Codes: #0 at 0x2365ec5c&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;*** Terminating app due to uncaught exception 'kaboom_exception*', reason: 'If this had been a real exception, you would be cursing now.'&#x000A;&#x000A;Last Exception Backtrace:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0 libc++abi.dylib  0x23160e17 std::__terminate(void (*)()) + 79&#x000A;1 libc++abi.dylib  0x231608f9 __cxa_rethrow + 98&#x000A;2 libobjc.A.dylib  0x2316ef5f objc_exception_rethrow + 40&#x000A;3 CoreFoundation   0x238e32af CFRunLoopRunSpecific + 652&#x000A;4 CoreFoundation   0x238e3015 CFRunLoopRunInMode + 106&#x000A;5 GraphicsServices 0x24ed3ac9 GSEventRunModal + 158&#x000A;6 UIKit            0x27fb7189 UIApplicationMain + 142&#x000A;7 CrashProbeiOS    0x0006ff07 main (main.m:16)&#x000A;8 libdyld.dylib    0x2358b873 start + 0</pre>
@@ -462,14 +470,6 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
             <h2 class='cp-h2'>Apple - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_CRASH (SIGABRT)&#x000A;Exception Codes: 0x0000000000000000, 0x0000000000000000&#x000A;Triggered by Thread:  0&#x000A;&#x000A;<span class="cp-wrong">Missing exception details</span>&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  libsystem_kernel.dylib  0x00000001980a3270 __pthread_kill + 8&#x000A;1  libsystem_pthread.dylib 0x000000019814116c pthread_kill + 108&#x000A;2  libsystem_c.dylib       0x000000019801ab14 abort + 108&#x000A;3  libc++abi.dylib         0x00000001970d9414 abort_message + 112&#x000A;4  libc++abi.dylib         0x00000001970f8b88 default_terminate_handler() + 300&#x000A;5  libobjc.A.dylib         0x000000019790c3d8 _objc_terminate() + 152&#x000A;6  libc++abi.dylib         0x00000001970f5bb0 std::__terminate(void (*)()) + 12&#x000A;7  libc++abi.dylib         0x00000001970f5738 __cxa_rethrow + 140&#x000A;8  libobjc.A.dylib         0x000000019790c290 objc_exception_rethrow + 40&#x000A;9  CoreFoundation          0x0000000185fc9380 CFRunLoopRunSpecific + 568&#x000A;10 GraphicsServices        0x000000018f7df6f8 GSEventRunModal + 164&#x000A;11 UIKit                   0x000000018ab8efa8 UIApplicationMain + 1484&#x000A;12 CrashProbeiOS           0x0000000100049640 main (main.m:16)&#x000A;13 libdyld.dylib           0x0000000197f8aa04 start + 0</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
-            <h2 class='cp-h2'>Crashlytics - armv7</h2>
-            <pre class='cp-featurecode'>Crashed: com.twitter.crashlytics.ios.exception&#x000A;SIGABRT ABORT at 0x000000002581cc84&#x000A;&#x000A;Fatal Exception: kaboom_exception*&#x000A;If this had been a real exception, you would be cursing now.&#x000A;&#x000A;Thread : Crashed: com.twitter.crashlytics.ios.exception&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  CrashProbeiOS     0x0009aac9 CLSProcessRecordAllThreads + 527049&#x000A;1  CrashProbeiOS     0x0009aac9 CLSProcessRecordAllThreads + 527049&#x000A;2  CrashProbeiOS     0x0009ace1 CLSProcessRecordAllThreads + 527585&#x000A;3  CrashProbeiOS     0x0008f4ff CLSHandler + 480511&#x000A;4  CrashProbeiOS     0x00099993 __CLSExceptionRecord_block_invoke + 522643&#x000A;5  libdispatch.dylib 0x25701b47 _dispatch_client_callout + 22&#x000A;6  libdispatch.dylib 0x2570d355 _dispatch_barrier_sync_f_invoke + 56&#x000A;7  CrashProbeiOS     0x0009939b CLSExceptionRecord + 521115&#x000A;8  CrashProbeiOS     0x00098e3f CLSTerminateHandler() + 519743&#x000A;9  libc++abi.dylib   0x25320e17 std::__terminate(void (*)()) + 78&#x000A;10 libc++abi.dylib   0x253208f9 __cxa_increment_exception_refcount + 98&#x000A;11 libobjc.A.dylib   0x2532ef5f objc_exception_rethrow + 42&#x000A;12 CoreFoundation    0x25a9cc7f CFRunLoopRunSpecific + 654&#x000A;13 CoreFoundation    0x25a9c9e5 CFRunLoopRunInMode + 108&#x000A;14 GraphicsServices  0x26ce8ac9 GSEventRunModal + 160&#x000A;15 UIKit             0x29d2cba1 UIApplicationMain + 144&#x000A;16 CrashProbeiOS     0x00078dd7 main (main.m:16)&#x000A;17 libdispatch.dylib 0x2574b873 (Missing)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
-            <h2 class='cp-h2'>Crashlytics - arm64</h2>
-            <pre class='cp-featurecode'>Crashed: com.twitter.crashlytics.ios.exception&#x000A;SIGABRT ABORT at 0x0000000183714140&#x000A;&#x000A;Fatal Exception: kaboom_exception*&#x000A;If this had been a real exception, you would be cursing now.&#x000A;&#x000A;Thread : Crashed: com.twitter.crashlytics.ios.exception&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;0  CrashProbeiOS     0x1000ccefc CLSProcessRecordAllThreads + 4296019708&#x000A;1  CrashProbeiOS     0x1000ccefc CLSProcessRecordAllThreads + 4296019708&#x000A;2  CrashProbeiOS     0x1000cd31c CLSProcessRecordAllThreads + 4296020764&#x000A;3  CrashProbeiOS     0x1000be268 CLSHandler + 4295959144&#x000A;4  CrashProbeiOS     0x1000cb83c __CLSExceptionRecord_block_invoke + 4296013884&#x000A;5  libdispatch.dylib 0x1835c55f0 _dispatch_client_callout + 16&#x000A;6  libdispatch.dylib 0x1835d089c _dispatch_barrier_sync_f_invoke + 100&#x000A;7  CrashProbeiOS     0x1000cb2e8 CLSExceptionRecord + 4296012520&#x000A;8  CrashProbeiOS     0x1000caec0 CLSTerminateHandler() + 4296011456&#x000A;9  libc++abi.dylib   0x1831d2f44 std::__terminate(void (*)()) + 16&#x000A;10 libc++abi.dylib   0x1831d2b10 __cxa_rethrow + 144&#x000A;11 libobjc.A.dylib   0x1831e0120 objc_exception_rethrow + 44&#x000A;12 CoreFoundation    0x183a55728 CFRunLoopRunSpecific + 552&#x000A;13 GraphicsServices  0x184f64088 GSEventRunModal + 180&#x000A;14 UIKit             0x1888ccd90 UIApplicationMain + 204&#x000A;15 CrashProbeiOS     0x1000a3da4 main (main.m:16)&#x000A;16 libdispatch.dylib 0x1835f68b8 (Missing)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
             <h2 class='cp-h2'>Raygun - armv7</h2>

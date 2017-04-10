@@ -304,25 +304,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'x86_64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Crashlytics'>
-                <td class='title'>
-                  Crashlytics
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.4.1
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      12/10/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'x86_64', $(this));"></div>
-                </td>
-              </tr>
               <tr id='cp-Apple'>
                 <td class='title'>
                   Apple
@@ -363,10 +344,6 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
             <h2 class='cp-h2'>Bugsnag - x86_64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Stack overflow in _mh_execute_header&#x000A;&#x000A;0   CrashProbe            -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;130 CrashProbe            -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;131 CrashProbe            -[CRLMainWindowController causeCrash:] (CRLMainWindowController.m:72)&#x000A;132 libsystem_trace.dylib os_activity_initiate&#x000A;133 AppKit                -[NSApplication sendAction:to:from:]&#x000A;134 AppKit                -[NSControl sendAction:to:]&#x000A;135 AppKit                _26-[NSCell _sendActionFrom:]_block_invoke&#x000A;136 libsystem_trace.dylib os_activity_initiate&#x000A;137 AppKit                -[NSCell _sendActionFrom:]&#x000A;138 libsystem_trace.dylib os_activity_initiate&#x000A;139 AppKit                -[NSCell trackMouse:inRect:ofView:untilMouseUp:]&#x000A;140 AppKit                -[NSButtonCell trackMouse:inRect:ofView:untilMouseUp:]&#x000A;141 AppKit                -[NSControl mouseDown:]&#x000A;142 AppKit                -[NSWindow _handleMouseDownEvent:isDelayedEvent:]&#x000A;143 AppKit                -[NSWindow _reallySendEvent:isDelayedEvent:]&#x000A;144 AppKit                -[NSWindow sendEvent:]&#x000A;145 AppKit                -[NSApplication sendEvent:]&#x000A;146 AppKit                -[NSApplication run]&#x000A;147 AppKit                NSApplicationMain&#x000A;148 CrashProbe            main (main.m:13)&#x000A;149 libdyld.dylib         start</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_x86_64'>
-            <h2 class='cp-h2'>Crashlytics - x86_64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x00007fff557cbff8&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashLib 0x000109cbbb15 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;1   CrashLib 0x000109cbbb1b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLib 0x000109cbbb1b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>

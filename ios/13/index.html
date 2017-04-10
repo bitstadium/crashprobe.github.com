@@ -302,6 +302,29 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Sentry'>
+                <td class='title'>
+                  Sentry
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    2.1.7
+                    <span title='Data provided by Sentry.io'>
+                      Date:
+                      04/03/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'arm64', $(this));"></div>
+                </td>
+              </tr>
               <tr id='cp-HockeyApp'>
                 <td class='title'>
                   HockeyApp
@@ -369,29 +392,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-Crashlytics'>
-                <td class='title'>
-                  Crashlytics
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    3.4.1
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      12/10/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Crashlytics', 'arm64', $(this));"></div>
-                </td>
-              </tr>
               <tr id='cp-Raygun'>
                 <td class='title'>
                   Raygun
@@ -439,6 +439,14 @@
             <h2 class='cp-h2'>Bugsee - arm64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_armv7'>
+            <h2 class='cp-h2'>Sentry - armv7</h2>
+            <pre class='cp-featurecode'>OS Version: iOS 9.3.5 (13G36)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP at 0x1eeffc&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Stack overflow in (null)&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                     0x1c4b76            -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS                     0x1c4b8b            [inlined] -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;2   CrashLibiOS                     0x1c4b8b            [inlined] -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;99  CrashLibiOS                     0x1c4b8b            -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_arm64'>
+            <h2 class='cp-h2'>Sentry - arm64</h2>
+            <pre class='cp-featurecode'>OS Version: iOS 10.2.1 (14D27)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP at 0x16fc57ff0&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Stack overflow in (null)&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                     0x1000cbe6c         -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS                     0x1000cbe80         [inlined] -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;2   CrashLibiOS                     0x1000cbe80         [inlined] -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;99  CrashLibiOS                     0x1000cbe80         -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
+          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
             <h2 class='cp-h2'>HockeyApp - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x121ff8&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x00225b76 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x00225b8b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x00225b8b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
@@ -462,14 +470,6 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
             <h2 class='cp-h2'>Apple - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_PROTECTION_FAILURE at 0x000000016fc67ff0&#x000A;Triggered by Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x00000001000c5c00 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x00000001000c5c14 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x00000001000c5c14 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_armv7'>
-            <h2 class='cp-h2'>Crashlytics - armv7</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x0000000000290ff8&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashLibiOS 0x394f30 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x394f45 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;510 CrashLibiOS 0x394f45 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Crashlytics_arm64'>
-            <h2 class='cp-h2'>Crashlytics - arm64</h2>
-            <pre class='cp-featurecode'>Crashed: com.apple.main-thread&#x000A;EXC_BAD_ACCESS KERN_PROTECTION_FAILURE at 0x000000016fd03ff0&#x000A;&#x000A;Thread : Crashed: com.apple.main-thread&#x000A;0   CrashLibiOS 0x10024beb4 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x10024bec8 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;510 CrashLibiOS 0x10024bec8 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
             <h2 class='cp-h2'>Raygun - armv7</h2>
