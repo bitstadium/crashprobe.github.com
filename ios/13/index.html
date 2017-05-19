@@ -285,21 +285,44 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    1.9.10
+                    1.13.0
                     <span title='Data provided by Bugsee Inc'>
                       Date:
-                      12/14/2016
+                      04/11/2017
                       (i)
                     </span>
                   </font>
                 </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'armv7', $(this));"></div>
                 </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-HockeyApp'>
+                <td class='title'>
+                  HockeyApp
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    4.1.5
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      05/18/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Sentry'>
@@ -325,29 +348,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'arm64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-HockeyApp'>
-                <td class='title'>
-                  HockeyApp
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    4.1.3
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      02/24/2017
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
-                </td>
-              </tr>
               <tr id='cp-Bugsnag'>
                 <td class='title'>
                   Bugsnag
@@ -369,27 +369,6 @@
                 <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-Apple'>
-                <td class='title'>
-                  Apple
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      06/24/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Raygun'>
@@ -415,6 +394,27 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'arm64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Apple'>
+                <td class='title'>
+                  Apple
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      05/18/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-unknown'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
+                </td>
+              </tr>
             </tbody>
           </table>
           <div class='clear'></div>
@@ -433,11 +433,19 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_armv7'>
             <h2 class='cp-h2'>Bugsee - armv7</h2>
-            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x0025EFF8&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                         0x00362B96 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS                         0x00362BAB -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;2   CrashLibiOS                         0x00362BAB -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_arm64'>
             <h2 class='cp-h2'>Bugsee - arm64</h2>
-            <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x16FC77FF0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                         0x000000010025BE6C -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS                         0x000000010025BE80 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;2   CrashLibiOS                         0x000000010025BE80 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
+            <h2 class='cp-h2'>HockeyApp - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x295ff8&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x00144b9a -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x00144baf -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x00144baf -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
+            <h2 class='cp-h2'>HockeyApp - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x16fc47ff0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x000000010017fe6c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x000000010017fe80 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x000000010017fe80 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_armv7'>
             <h2 class='cp-h2'>Sentry - armv7</h2>
@@ -447,14 +455,6 @@
             <h2 class='cp-h2'>Sentry - arm64</h2>
             <pre class='cp-featurecode'>OS Version: iOS 10.2.1 (14D27)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP at 0x16fc57ff0&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Stack overflow in (null)&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                     0x1000cbe6c         -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS                     0x1000cbe80         [inlined] -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;2   CrashLibiOS                     0x1000cbe80         [inlined] -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;99  CrashLibiOS                     0x1000cbe80         -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
-            <h2 class='cp-h2'>HockeyApp - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x121ff8&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x00225b76 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x00225b8b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x00225b8b -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
-            <h2 class='cp-h2'>HockeyApp - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x16fc5bff0&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x000000010016fde0 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;...&#x000A;511 CrashLibiOS 0x000000010016fdf4 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
-          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
             <h2 class='cp-h2'>Bugsnag - armv7</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS&#x000A;Stack overflow in -[CRLDetailViewController doCrash]&#x000A;&#x000A;0   CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;131 CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;132 CrashProbe iOS   -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;133 UIKit            -[UIApplication sendAction:to:from:forEvent:]&#x000A;134 UIKit            -[UIControl sendAction:to:forEvent:]&#x000A;135 UIKit            -[UIControl _sendActionsForEvents:withEvent:]&#x000A;136 UIKit            -[UIControl touchesEnded:withEvent:]&#x000A;137 UIKit            _UIGestureRecognizerUpdate&#x000A;138 UIKit            -[UIWindow _sendGesturesForEvent:]&#x000A;139 UIKit            -[UIWindow sendEvent:]&#x000A;140 UIKit            -[UIApplication sendEvent:]&#x000A;141 UIKit            _UIApplicationHandleEventQueue&#x000A;142 CoreFoundation   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;143 CoreFoundation   __CFRunLoopDoSources0&#x000A;144 CoreFoundation   __CFRunLoopRun&#x000A;145 CoreFoundation   CFRunLoopRunSpecific&#x000A;146 CoreFoundation   CFRunLoopRunInMode&#x000A;147 GraphicsServices GSEventRunModal&#x000A;148 UIKit            UIApplicationMain&#x000A;149 CrashProbe iOS   main (main.m:16)</pre>
@@ -463,14 +463,6 @@
             <h2 class='cp-h2'>Bugsnag - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Stack overflow in -[CRLDetailViewController doCrash]&#x000A;&#x000A;0   CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;131 CrashProbe       -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;132 CrashProbe iOS   -[CRLDetailViewController doCrash] (CRLDetailViewController.m:53)&#x000A;133 UIKit            -[UIApplication sendAction:to:from:forEvent:]&#x000A;134 UIKit            -[UIControl sendAction:to:forEvent:]&#x000A;135 UIKit            -[UIControl _sendActionsForEvents:withEvent:]&#x000A;136 UIKit            -[UIControl touchesEnded:withEvent:]&#x000A;137 UIKit            _UIGestureRecognizerUpdate&#x000A;138 UIKit            -[UIWindow _sendGesturesForEvent:]&#x000A;139 UIKit            -[UIWindow sendEvent:]&#x000A;140 UIKit            -[UIApplication sendEvent:]&#x000A;141 UIKit            _UIApplicationHandleEventQueue&#x000A;142 CoreFoundation   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__&#x000A;143 CoreFoundation   __CFRunLoopDoSources0&#x000A;144 CoreFoundation   __CFRunLoopRun&#x000A;145 CoreFoundation   CFRunLoopRunSpecific&#x000A;146 GraphicsServices GSEventRunModal&#x000A;147 UIKit            UIApplicationMain&#x000A;148 CrashProbe iOS   main (main.m:16)&#x000A;149 libdyld.dylib    start</pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
-            <h2 class='cp-h2'>Apple - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_PROTECTION_FAILURE at 0x00074ffc&#x000A;Triggered by Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x0017706c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x0017707c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x0017707c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
-            <h2 class='cp-h2'>Apple - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_PROTECTION_FAILURE at 0x000000016fc67ff0&#x000A;Triggered by Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x00000001000c5c00 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;1   CrashLibiOS 0x00000001000c5c14 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLibiOS 0x00000001000c5c14 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
-          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
             <h2 class='cp-h2'>Raygun - armv7</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
@@ -478,6 +470,14 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_arm64'>
             <h2 class='cp-h2'>Raygun - arm64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
+            <h2 class='cp-h2'>Apple - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_PROTECTION_FAILURE at 0x00203ff8&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x00134b9a -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;<span class="cp-wrong">1   CrashLibiOS 0x00134bae -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:43) | Wrong line number</span>&#x000A;...&#x000A;<span class="cp-wrong">510 CrashLibiOS 0x00134bae -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:43) | Wrong line number</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
+            <h2 class='cp-h2'>Apple - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_PROTECTION_FAILURE at 0x000000016fcbfff0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS 0x000000010008fe6c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:38)&#x000A;<span class="cp-wrong">1   CrashLibiOS 0x000000010008fe80 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:43) | Wrong line number</span>&#x000A;...&#x000A;<span class="cp-wrong">510 CrashLibiOS 0x000000010008fe80 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:43) | Wrong line number</span></pre>
           </div>
           <div class='clear'></div>
         </div>

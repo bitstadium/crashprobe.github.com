@@ -272,10 +272,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    4.1.2
+                    4.1.3
                     <span title='Data provided by Bit Stadium GmbH'>
                       Date:
-                      02/124/2017
+                      05/18/2017
                       (i)
                     </span>
                   </font>
@@ -311,7 +311,7 @@
                   <font style='font-weight: normal; font-size: 12px'>
                     <span title='Data provided by Bit Stadium GmbH'>
                       Date:
-                      06/24/2015
+                      05/18/2017
                       (i)
                     </span>
                   </font>
@@ -339,7 +339,7 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_x86_64'>
             <h2 class='cp-h2'>HockeyApp - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0x7fff56019ff8&#x000A;Crashed Thread:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLib 0x00000001093faa86 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;1   CrashLib 0x00000001093faa8c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLib 0x00000001093faa8c -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
+            <pre class='cp-featurecode'>:  0&#x000A;&#x000A;Application Specific Information:&#x000A;Selector name found in current argument registers: crash&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   CrashLib 0x0000000100b0ca89 -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;1   CrashLib 0x0000000100b0ca8f -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)&#x000A;...&#x000A;511 CrashLib 0x0000000100b0ca8f -[CRLCrashStackGuard crash] (CRLCrashStackGuard.m:39)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_x86_64'>
             <h2 class='cp-h2'>Bugsnag - x86_64</h2>
@@ -347,7 +347,7 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_x86_64'>
             <h2 class='cp-h2'>Apple - x86_64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes: KERN_PROTECTION_FAILURE at 0x00007fff51453ff8&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x618000152220&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;<span class="cp-wrong">0   net.hockeyapp.CrashLib 0x00000001006f7473 -[CRLCrashStackGuard crash] + 11 | Missing filename, and line number</span>&#x000A;<span class="cp-wrong">1   net.hockeyapp.CrashLib 0x00000001006f7479 -[CRLCrashStackGuard crash] + 17 | Missing filename, and line number</span>&#x000A;...&#x000A;<span class="cp-wrong">511 net.hockeyapp.CrashLib 0x00000001006f7479 -[CRLCrashStackGuard crash] + 17 | Missing filename, and line number</span></pre>
+            <pre class='cp-featurecode'>Exception Type:        EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Codes:       KERN_PROTECTION_FAILURE at 0x00007fff5b135ff8&#x000A;&#x000A;Application Specific Information:&#x000A;Performing @selector(causeCrash:) from sender NSButton 0x608000340bb0&#x000A;&#x000A;Thread 0 Crashed:: Dispatch queue: com.apple.main-thread&#x000A;0   net.hockeyapp.CrashLib 0x00000001042dda89 -[CRLCrashStackGuard crash] + 11 (CRLCrashStackGuard.m:39)&#x000A;<span class="cp-wrong">1   net.hockeyapp.CrashLib 0x00000001042dda8f -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:43) | Wrong line number</span>&#x000A;...&#x000A;<span class="cp-wrong">511 net.hockeyapp.CrashLib 0x00000001042dda8f -[CRLCrashStackGuard crash] + 17 (CRLCrashStackGuard.m:43) | Wrong line number</span></pre>
           </div>
           <div class='clear'></div>
         </div>

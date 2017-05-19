@@ -285,10 +285,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    1.9.10
+                    1.13.0
                     <span title='Data provided by Bugsee Inc'>
                       Date:
-                      12/14/2016
+                      04/11/2017
                       (i)
                     </span>
                   </font>
@@ -300,6 +300,29 @@
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsee', 'arm64', $(this));"></div>
+                </td>
+              </tr>
+              <tr id='cp-HockeyApp'>
+                <td class='title'>
+                  HockeyApp
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    SDK:
+                    4.1.5
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      05/18/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Sentry'>
@@ -325,29 +348,6 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Sentry', 'arm64', $(this));"></div>
                 </td>
               </tr>
-              <tr id='cp-HockeyApp'>
-                <td class='title'>
-                  HockeyApp
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    SDK:
-                    4.1.3
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      02/24/2017
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-available cp-feature-hover cp-feature-indicator'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('HockeyApp', 'arm64', $(this));"></div>
-                </td>
-              </tr>
               <tr id='cp-Bugsnag'>
                 <td class='title'>
                   Bugsnag
@@ -369,27 +369,6 @@
                 <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
                   <div class='cp-border'></div>
                   <div class='cp-button-codeview' onClick="javascript:showReport('Bugsnag', 'arm64', $(this));"></div>
-                </td>
-              </tr>
-              <tr id='cp-Apple'>
-                <td class='title'>
-                  Apple
-                  <br>
-                  <font style='font-weight: normal; font-size: 12px'>
-                    <span title='Data provided by Bit Stadium GmbH'>
-                      Date:
-                      06/24/2015
-                      (i)
-                    </span>
-                  </font>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'armv7', $(this));"></div>
-                </td>
-                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
-                  <div class='cp-border'></div>
-                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
                 </td>
               </tr>
               <tr id='cp-Raygun'>
@@ -415,6 +394,27 @@
                   <div class='cp-button-codeview' onClick="javascript:showReport('Raygun', 'arm64', $(this));"></div>
                 </td>
               </tr>
+              <tr id='cp-Apple'>
+                <td class='title'>
+                  Apple
+                  <br>
+                  <font style='font-weight: normal; font-size: 12px'>
+                    <span title='Data provided by Bit Stadium GmbH'>
+                      Date:
+                      05/18/2017
+                      (i)
+                    </span>
+                  </font>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'armv7', $(this));"></div>
+                </td>
+                <td class='cp-feature-hover cp-feature-indicator cp-feature-na'>
+                  <div class='cp-border'></div>
+                  <div class='cp-button-codeview' onClick="javascript:showReport('Apple', 'arm64', $(this));"></div>
+                </td>
+              </tr>
             </tbody>
           </table>
           <div class='clear'></div>
@@ -433,11 +433,19 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_armv7'>
             <h2 class='cp-h2'>Bugsee - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_ACCERR at 0xA5A5A5A4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   unknown                             0x-5A5A5A5C unknown&#x000A;1   CrashLibiOS                         0x002C0EB7 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xA5A5A5A4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   unknown                             0x-5A5A5A5C unknown&#x000A;1   CrashLibiOS                         0x00324ED7 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsee_arm64'>
             <h2 class='cp-h2'>Bugsee - arm64</h2>
             <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRALN at 0xA5A5A5A5A5A5A800&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0   unknown                             0x-5A5A5A5A5A5A5C00 unknown&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
+            <h2 class='cp-h2'>HockeyApp - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???         0xa5a5a5a4 0x0 + 0&#x000A;1 CrashLibiOS 0x00230edb -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
+            <h2 class='cp-h2'>HockeyApp - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0xa5a5a5a5a5a5a5a5&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a5a5a5a5a5 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_armv7'>
             <h2 class='cp-h2'>Sentry - armv7</h2>
@@ -447,14 +455,6 @@
             <h2 class='cp-h2'>Sentry - arm64</h2>
             <pre class='cp-featurecode'>OS Version: iOS 10.2.1 (14D27)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP at 0xa5a5a5a5a5a5a5a5&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference garbage pointer 0xa5a5a5a5a5a5a5a5.&#x000A;&#x000A;<span class="cp-wrong">Missing frame/thread that shows where the crash occured</span>&#x000A;Thread 1 name:&#x000A;0   libsystem_kernel.dylib          0x30dea3a88         ___workq_kernreturn&#x000A;1   libsystem_pthread.dylib         0x30e049160         __pthread_wqthread&#x000A;&#x000A;Thread 2 name: com.apple.uikit.eventfetch-thread&#x000A;0   libsystem_kernel.dylib          0x30de85188         _mach_msg_trap&#x000A;1   libsystem_kernel.dylib          0x30de84ff8         _mach_msg&#x000A;2   CoreFoundation                  0x30fda35d0         ___CFRunLoopServiceMachPort&#x000A;3   CoreFoundation                  0x30fda11ec         ___CFRunLoopRun&#x000A;4   CoreFoundation                  0x30fccf2b8         _CFRunLoopRunSpecific&#x000A;5   Foundation                      0x31134626c         -[NSRunLoop(NSRunLoop) runMode:beforeDate:]&#x000A;6   Foundation                      0x311366dd0         -[NSRunLoop(NSRunLoop) runUntilDate:]&#x000A;7   UIKit                           0x31c652c38         -[UIEventFetcher threadMain]&#x000A;8   Foundation                      0x311443e68         ___NSThread__start__&#x000A;9   libsystem_pthread.dylib         0x30e04b850         __pthread_body&#x000A;10  libsystem_pthread.dylib         0x30e04b760         __pthread_start</pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_armv7'>
-            <h2 class='cp-h2'>HockeyApp - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGSEGV&#x000A;Exception Codes: SEGV_MAPERR at 0xa5a5a5a4&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ???         0xa5a5a5a4 0x0 + 0&#x000A;1 CrashLibiOS 0x001e1eb7 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:54)</pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_HockeyApp_arm64'>
-            <h2 class='cp-h2'>HockeyApp - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  SIGBUS&#x000A;Exception Codes: BUS_ADRERR at 0xa5a5a5a5a5a5a5a5&#x000A;Crashed Thread:  0&#x000A;&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a5a5a5a5a5 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
-          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
             <h2 class='cp-h2'>Bugsnag - armv7</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
@@ -463,14 +463,6 @@
             <h2 class='cp-h2'>Bugsnag - arm64</h2>
             <pre class='cp-featurecode'><span class="cp-wrong">No report</span></pre>
           </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
-            <h2 class='cp-h2'>Apple - armv7</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.libdispatch-manager&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x3093824c kevent64 + 24&#x000A;1 libdispatch.dylib      0x308584ec _dispatch_mgr_invoke + 276&#x000A;2 libdispatch.dylib      0x3085821e _dispatch_mgr_thread$VARIANT$mp + 34&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
-          </div>
-          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
-            <h2 class='cp-h2'>Apple - arm64</h2>
-            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Subtype: EXC_ARM_DA_ALIGN at 0xa5a5a5a5a5a5a5a5&#x000A;Highlighted Thread:  0&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.libdispatch-manager&#x000A;Thread 0:&#x000A;0 libsystem_kernel.dylib 0x0000000198088c24 kevent64 + 8&#x000A;1 libdispatch.dylib      0x0000000197f6de6c _dispatch_mgr_invoke + 272&#x000A;2 libdispatch.dylib      0x0000000197f5f998 _dispatch_mgr_thread + 48&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
-          </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_armv7'>
             <h2 class='cp-h2'>Raygun - armv7</h2>
             <pre class='cp-featurecode'>0   ???                                 0xa5a5a5a4 0x0 + 0&#x000A;<span class="cp-wrong">1   CrashLibiOS                         0x0015e2c7 -[CRLCrashSmashStackBottom crash] (CRLCrashSmashStackBottom.m:55) | Wrong line number</span></pre>
@@ -478,6 +470,14 @@
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Raygun_arm64'>
             <h2 class='cp-h2'>Raygun - arm64</h2>
             <pre class='cp-featurecode'>0   ???                                 0xa5a5a5a5a5a5a5a5 0x0 + 0&#x000A;1   ???                                 0xa5a5a5a5a5a5a5a5 0x0 + 0&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_armv7'>
+            <h2 class='cp-h2'>Apple - armv7</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGSEGV)&#x000A;Exception Subtype: KERN_INVALID_ADDRESS at 0xa5a5a5a4&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a4 0 + -1515870812&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
+          </div>
+          <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Apple_arm64'>
+            <h2 class='cp-h2'>Apple - arm64</h2>
+            <pre class='cp-featurecode'>Exception Type:  EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Subtype: EXC_ARM_DA_ALIGN at 0xa5a5a5a5a5a5a5a5&#x000A;&#x000A;Thread 0 name:  Dispatch queue: com.apple.main-thread&#x000A;Thread 0 Crashed:&#x000A;0 ??? 0xa5a5a5a5a5a5a5a5 0 + -6510615555426900571&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span></pre>
           </div>
           <div class='clear'></div>
         </div>
