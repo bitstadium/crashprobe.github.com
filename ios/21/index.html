@@ -331,10 +331,10 @@
                   <br>
                   <font style='font-weight: normal; font-size: 12px'>
                     SDK:
-                    2.1.7
+                    3.0.7
                     <span title='Data provided by Sentry.io'>
                       Date:
-                      04/03/2017
+                      06/07/2017
                       (i)
                     </span>
                   </font>
@@ -449,11 +449,11 @@
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_armv7'>
             <h2 class='cp-h2'>Sentry - armv7</h2>
-            <pre class='cp-featurecode'>OS Version: iOS 9.3.5 (13G36)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP at 0xa5a5a5a4&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference garbage pointer 0xa5a5a5a4.&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   CrashLibiOS                     0x212f1f            -[CRLCrashSmashStackTop crash] (CRLCrashSmashStackTop.m:54)&#x000A;&#x000A;Thread 1 name:&#x000A;0   libsystem_kernel.dylib          0x4538a2f8          _kevent_qos&#x000A;1   libdispatch.dylib               0x45174d61          __dispatch_mgr_invoke&#x000A;2   libdispatch.dylib               0x45174abf          __dispatch_mgr_thread$VARIANT$mp</pre>
+            <pre class='cp-featurecode'>OS Version: iOS 9.3.5 (13G36)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference garbage pointer 0xa5a5a5a4.&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   <unknown>                       0xa5a5a5a4          <redacted>&#x000A;1   CrashLibiOS                     0x159f43            -[CRLCrashSmashStackTop crash] (CRLCrashSmashStackTop.m:54)&#x000A;&#x000A;Thread 1 name:&#x000A;0   libsystem_kernel.dylib          0x4504e2f8          kevent_qos&#x000A;1   libdispatch.dylib               0x44e38d61          _dispatch_mgr_invoke&#x000A;2   libdispatch.dylib               0x44e38abf          _dispatch_mgr_thread$VARIANT$mp</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Sentry_arm64'>
             <h2 class='cp-h2'>Sentry - arm64</h2>
-            <pre class='cp-featurecode'>OS Version: iOS 10.2.1 (14D27)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP at 0xa5a5a5a5a5a5a5a5&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference garbage pointer 0xa5a5a5a5a5a5a5a5.&#x000A;&#x000A;<span class="cp-wrong">Missing frame/thread that shows where the crash occured</span>&#x000A;Thread 1 name:&#x000A;0   libsystem_kernel.dylib          0x30dea3a88         ___workq_kernreturn&#x000A;1   libsystem_pthread.dylib         0x30e049160         __pthread_wqthread&#x000A;&#x000A;Thread 2 name: com.apple.uikit.eventfetch-thread&#x000A;0   libsystem_kernel.dylib          0x30de85188         _mach_msg_trap&#x000A;1   libsystem_kernel.dylib          0x30de84ff8         _mach_msg&#x000A;2   CoreFoundation                  0x30fda35d0         ___CFRunLoopServiceMachPort&#x000A;3   CoreFoundation                  0x30fda11ec         ___CFRunLoopRun&#x000A;4   CoreFoundation                  0x30fccf2b8         _CFRunLoopRunSpecific&#x000A;5   Foundation                      0x31134626c         -[NSRunLoop(NSRunLoop) runMode:beforeDate:]&#x000A;6   Foundation                      0x311366dd0         -[NSRunLoop(NSRunLoop) runUntilDate:]&#x000A;7   UIKit                           0x31c652c38         -[UIEventFetcher threadMain]&#x000A;8   Foundation                      0x311443e68         ___NSThread__start__&#x000A;9   libsystem_pthread.dylib         0x30e04b850         __pthread_body&#x000A;10  libsystem_pthread.dylib         0x30e04b760         __pthread_start</pre>
+            <pre class='cp-featurecode'>OS Version: iOS 10.3.2 (14F89)&#x000A;Report Version: 104&#x000A;&#x000A;Exception Type: EXC_BAD_ACCESS (SIGBUS)&#x000A;Exception Codes: BUS_NOOP&#x000A;Crashed Thread: 0&#x000A;&#x000A;Application Specific Information:&#x000A;Attempted to dereference garbage pointer 0xa5a5a5a5a5a5a5a5.&#x000A;&#x000A;Thread 0 name:&#x000A;Thread 0 Crashed:&#x000A;0   <unknown>                       0xa5a5a5a5a5a5a5a5L <redacted>&#x000A;<span class="cp-wrong">Missing frame that shows where the crash occured</span>&#x000A;&#x000A;Thread 1 name:&#x000A;0   libsystem_kernel.dylib          0x30a1e7a88         __workq_kernreturn&#x000A;1   libsystem_pthread.dylib         0x30a390fd0         _pthread_wqthread&#x000A;&#x000A;Thread 2 name:&#x000A;0   libsystem_kernel.dylib          0x30a1e7a88         __workq_kernreturn&#x000A;1   libsystem_pthread.dylib         0x30a390fd0         _pthread_wqthread</pre>
           </div>
           <div class='col-xs-12 cp-featurecode crashreport hiddenElement' id='crashview_Bugsnag_armv7'>
             <h2 class='cp-h2'>Bugsnag - armv7</h2>
